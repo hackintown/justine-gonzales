@@ -7,11 +7,21 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1200px",
+      },
+    },
     extend: {
+      colors: {
+        primary: "#1c1c1c",
+        secondary: "#006400",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-navbar":
+          "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,100,0,1) 100%)",
       },
     },
   },
