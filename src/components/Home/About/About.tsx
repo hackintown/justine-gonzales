@@ -1,15 +1,22 @@
 import React from "react";
 import DevelopmentSummary from "./DevelopmentSummary";
 import SocialIcons from "./SocialIcons";
+import Image from "next/image";
 
 const About: React.FC = () => {
   return (
     <section className="container mt-3">
       <div className="bg-gradient-navbar rounded-lg p-4">
         <div className="flex justify-between items-center mb-3">
-          <h2 className="text-2xl font-bold mb-2 text-white">About</h2>
-          <button className="px-6 py-1 bg-indigo-300 text-sm rounded-xl">
-            View Map
+          <h2 className="text-2xl font-bold text-white">About</h2>
+          <button className="max-w-[165px] mt-3">
+            <Image
+              src="/images/view-map.png"
+              width={500}
+              height={500}
+              alt="inquire-button"
+              className="w-full"
+            />
           </button>
         </div>
 
@@ -21,10 +28,7 @@ const About: React.FC = () => {
           experience of living with an abundance of possibilities and
           conveniences.
         </p>
-        <div className="flex items-center justify-between">
-          <DevelopmentSummary />
-          <SocialIcons />
-        </div>
+        <DevelopmentSummary />
       </div>
     </section>
   );

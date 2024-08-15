@@ -1,20 +1,44 @@
+import Image from "next/image";
 import React from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaEnvelope,
-  FaWhatsapp,
-  FaPhone,
-} from "react-icons/fa";
 
 const SocialIcons: React.FC = () => {
   return (
-    <div className="flex flex-col items-center space-y-2 bg-gray-500 py-2 px-1 rounded-md">
-      <FaFacebookF className="text-white h-6 w-6" />
-      <FaInstagram className="text-white h-6 w-6" />
-      <FaEnvelope className="text-white h-6 w-6" />
-      <FaWhatsapp className="text-white h-6 w-6" />
-      <FaPhone className="text-white h-6 w-6" />
+    <div className="flex flex-col items-center justify-center space-y-3 bg-gray-500 py-2 px-2 rounded-md">
+      <Image
+        src="/images/icon-fb.png"
+        width={500}
+        height={500}
+        alt="social-icon"
+        className="text-white w-[28px]"
+      />
+      <Image
+        src="/images/icon-insta.png"
+        width={500}
+        height={500}
+        alt="social-icon"
+        className="text-white w-[28px]"
+      />
+      <Image
+        src="/images/icon-email.png"
+        width={500}
+        height={500}
+        alt="social-icon"
+        className="text-white w-[28px]"
+      />
+      <Image
+        src="/images/icon-whatsapp.png"
+        width={500}
+        height={500}
+        alt="social-icon"
+        className="text-white w-[28px]"
+      />
+      <Image
+        src="/images/icon-call.png"
+        width={500}
+        height={500}
+        alt="social-icon"
+        className="text-white w-[28px]"
+      />
     </div>
   );
 };

@@ -12,23 +12,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative text-white px-4 py-5 max-w-[90%] mb-8 mx-auto rounded-3xl overflow-hidden">
-      {/* Background Image */}
-      <div>
-        <Image
-          src="/images/home-header-bg.png"
-          alt="home-header-bg"
-          layout="fill"
-          quality={100}
-          priority={true}
-          className="rounded-3xl w-full h-full"
-        />
-      </div>
-
+    <nav className="relative text-white px-4 py-4 max-w-[90%] mb-8 mx-auto rounded-xl overflow-hidden bg-gradient-navbar">
       {/* Navbar Content */}
       <div className="relative flex justify-between items-center max-w-7xl mx-auto z-10">
         <div className="text-lg font-bold">
-          <Link href="/" className="max-w-[120px] w-full block">
+          <Link href="/" className="max-w-[100px] w-full block">
             <Image
               src="/images/header-logo.png"
               width={150}
@@ -59,7 +47,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="md:hidden flex items-center">
-          <Link href="/" className="hover:text-secondary mx-2">
+          <Link href="/" className="hover:text-secondary mx-2 font-light">
             CONTACT
           </Link>
           <button onClick={toggleMenu}>

@@ -5,8 +5,15 @@ const Banner = () => {
   return (
     <section className="relative container">
       <div
-        className="p-4 
-h-full w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 shadow-lg rounded-lg"
+        className="p-4 h-full w-full shadow-xl rounded-lg"
+        style={{
+          background: "rgba(255, 255, 255, 0.15)",
+          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+          backdropFilter: "blur(1.5px)",
+          WebkitBackdropFilter: "blur(1.5px)",
+          borderRadius: "10px",
+          border: "1px solid rgba(255, 255, 255, 0.18)",
+        }}
       >
         <div className="relative">
           <div className="rounded-lg overflow-hidden">
@@ -44,8 +51,14 @@ h-full w-full bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-op
             <span className="text-white font-light">Morong Bataan</span>
           </p>
           <h1 className="text-4xl font-bold text-white">Anvaya Cove</h1>
-          <button className="mt-2 bg-gray-400 text-white text-lg py-2 px-8 rounded-lg">
-            INQUIRE
+          <button className="max-w-[165px] mt-3">
+            <Image
+              src="/images/inquire-btn.png"
+              width={500}
+              height={500}
+              alt="inquire-button"
+              className="w-full"
+            />
           </button>
         </div>
       </div>

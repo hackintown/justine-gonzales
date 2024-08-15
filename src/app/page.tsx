@@ -15,7 +15,7 @@ export default function Home() {
         className="absolute inset-0 w-full h-full z-0 filter blur-sm"
       ></div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 py-10">
         <Navbar />
         <Banner />
         <About />
