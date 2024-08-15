@@ -7,79 +7,64 @@ const DevelopmentSummary: React.FC = () => {
       <h2 className="text-2xl font-bold mb-4 text-white">
         Development Summary
       </h2>
-      <div className="flex justify-between ">
-        <div className="w-[85%]">
-          <div className="flex flex-wrap">
-            <div className="w-1/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs">Location</p>
-              </div>
+      <div className="flex justify-between lg:justify-start lg:gap-x-8 ">
+        <div className="max-w-[80%] w-full">
+          <div className="flex">
+            <div className="max-w-[125px] w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs sm:text-sm md:text-xs lg:text-sm">Location</p>
             </div>
-            <div className="w-2/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs font-light">Morong, Bataan</p>
-              </div>
+
+            <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">Morong, Bataan</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-1/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs">Land Area</p>
-              </div>
+          <div className="flex">
+            <div className="max-w-[125px] w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs sm:text-sm md:text-xs lg:text-sm">Land Area</p>
             </div>
-            <div className="w-2/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs font-light">620 hectares</p>
-              </div>
+
+            <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">620 hectares</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-1/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs">Coast Line</p>
-              </div>
+          <div className="flex">
+            <div className="max-w-[125px] w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs sm:text-sm md:text-xs lg:text-sm">Coast Line</p>
             </div>
-            <div className="w-2/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs font-light">3.5 kilometers</p>
-              </div>
+
+            <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">3.5 kilometers</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-1/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs">Peak Elevation</p>
-              </div>
+          <div className="flex">
+            <div className="max-w-[125px] w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs sm:text-sm md:text-xs lg:text-sm">Peak Elevation</p>
             </div>
-            <div className="w-2/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs font-light">
-                  130 meters above mean sea level
-                </p>
-              </div>
+
+            <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">
+                130 meters above mean sea level
+              </p>
             </div>
           </div>
 
-          <div className="flex flex-wrap">
-            <div className="w-1/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs">Density</p>
-              </div>
+          <div className="flex">
+            <div className="max-w-[125px] w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs sm:text-sm md:text-xs lg:text-sm">Density</p>
             </div>
-            <div className="w-2/3">
-              <div className="rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
-                <p className="text-white text-xs font-light">
-                  6 to 13 lots per hectare
-                </p>
-              </div>
+
+            <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
+              <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">
+                6 to 13 lots per hectare
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="flex justify-end my-1">
+        <div className="flex my-1 max-w-[50px] w-full">
           <SocialIcons />
         </div>
       </div>

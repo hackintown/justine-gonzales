@@ -3,7 +3,7 @@ import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 const Banner = () => {
   return (
-    <section className="relative container">
+    <section className="relative">
       <div
         className="p-4 h-full w-full shadow-xl rounded-lg"
         style={{
