@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative text-white px-4 py-4  mb-8 mx-auto rounded-xl overflow-hidden bg-gradient-navbar">
+    <nav className="relative w-full text-white px-4 py-4  mb-8 mx-auto rounded-xl overflow-hidden bg-gradient-navbar">
       {/* Navbar Content */}
       <div className="relative flex justify-between items-center max-w-7xl mx-auto z-10">
         <div className="text-lg font-bold">
@@ -30,7 +30,7 @@ const Navbar = () => {
           <Link href="/" className="hover:text-secondary">
             HOME
           </Link>
-          <Link href="/" className="hover:text-secondary">
+          <Link href="/ayalaland" className="hover:text-secondary">
             RESIDENTIAL LOTS
           </Link>
           <Link href="/" className="hover:text-secondary">
@@ -67,7 +67,7 @@ const Navbar = () => {
             <Link href="/" className="hover:text-secondary">
               HOME
             </Link>
-            <Link href="/" className="hover:text-secondary">
+            <Link href="/ayalaland" className="hover:text-secondary">
               RESIDENTIAL LOTS
             </Link>
             <Link href="/" className="hover:text-secondary">

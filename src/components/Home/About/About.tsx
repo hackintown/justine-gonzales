@@ -1,6 +1,6 @@
 import React from "react";
 import DevelopmentSummary from "./DevelopmentSummary";
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "../../ui/Icons/SocialIcons";
 import Image from "next/image";
 
 const About: React.FC = () => {

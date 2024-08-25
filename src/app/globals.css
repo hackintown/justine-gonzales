@@ -7,3 +7,44 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* Custom Slick Arrows */
+/* Ensure that the default slick arrows are hidden and custom ones are used */
+.slick-prev,
+.slick-next {
+  display: none; /* Hide default arrows */
+}
+
+/* Custom Slick Arrows */
+.custom-slick-prev,
+.custom-slick-next {
+  position: absolute;
+  top: 50%;
+  width: 50px; /* Set custom width */
+  height: 50px; /* Set custom height */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.custom-slick-prev {
+  left: -22px; /* Adjust position as needed */
+  background-image: url("/images/gray-next-arrow.png"); /* Custom previous arrow image */
+  transform: rotate(180deg);
+}
+
+.custom-slick-next {
+  right: -22px; /* Adjust position as needed */
+  background-image: url("/images/gray-next-arrow.png"); /* Custom next arrow image */
+}
+
+/* Optional: add hover effects */
+.custom-slick-prev:hover,
+.custom-slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Adjust hover effect as needed */
+}
+
+.clip-path-custom {
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 34%, 30% 34%);
+}
