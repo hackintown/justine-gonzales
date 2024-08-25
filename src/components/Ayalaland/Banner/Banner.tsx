@@ -40,7 +40,7 @@ const Banner: React.FC = () => {
           </div>
           <p className="text-xs sm:text-sm text-white font-light">
             <span className="font-bold">Ayala Land</span> transformed the
-            Philippine landscape with the nation's premier business district
+            Philippine landscape with the nation&apos;s premier business district
             over five decades ago. As the largest, most experienced, and most
             trusted company in its field, Ayala Land leads the burgeoning real
             estate industry in the Philippines with prime residential and

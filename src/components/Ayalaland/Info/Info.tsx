@@ -27,14 +27,14 @@ const Info = () => {
           </div>
           <p className="mt-4 text-xs sm:text-sm font-light">
             With over a century of envisioning, building, and developing
-            masterplanned communities, Ayala Land's rich history and illustrious
+            masterplanned communities, Ayala Land&apos;s rich history and illustrious
             reputation remain unparalleled in the country. Ayala Land recognizes
             that the value of land lies in how it can be sustained and enriched
             for future generations to enjoy, through: dramatic transformations
             that shape raw land into lasting communities, sustainable progress,
             and quality developments that create quality moments, embodying the
-            company's thrust of "Enhancing land, enriching lives for more
-            people".
+            company&apos;s thrust of &quot;Enhancing land, enriching lives for more
+            people&quot;.
           </p>
         </div>
       </div>
