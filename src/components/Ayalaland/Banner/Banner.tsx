@@ -14,6 +14,7 @@ const Banner: React.FC = () => {
         objectFit="cover"
         quality={100}
         className="z-0"
+        priority
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
@@ -27,7 +28,7 @@ const Banner: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute w-full bottom-0 py-6 sm:py-8 backdrop-blur-sm z-20">
+      <div className="absolute w-full bottom-0 py-6 sm:py-8 backdrop-blur-sm z-10">
         <div className="flex items-center gap-x-8  container">
           <div className="hidden md:block relative w-full max-w-[250px]">
             <Image

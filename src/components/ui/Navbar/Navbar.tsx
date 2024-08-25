@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative w-full text-white px-4 py-4  mb-8 mx-auto rounded-xl overflow-hidden bg-gradient-navbar">
+    <nav className="relative w-full text-white px-4 py-4 mb-8 mx-auto rounded-xl bg-gradient-navbar shadow-lg">
       {/* Navbar Content */}
       <div className="relative flex justify-between items-center max-w-7xl mx-auto z-10">
         <div className="text-lg font-bold">
@@ -27,27 +27,48 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:text-secondary">
+          <Link
+            href="/"
+            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+          >
             HOME
           </Link>
-          <Link href="/ayalaland" className="hover:text-secondary">
+          <Link
+            href="/ayalaland"
+            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+          >
             RESIDENTIAL LOTS
           </Link>
-          <Link href="/" className="hover:text-secondary">
+          <Link
+            href="/ayalaland"
+            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+          >
             CONDOMINIUMS
           </Link>
-          <Link href="/" className="hover:text-secondary">
+          <Link
+            href="/"
+            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+          >
             OFFICE
           </Link>
-          <Link href="/" className="hover:text-secondary">
+          <Link
+            href="/"
+            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+          >
             LEISURE
           </Link>
-          <Link href="/" className="hover:text-secondary">
+          <Link
+            href="/"
+            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+          >
             CONTACT
           </Link>
         </div>
         <div className="md:hidden flex items-center">
-          <Link href="/" className="hover:text-secondary mx-2 font-light">
+          <Link
+            href="/"
+            className="text-sm font-medium mx-2 font-light hover:text-gray-300 transition-colors duration-200"
+          >
             CONTACT
           </Link>
           <button onClick={toggleMenu}>
@@ -61,30 +82,61 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="flex flex-col items-center mt-4 space-y-4">
-            <Link href="/" className="hover:text-secondary">
-              HOME
-            </Link>
-            <Link href="/ayalaland" className="hover:text-secondary">
-              RESIDENTIAL LOTS
-            </Link>
-            <Link href="/" className="hover:text-secondary">
-              CONDOMINIUMS
-            </Link>
-            <Link href="/" className="hover:text-secondary">
-              OFFICE
-            </Link>
-            <Link href="/" className="hover:text-secondary">
-              LEISURE
-            </Link>
-            <Link href="/" className="hover:text-secondary">
-              CONTACT
-            </Link>
-          </div>
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-gradient-navbar transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-500 ease-in-out z-50`}
+      >
+        <div className="flex justify-end p-4">
+          <button onClick={toggleMenu}>
+            <FaTimes className="h-6 w-6 text-white" />
+          </button>
         </div>
-      )}
+        <div className="flex flex-col items-center mt-10 space-y-6">
+          <Link
+            href="/"
+            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
+            onClick={toggleMenu}
+          >
+            HOME
+          </Link>
+          <Link
+            href="/ayalaland"
+            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
+            onClick={toggleMenu}
+          >
+            RESIDENTIAL LOTS
+          </Link>
+          <Link
+            href="/"
+            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
+            onClick={toggleMenu}
+          >
+            CONDOMINIUMS
+          </Link>
+          <Link
+            href="/"
+            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
+            onClick={toggleMenu}
+          >
+            OFFICE
+          </Link>
+          <Link
+            href="/"
+            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
+            onClick={toggleMenu}
+          >
+            LEISURE
+          </Link>
+          <Link
+            href="/"
+            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
+            onClick={toggleMenu}
+          >
+            CONTACT
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 };

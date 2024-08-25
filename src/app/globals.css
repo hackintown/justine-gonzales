@@ -25,7 +25,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .custom-slick-prev {
@@ -37,12 +38,6 @@
 .custom-slick-next {
   right: -22px; /* Adjust position as needed */
   background-image: url("/images/gray-next-arrow.png"); /* Custom next arrow image */
-}
-
-/* Optional: add hover effects */
-.custom-slick-prev:hover,
-.custom-slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Adjust hover effect as needed */
 }
 
 .clip-path-custom {
