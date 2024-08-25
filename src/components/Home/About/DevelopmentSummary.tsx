@@ -80,7 +80,7 @@ const DevelopmentSummary: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex my-1 max-w-[50px] w-full">
+        <div className="flex my-1 max-w-[50px] w-full bg-[#5c6035] rounded-lg ">
           <SocialIcons />
         </div>
       </div>

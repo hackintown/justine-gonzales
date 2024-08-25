@@ -22,6 +22,13 @@ const config: Config = {
       backgroundImage: {
         "gradient-navbar":
           "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,100,0,1) 100%)",
+        "about-sec-gradient":
+          "linear-gradient(90deg, rgba(46,46,18,1) 20%, rgba(62,56,20,0.8) 65%, rgba(63,57,20,0.9) 100%)",
+        "glass-gradient":
+          "linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.3) 100%)",
+      },
+      backdropBlur: {
+        glass: "blur(10px)",
       },
     },
   },

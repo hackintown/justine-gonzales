@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
             <h2 className="text-xl sm:text-2xl font-semibold mb-2">
               Which project are you interested in?
             </h2>
-            <form className="flex flex-col">
+            <form id="inquiry-form" className="flex flex-col">
               <label className="sr-only" htmlFor="project">
                 Select Project
               </label>

@@ -8,7 +8,7 @@ export default function Home() {
       {/* Background Image */}
       <div
         style={{
-          backgroundImage: "url('/images/web-homepage-bg.jpg')",
+          backgroundImage: "url('/images/homepage-banner-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "bottom",
         }}
@@ -18,7 +18,7 @@ export default function Home() {
       <div className="relative container z-10 py-10">
         <Navbar />
 
-        <div className="md:grid md:grid-cols-2 md:gap-3 md:bg-gradient-navbar md:p-4 rounded-xl lg:grid-cols-[40%_1fr]">
+        <div className="md:grid md:grid-cols-2 md:gap-3 md:bg-[linear-gradient(90deg,_rgba(43,43,16,0.8)_20%,_rgba(66,59,26,0.8)_65%,_rgba(57,59,41,0.8)_100%)] md:p-4 rounded-xl lg:grid-cols-[40%_1fr]">
           <div className="mb-3 md:mb-0">
             <Banner />
           </div>
