@@ -67,16 +67,12 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <Link
             href="/"
-            className="text-sm font-medium mx-2 font-light hover:text-gray-300 transition-colors duration-200"
+            className="text-sm font-medium mx-2  hover:text-gray-300 transition-colors duration-200"
           >
             CONTACT
           </Link>
           <button onClick={toggleMenu}>
-            {isOpen ? (
-              <FaTimes className="h-6 w-6 text-white" />
-            ) : (
-              <FaBars className="h-6 w-6 text-white" />
-            )}
+            <FaBars className="h-6 w-6 text-white" />
           </button>
         </div>
       </div>

@@ -64,8 +64,9 @@ const Services: React.FC = () => {
         alt="Real Estate"
         layout="fill"
         objectFit="cover"
-        quality={100}
-        className="z-0 opacity-40"
+        quality={75}
+        priority
+        className="z-0"
       />
       <div className="relative container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
@@ -116,8 +117,8 @@ const Services: React.FC = () => {
           </div>
           <Image
             src="/images/alp-icon.png"
-            width={500}
-            height={500}
+            width={40}
+            height={40}
             alt="ALP-Icon"
             className="w-[40px] h-[40px]"
           />
@@ -135,6 +136,8 @@ const Services: React.FC = () => {
                 alt="resident-lots-image"
                 width={320}
                 height={240}
+                quality={75}  // Reduced quality for optimization
+                loading="lazy"  // Lazy load images
                 className="rounded-lg shadow-md"
               />
             </div>
@@ -190,8 +193,8 @@ const Services: React.FC = () => {
           </div>
           <Image
             src="/images/alp-icon.png"
-            width={500}
-            height={500}
+            width={40}
+            height={40}
             alt="ALP-Icon"
             className="w-[40px] h-[40px]"
           />
@@ -209,6 +212,8 @@ const Services: React.FC = () => {
                 alt="resident-lots-image"
                 width={320}
                 height={240}
+                quality={75}  // Reduced quality for optimization
+                loading="lazy"  // Lazy load images
                 className="rounded-lg shadow-md"
               />
             </div>

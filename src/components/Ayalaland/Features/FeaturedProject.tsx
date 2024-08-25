@@ -42,6 +42,8 @@ const FeaturedProject = () => {
                 src="/images/location-frame.png"
                 width={500}
                 height={500}
+                quality={75} // Balanced quality for smaller file size
+                loading="lazy"
                 alt="location-frame"
               />
               <p className="absolute left-6 inset-0 flex  items-center text-white text-xs font-semibold">
@@ -107,6 +109,8 @@ const FeaturedProject = () => {
                 src="/images/learn-more-btn.png"
                 width={500}
                 height={500}
+                quality={75} // Reduced quality for optimization
+                loading="lazy" // Lazy load images
                 alt="learn-more-btn"
               />
             </button>
@@ -121,6 +125,7 @@ const FeaturedProject = () => {
               alt="Anvaya Cove"
               layout="fill"
               objectFit="cover"
+              quality={75}
               className=""
               priority
             />
@@ -131,6 +136,8 @@ const FeaturedProject = () => {
                 src="/images/location-frame.png"
                 width={500}
                 height={500}
+                quality={75}
+                loading="lazy"
                 alt="location-frame"
               />
               <p className="absolute left-8 inset-0 flex  items-center text-white text-xs font-semibold">
@@ -152,6 +159,8 @@ const FeaturedProject = () => {
                 src="/images/learn-more-btn.png"
                 width={500}
                 height={500}
+                quality={75}
+                loading="lazy"
                 alt="learn-more-btn"
               />
             </button>

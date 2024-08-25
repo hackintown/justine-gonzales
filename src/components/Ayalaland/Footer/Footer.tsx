@@ -9,12 +9,13 @@ const Footer: React.FC = () => {
         <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="flex flex-col items-center md:text-left w-full">
             <Image
-              src="/images/header-logo.png"
-              width={500}
-              height={500}
+              src="/images/header-logo.png" // Consider using WebP format
+              width={280} // Adjusted to the max required width
+              height={280} // Adjusted to the max required height
               alt="footer-logo"
               priority
               className="max-w-[250px] lg:max-w-[280px] w-full mb-4"
+              sizes="(max-width: 1024px) 250px, 280px" // Serve smaller size for smaller screens
             />
             <p className="mt-2 text-center font-light text-sm">
               18F Tower One & Exchange Plaza
@@ -26,51 +27,63 @@ const Footer: React.FC = () => {
             <div className="flex justify-center mt-4 space-x-4">
               {/* Replace with actual icons */}
               <Link href="#" aria-label="Phone">
-                <img
+                <Image
                   src="/images/icon-call.png"
+                  width={500}
+                  height={500}
                   alt="Phone"
                   className="w-6 h-6"
                 />
               </Link>
               <Link href="#" aria-label="WhatsApp">
-                <img
+                <Image
                   src="/images/icon-whatsapp.png"
                   alt="WhatsApp"
+                  width={500}
+                  height={500}
                   className="w-6 h-6"
                 />
               </Link>
               <Link href="#" aria-label="Email">
-                <img
+                <Image
                   src="/images/icon-email.png"
                   alt="Email"
+                  width={500}
+                  height={500}
                   className="w-6 h-6"
                 />
               </Link>
               <Link href="#" aria-label="Facebook">
-                <img
+                <Image
                   src="/images/icon-fb.png"
                   alt="Facebook"
+                  width={500}
+                  height={500}
                   className="w-6 h-6"
                 />
               </Link>
               <Link href="#" aria-label="Instagram">
-                <img
+                <Image
                   src="/images/icon-insta.png"
                   alt="Instagram"
+                  width={500}
+                  height={500}
                   className="w-6 h-6"
                 />
               </Link>
             </div>
           </div>
           <div className="mt-8 md:mt-0 md:ml-8 max-w-xl w-full">
-            <h2 className="text-xl sm:text-2xl font-semibold mb-2">Which project are you interested in?</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold mb-2">
+              Which project are you interested in?
+            </h2>
             <form className="flex flex-col">
               <label className="sr-only" htmlFor="project">
                 Select Project
               </label>
               <select
                 id="project"
-                className="bg-gray-700 text-white p-2 rounded placeholder-white font-light"
+                className="bg-[#344630] text-white p-2 rounded placeholder-white font-light"
               >
                 <option>Select Project</option>
                 <option>Select Project</option>
@@ -116,7 +129,7 @@ const Footer: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="bg-green-800 text-white p-2 rounded mt-4"
+                className="bg-[#344630] text-white p-2 rounded mt-4"
               >
                 Submit
               </button>
@@ -130,6 +143,8 @@ const Footer: React.FC = () => {
             src="/images/ayalaland-logo.png"
             width={500}
             height={500}
+            quality={75} // Reduced quality for optimization
+            loading="lazy"
             alt="footer-logo"
             className="max-w-[200px] w-full mx-auto"
           />
