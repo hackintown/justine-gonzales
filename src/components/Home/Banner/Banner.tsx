@@ -1,157 +1,62 @@
-"use client";
+import SocialIcons from "@/components/ui/Icons/SocialIcons";
+import Navbar from "@/components/ui/Navbar/Navbar";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { IoLocationOutline } from "react-icons/io5";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import axios from "axios";
-import { useRouter } from "next/navigation";
-const Banner = () => {
-  const [location, setLocation] = useState<string>("Fetching location...");
-  const router = useRouter();
+import React from "react";
 
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { latitude, longitude } = position.coords;
-          try {
-            const response = await axios.get(
-              `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${process.env.NEXT_PUBLIC_OPENCAGE_API_KEY}`
-            );
-
-            const locationName = response.data.results[0].formatted;
-            setLocation(locationName);
-          } catch (error) {
-            console.error("Error fetching location:", error);
-            setLocation("Unable to fetch location");
-          }
-        },
-        (error) => {
-          console.error("Error getting geolocation:", error);
-          setLocation("Location access denied");
-        }
-      );
-    } else {
-      setLocation("Geolocation is not supported by this browser.");
-    }
-  }, []);
-
-  // Slick slider settings
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000, // Adjust autoplay speed (in milliseconds)
-  };
-
-  const handleInquiryClick = () => {
-    router.push("/#inquiry-form");
-  };
+const Banner: React.FC = () => {
   return (
-    <section className="relative">
-      <div
-        className="p-4 h-full w-full shadow-xl rounded-lg bg-glass-gradient backdrop-glass"
-        style={{
-          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-          WebkitBackdropFilter: "blur(1.5px)",
-          borderRadius: "10px",
-          border: "1px solid rgba(255, 255, 255, 0.18)",
-        }}
-      >
-        <div className="relative">
-          <Slider {...sliderSettings} className="rounded-lg overflow-hidden">
-            <div className="rounded-xl max-h-[350px] h-full overflow-hidden">
-              <Image
-                src="/images/anvaya-bg.jpg"
-                height={500}
-                width={500}
-                layout="responsive"
-                quality={75} // Adjust image quality for optimization
-                priority={true} // Load the first image eagerly
-                alt="Anvaya Cove Background 1"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden">
-              <Image
-                src="/images/ANV-Golf-Pavilion-2.jpg"
-                height={500}
-                width={500}
-                layout="responsive"
-                quality={75} // Adjust image quality for optimization
-                priority={true} // Load the first image eagerly
-                alt="Anvaya Cove Background 2"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden">
-              <Image
-                src="/images/ANV-Golf-Pavilion-3.jpg"
-                height={500}
-                width={500}
-                layout="responsive"
-                quality={75} // Adjust image quality for optimization
-                priority={true} // Load the first image eagerly
-                alt="Anvaya Cove Background 3"
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="rounded-xl overflow-hidden">
-              <Image
-                src="/images/ANV-Golf-Pavilion-4.jpg"
-                height={500}
-                width={500}
-                layout="responsive"
-                quality={75} // Adjust image quality for optimization
-                priority={true} // Load the first image eagerly
-                alt="Anvaya Cove Background 3"
-                className="w-full h-auto"
-              />
-            </div>
-          </Slider>
-          <div className="absolute top-1/2 right-2 transform -translate-y-1/2 max-w-[50px] w-full">
-            <Image
-              src="/images/mbl-next-icon.png"
-              height={500}
-              width={500}
-              alt="Next Icon"
-              className="w-full h-auto"
-            />
-          </div> 
-          <div className="absolute top-7 right-3 transform -translate-y-1/2 max-w-[85px] w-full">
-            <Image
-              src="/images/anvaya-logo.png"
-              height={500}
-              width={500}
-              alt="Next Icon"
-              className="w-full h-auto"
-            />
+    <section className="relative h-[600px] w-full">
+      {/* Background Image */}
+      <Image
+        src="/images/main-hero-bg.webp" // Verify this path
+        alt="Real Estate"
+        layout="fill"
+        objectFit="cover"
+        quality={100} // Lower quality setting to reduce file size
+        className="z-0"
+        priority
+        // Ensures the image covers the full width of the viewport
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50 z-10" />
+      {/* Adjust opacity if needed */}
+      {/* Navbar */}
+      <div className="absolute top-0 left-0 w-full z-20">
+        <div className="container mt-10 sm:mt-12 md:mt-16">
+          <Navbar />
+          <div className="mt-36">
+            <h1 className="font-light text-5xl text-white font-serif">
+              For Keeps
+            </h1>
           </div>
         </div>
-        <p className="flex items-center space-x-2 border-2 mt-6 mb-2 border-white px-2 py-2 rounded-xl">
-          <IoLocationOutline className="text-white size-5" />
-          <input
-            type="text"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            className="bg-transparent text-white font-light outline-none w-full"
-          />
-        </p>
-        <h1 className="text-4xl font-bold text-white">Anvaya Cove</h1>
-        <button className="max-w-[165px] mt-3" onClick={handleInquiryClick}>
-          <Image
-            src="/images/inquire-btn.png"
-            width={500}
-            height={500}
-            alt="inquire-button"
-            className="w-full"
-          />
-        </button>
+      </div>
+      <div className="absolute w-full bottom-0 py-6 sm:py-8 backdrop-blur-sm z-10">
+        <div className="flex items-center gap-x-8  container">
+          <div className="hidden md:block relative w-full max-w-[250px]">
+            <Image
+              src="/images/ayalaland-logo.png" // Ensure this path is correct
+              alt="Ayala Land Premier"
+              width={500}
+              height={500}
+              className="z-10" // Ensure z-index is correctly applied
+            />
+          </div>
+          <p className="text-xs sm:text-sm text-white font-light">
+            <span className="font-bold">Ayala Land</span> transformed the
+            Philippine landscape with the nation&apos;s premier business
+            district over five decades ago. As the largest, most experienced,
+            and most trusted company in its field, Ayala Land leads the
+            burgeoning real estate industry in the Philippines with prime
+            residential and commercial developments.
+            <span className="font-bold">Ayala Land Premier</span> carries the
+            heritage of Ayala Land.
+          </p>
+        </div>
+      </div>
+      {/* Social Icons */}
+      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-gradient-to-b from-[rgba(42,43,14,0.5)] via-[rgba(59,60,20,0.5)] to-[rgba(42,43,14,0.5)] rounded-lg z-20">
+        <SocialIcons />
       </div>
     </section>
   );

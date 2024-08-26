@@ -20,7 +20,7 @@ const About: React.FC = () => {
           </button>
         </div>
 
-        <p className="text-white text-sm font-light leading-normal">
+        <p className="text-white text-sm md:text-xs lg:text-sm font-light leading-normal">
           Extending growth and dynamism in the South, a thriving estate spurs
           active and living wellness with distinct recreation and lifestyle
           destinations, interconnected verdant parks, and outdoor retail spaces.

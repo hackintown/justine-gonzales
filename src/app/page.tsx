@@ -1,8 +1,8 @@
-import Banner from "@/components/Ayalaland/Banner/Banner";
-import FeaturedProject from "@/components/Ayalaland/Features/FeaturedProject";
-import Footer from "@/components/Ayalaland/Footer/Footer";
-import Info from "@/components/Ayalaland/Info/Info";
-import Services from "@/components/Ayalaland/Services/Services";
+import Banner from "@/components/Home/Banner/Banner";
+import FeaturedProject from "@/components/Home/Features/FeaturedProject";
+import Footer from "@/components/Home/Footer/Footer";
+import Info from "@/components/Home/Info/Info";
+import Services from "@/components/Home/Services/Services";
 
 export default function Home() {
   return (
