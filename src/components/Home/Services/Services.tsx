@@ -21,10 +21,32 @@ const Services: React.FC = () => {
     { image: "/images/rc-4.png" },
     { image: "/images/rc-5.png" },
   ];
+  const officeSpaces = [
+    { image: "/images/rl-1.png" },
+    { image: "/images/rl-2.png" },
+    { image: "/images/rl-3.png" },
+    { image: "/images/rl-4.png" },
+    { image: "/images/rl-5.png" },
+  ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const leisureRecreation = [
+    { image: "/images/rc-1.png" },
+    { image: "/images/rc-2.png" },
+    { image: "/images/rc-3.png" },
+    { image: "/images/rc-4.png" },
+    { image: "/images/rc-5.png" },
+  ];
 
-  const settings = {
+  // Separate state variables for each slider
+  const [currentSlideLots, setCurrentSlideLots] = useState(0);
+  const [currentSlideCondos, setCurrentSlideCondos] = useState(0);
+  const [currentSlideOffice, setCurrentSlideOffice] = useState(0);
+  const [currentSlideLeisure, setCurrentSlideLeisure] = useState(0);
+
+  const settings = (
+    currentSlide: number,
+    setCurrentSlide: (slide: number) => void
+  ) => ({
     dots: false,
     infinite: false,
     speed: 500,
@@ -35,34 +57,38 @@ const Services: React.FC = () => {
       { breakpoint: 768, settings: { slidesToShow: 3 } },
       { breakpoint: 480, settings: { slidesToShow: 2 } },
     ],
-    beforeChange: (current: number, next: number) => setCurrentSlide(next),
-  };
+    beforeChange: (current: number, next: number) => setCurrentSlideLots(next),
+  });
 
-  const CustomPrevArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      currentSlide > 0 && (
-        <div className="custom-slick-prev" onClick={onClick} />
-      )
-    );
-  };
+  const CustomPrevArrow = ({
+    onClick,
+    currentSlide,
+  }: {
+    onClick?: () => void;
+    currentSlide: number;
+  }) =>
+    currentSlide > 0 && <div className="custom-slick-prev" onClick={onClick} />;
 
-  const CustomNextArrow = (props: any) => {
-    const { onClick } = props;
-    return (
-      currentSlide < residentialLots.length - 3 && (
-        <div className="custom-slick-next" onClick={onClick} />
-      )
+  const CustomNextArrow = ({
+    onClick,
+    currentSlide,
+    slideCount,
+  }: {
+    onClick?: () => void;
+    currentSlide: number;
+    slideCount: number;
+  }) =>
+    currentSlide < slideCount - 4 && (
+      <div className="custom-slick-next" onClick={onClick} />
     );
-  };
 
   return (
     <section className="relative bg-gray-50 py-12">
       <Image
         src="/images/residential-sec-bg.png"
         alt="Real Estate"
-        layout="fill"
-        objectFit="cover"
+        fill
+        
         quality={75}
         priority
         className="z-0"
@@ -86,9 +112,14 @@ const Services: React.FC = () => {
           />
         </div>
         <Slider
-          {...settings}
-          prevArrow={<CustomPrevArrow />}
-          nextArrow={<CustomNextArrow />}
+          {...settings(currentSlideLots, setCurrentSlideLots)}
+          prevArrow={<CustomPrevArrow currentSlide={currentSlideLots} />}
+          nextArrow={
+            <CustomNextArrow
+              currentSlide={currentSlideLots}
+              slideCount={residentialLots.length}
+            />
+          }
           className="relative w-full"
         >
           {residentialLots.map((item, index) => (
@@ -123,9 +154,14 @@ const Services: React.FC = () => {
           />
         </div>
         <Slider
-          {...settings}
-          prevArrow={<CustomPrevArrow />}
-          nextArrow={<CustomNextArrow />}
+          {...settings(currentSlideCondos, setCurrentSlideCondos)}
+          prevArrow={<CustomPrevArrow currentSlide={currentSlideCondos} />}
+          nextArrow={
+            <CustomNextArrow
+              currentSlide={currentSlideCondos}
+              slideCount={residentialCondominiums.length}
+            />
+          }
           className="relative w-full"
         >
           {residentialCondominiums.map((item, index) => (
@@ -135,8 +171,8 @@ const Services: React.FC = () => {
                 alt="resident-lots-image"
                 width={320}
                 height={240}
-                quality={75}  // Reduced quality for optimization
-                loading="lazy"  // Lazy load images
+                quality={75} // Reduced quality for optimization
+                loading="lazy" // Lazy load images
                 className="rounded-lg shadow-md"
               />
             </div>
@@ -162,12 +198,17 @@ const Services: React.FC = () => {
           />
         </div>
         <Slider
-          {...settings}
-          prevArrow={<CustomPrevArrow />}
-          nextArrow={<CustomNextArrow />}
+          {...settings(currentSlideOffice, setCurrentSlideOffice)}
+          prevArrow={<CustomPrevArrow currentSlide={currentSlideOffice} />}
+          nextArrow={
+            <CustomNextArrow
+              currentSlide={currentSlideOffice}
+              slideCount={officeSpaces.length}
+            />
+          }
           className="relative w-full"
         >
-          {residentialLots.map((item, index) => (
+          {officeSpaces.map((item, index) => (
             <div key={index} className="px-2 outline-none">
               <Image
                 src={item.image}
@@ -199,20 +240,25 @@ const Services: React.FC = () => {
           />
         </div>
         <Slider
-          {...settings}
-          prevArrow={<CustomPrevArrow />}
-          nextArrow={<CustomNextArrow />}
+          {...settings(currentSlideLeisure, setCurrentSlideLeisure)}
+          prevArrow={<CustomPrevArrow currentSlide={currentSlideLeisure} />}
+          nextArrow={
+            <CustomNextArrow
+              currentSlide={currentSlideLeisure}
+              slideCount={leisureRecreation.length}
+            />
+          }
           className="relative w-full"
         >
-          {residentialLots.map((item, index) => (
+          {leisureRecreation.map((item, index) => (
             <div key={index} className="px-2 outline-none">
               <Image
                 src={item.image}
                 alt="resident-lots-image"
                 width={320}
                 height={240}
-                quality={75}  // Reduced quality for optimization
-                loading="lazy"  // Lazy load images
+                quality={75} // Reduced quality for optimization
+                loading="lazy" // Lazy load images
                 className="rounded-lg shadow-md"
               />
             </div>

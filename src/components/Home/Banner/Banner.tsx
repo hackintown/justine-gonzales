@@ -10,8 +10,8 @@ const Banner: React.FC = () => {
       <Image
         src="/images/main-hero-bg.webp" // Verify this path
         alt="Real Estate"
-        layout="fill"
-        objectFit="cover"
+        fill
+        
         quality={100} // Lower quality setting to reduce file size
         className="z-0"
         priority

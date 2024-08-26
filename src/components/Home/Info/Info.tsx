@@ -8,8 +8,8 @@ const Info = () => {
       <Image
         src="/images/ayaland-sec-bg.png" // Ensure this path is correct
         alt="Ayala Land Premier"
-        layout="fill"
-        objectFit="cover"
+        fill
+        
         quality={100}
         className="z-0"
       />

@@ -6,8 +6,8 @@ const FeaturedProject = () => {
       <Image
         src="/images/featured-sec-bg.png"
         alt="Anvaya Cove"
-        layout="fill"
-        objectFit="cover"
+        fill
+        
         className=""
         priority
       />
@@ -30,8 +30,8 @@ const FeaturedProject = () => {
             <Image
               src="/images/anvaya-cove-bg.jpg"
               alt="Anvaya Cove"
-              layout="fill"
-              objectFit="cover"
+              fill
+              
               className=""
               priority
             />
@@ -51,7 +51,7 @@ const FeaturedProject = () => {
               </p>
             </div>
           </div>
-          <div className="absolute bottom-4 lg:bottom-11 z-50 right-6 flex flex-col items-end text-white">
+          <div className="absolute bottom-4 lg:bottom-11 z-10 right-6 flex flex-col items-end text-white">
             <h2 className="text-3xl font-bold mb-1 lg:text-5xl">Anvaya Cove</h2>
             <p className="text-[0.5rem] sm:text-xs  sm:max-w-lg max-w-md w-full text-right mb-2">
               Presenting the excitement of a seaside resort and the tranquility
@@ -76,8 +76,8 @@ const FeaturedProject = () => {
             <Image
               src="/images/miravera-hillestate.jpg"
               alt="Anvaya Cove"
-              layout="fill"
-              objectFit="cover"
+              fill
+              
               className=""
               priority
             />
@@ -95,7 +95,7 @@ const FeaturedProject = () => {
               </p>
             </div>
           </div>
-          <div className="absolute bottom-4 lg:bottom-11 z-50 right-6 flex flex-col items-end text-white">
+          <div className="absolute bottom-4 lg:bottom-11 z-10 right-6 flex flex-col items-end text-white">
             <h2 className="text-3xl font-bold mb-1 lg:text-5xl">
               Miravera Altaraza
             </h2>
@@ -123,8 +123,8 @@ const FeaturedProject = () => {
             <Image
               src="/images/azuela-cove.jpg"
               alt="Anvaya Cove"
-              layout="fill"
-              objectFit="cover"
+              fill
+              
               quality={75}
               className=""
               priority
@@ -145,7 +145,7 @@ const FeaturedProject = () => {
               </p>
             </div>
           </div>
-          <div className="absolute bottom-4 lg:bottom-11 z-50 right-6 flex flex-col items-end text-white">
+          <div className="absolute bottom-4 lg:bottom-11 z-10 right-6 flex flex-col items-end text-white">
             <h2 className="text-3xl font-bold mb-1 text-right lg:text-5xl leading-[1.0]">
               The Residence at Azuela Cove
             </h2>
