@@ -8,14 +8,14 @@ const Banner: React.FC = () => {
     <section className="relative h-[600px] w-full">
       {/* Background Image */}
       <Image
-        src="/images/main-hero-bg.jpg" // Verify this path
+        src="/images/main-hero-bg.webp" // Verify this path
         alt="Real Estate"
         layout="fill"
         objectFit="cover"
-        quality={75} // Lower quality setting to reduce file size
+        quality={100} // Lower quality setting to reduce file size
         className="z-0"
         priority
-        sizes="100vw" // Ensures the image covers the full width of the viewport
+        // Ensures the image covers the full width of the viewport
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50 z-10" />
@@ -55,7 +55,7 @@ const Banner: React.FC = () => {
         </div>
       </div>
       {/* Social Icons */}
-      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-gradient-to-b from-[rgba(42,43,14,0.5)] via-[rgba(59,60,20,0.5)] to-[rgba(42,43,14,0.5)] rounded-lg z-10">
+      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-gradient-to-b from-[rgba(42,43,14,0.5)] via-[rgba(59,60,20,0.5)] to-[rgba(42,43,14,0.5)] rounded-lg z-20">
         <SocialIcons />
       </div>
     </section>

@@ -34,13 +34,13 @@ const Navbar = () => {
             HOME
           </Link>
           <Link
-            href="/ayalaland"
+            href="/anvaya"
             className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
           >
             RESIDENTIAL LOTS
           </Link>
           <Link
-            href="/ayalaland"
+            href="/anvaya"
             className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
           >
             CONDOMINIUMS
