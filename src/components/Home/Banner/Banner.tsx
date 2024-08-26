@@ -50,7 +50,7 @@ const Banner = () => {
   };
 
   const handleInquiryClick = () => {
-    router.push("/ayalaland#inquiry-form");
+    router.push("/#inquiry-form");
   };
   return (
     <section className="relative">

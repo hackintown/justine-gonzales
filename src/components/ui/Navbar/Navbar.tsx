@@ -97,7 +97,7 @@ const Navbar = () => {
             HOME
           </Link>
           <Link
-            href="/ayalaland"
+            href="/anvaya"
             className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
             onClick={toggleMenu}
           >

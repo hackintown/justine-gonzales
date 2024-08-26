@@ -5,7 +5,7 @@ import React from "react";
 
 const ayalaland = () => {
   return (
-    <main className="relative h-screen">
+    <main className="relative h-100vh">
       {/* Background Image */}
       <div
         style={{

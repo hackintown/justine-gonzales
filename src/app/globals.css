@@ -16,6 +16,9 @@
 }
 
 /* Custom Slick Arrows */
+.custom-slick-prev {
+  top: 35% !important;
+}
 .custom-slick-prev,
 .custom-slick-next {
   position: absolute;
@@ -30,13 +33,13 @@
 }
 
 .custom-slick-prev {
-  left: -22px; /* Adjust position as needed */
+  left: -12px; /* Adjust position as needed */
   background-image: url("/images/gray-next-arrow.png"); /* Custom previous arrow image */
   transform: rotate(180deg);
 }
 
 .custom-slick-next {
-  right: -22px; /* Adjust position as needed */
+  right: -12px; /* Adjust position as needed */
   background-image: url("/images/gray-next-arrow.png"); /* Custom next arrow image */
 }
 
