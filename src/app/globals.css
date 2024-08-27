@@ -34,13 +34,13 @@
 
 .custom-slick-prev {
   left: -12px; /* Adjust position as needed */
-  background-image: url("/images/gray-next-arrow.png"); /* Custom previous arrow image */
+  background-image: url("/images/gray-next-arrow.webp"); /* Custom previous arrow image */
   transform: rotate(180deg);
 }
 
 .custom-slick-next {
   right: -12px; /* Adjust position as needed */
-  background-image: url("/images/gray-next-arrow.png"); /* Custom next arrow image */
+  background-image: url("/images/gray-next-arrow.webp"); /* Custom next arrow image */
 }
 
 .clip-path-custom {

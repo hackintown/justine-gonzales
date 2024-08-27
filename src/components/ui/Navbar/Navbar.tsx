@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative w-full text-white px-4 py-4 mb-8 mx-auto rounded-xl bg-gradient-navbar shadow-lg">
+    <nav className="relative w-full text-white px-4 py-4 mb-8 mx-auto rounded-xl bg-black bg-opacity-80 shadow-lg">
       {/* Navbar Content */}
       <div className="relative flex justify-between items-center max-w-7xl mx-auto z-10">
         <div className="text-lg font-bold">
@@ -79,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-gradient-navbar transform ${
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-500 ease-in-out z-50`}
       >

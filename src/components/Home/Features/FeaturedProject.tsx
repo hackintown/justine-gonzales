@@ -4,7 +4,7 @@ const FeaturedProject = () => {
   return (
     <section className="relative w-full">
       <Image
-        src="/images/featured-sec-bg.png"
+        src="/images/featured-sec-bg.webp"
         alt="Anvaya Cove"
         fill
         
@@ -28,7 +28,7 @@ const FeaturedProject = () => {
           <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
           <div className="absolute w-full h-full clip-path-custom z-0">
             <Image
-              src="/images/anvaya-cove-bg.jpg"
+              src="/images/anvaya-cove-bg.webp"
               alt="Anvaya Cove"
               fill
               
@@ -39,7 +39,7 @@ const FeaturedProject = () => {
           <div className="absolute top-8 right-8 z-10 max-w-[130px] w-full">
             <div className="relative">
               <Image
-                src="/images/location-frame.png"
+                src="/images/location-frame.webp"
                 width={500}
                 height={500}
                 quality={75} // Balanced quality for smaller file size
@@ -61,7 +61,7 @@ const FeaturedProject = () => {
             </p>
             <button className="max-w-[100px]">
               <Image
-                src="/images/learn-more-btn.png"
+                src="/images/learn-more-btn.webp"
                 width={500}
                 height={500}
                 alt="learn-more-btn"
@@ -74,7 +74,7 @@ const FeaturedProject = () => {
           <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
           <div className="absolute w-full h-full z-0">
             <Image
-              src="/images/miravera-hillestate.jpg"
+              src="/images/miravera-hillestate.webp"
               alt="Anvaya Cove"
               fill
               
@@ -85,7 +85,7 @@ const FeaturedProject = () => {
           <div className="absolute top-8 right-8 z-10 max-w-[130px] w-full">
             <div className="relative">
               <Image
-                src="/images/location-frame.png"
+                src="/images/location-frame.webp"
                 width={500}
                 height={500}
                 alt="location-frame"
@@ -106,7 +106,7 @@ const FeaturedProject = () => {
             </p>
             <button className="max-w-[100px]">
               <Image
-                src="/images/learn-more-btn.png"
+                src="/images/learn-more-btn.webp"
                 width={500}
                 height={500}
                 quality={75} // Reduced quality for optimization
@@ -121,7 +121,7 @@ const FeaturedProject = () => {
           <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
           <div className="absolute w-full h-full z-0">
             <Image
-              src="/images/azuela-cove.jpg"
+              src="/images/azuela-cove.webp"
               alt="Anvaya Cove"
               fill
               
@@ -133,7 +133,7 @@ const FeaturedProject = () => {
           <div className="absolute top-8 right-8 z-10 max-w-[130px] w-full">
             <div className="relative">
               <Image
-                src="/images/location-frame.png"
+                src="/images/location-frame.webp"
                 width={500}
                 height={500}
                 quality={75}
@@ -156,7 +156,7 @@ const FeaturedProject = () => {
             </p>
             <button className="max-w-[100px]">
               <Image
-                src="/images/learn-more-btn.png"
+                src="/images/learn-more-btn.webp"
                 width={500}
                 height={500}
                 quality={75}

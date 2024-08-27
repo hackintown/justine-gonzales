@@ -6,7 +6,7 @@ const Info = () => {
     <div className="relative w-full">
       {/* Background Image */}
       <Image
-        src="/images/ayaland-sec-bg.png" // Ensure this path is correct
+        src="/images/ayaland-sec-bg.webp" // Ensure this path is correct
         alt="Ayala Land Premier"
         fill
         
@@ -18,7 +18,7 @@ const Info = () => {
         <div className="text-center text-white px-4 flex flex-col items-center">
           <div className="relative max-w-[250px]">
             <Image
-              src="/images/ayalaland-logo.png" // Ensure this path is correct
+              src="/images/ayalaland-logo.webp" // Ensure this path is correct
               alt="Ayala Land Premier"
               width={500}
               height={500}

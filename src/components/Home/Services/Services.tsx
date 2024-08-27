@@ -7,34 +7,34 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Services: React.FC = () => {
   const residentialLots = [
-    { image: "/images/rl-1.png" },
-    { image: "/images/rl-2.png" },
-    { image: "/images/rl-3.png" },
-    { image: "/images/rl-4.png" },
-    { image: "/images/rl-5.png" },
+    { image: "/images/rl-1.webp" },
+    { image: "/images/rl-2.webp" },
+    { image: "/images/rl-3.webp" },
+    { image: "/images/rl-4.webp" },
+    { image: "/images/rl-5.webp" },
   ];
 
   const residentialCondominiums = [
-    { image: "/images/rc-1.png" },
-    { image: "/images/rc-2.png" },
-    { image: "/images/rc-3.png" },
-    { image: "/images/rc-4.png" },
-    { image: "/images/rc-5.png" },
+    { image: "/images/rc-1.webp" },
+    { image: "/images/rc-2.webp" },
+    { image: "/images/rc-3.webp" },
+    { image: "/images/rc-4.webp" },
+    { image: "/images/rc-5.webp" },
   ];
   const officeSpaces = [
-    { image: "/images/rl-1.png" },
-    { image: "/images/rl-2.png" },
-    { image: "/images/rl-3.png" },
-    { image: "/images/rl-4.png" },
-    { image: "/images/rl-5.png" },
+    { image: "/images/rl-1.webp" },
+    { image: "/images/rl-2.webp" },
+    { image: "/images/rl-3.webp" },
+    { image: "/images/rl-4.webp" },
+    { image: "/images/rl-5.webp" },
   ];
 
   const leisureRecreation = [
-    { image: "/images/rc-1.png" },
-    { image: "/images/rc-2.png" },
-    { image: "/images/rc-3.png" },
-    { image: "/images/rc-4.png" },
-    { image: "/images/rc-5.png" },
+    { image: "/images/rc-1.webp" },
+    { image: "/images/rc-2.webp" },
+    { image: "/images/rc-3.webp" },
+    { image: "/images/rc-4.webp" },
+    { image: "/images/rc-5.webp" },
   ];
 
   // Separate state variables for each slider
@@ -85,10 +85,9 @@ const Services: React.FC = () => {
   return (
     <section className="relative bg-gray-50 py-12">
       <Image
-        src="/images/residential-sec-bg.png"
+        src="/images/residential-sec-bg.webp"
         alt="Real Estate"
         fill
-        
         quality={75}
         priority
         className="z-0"
@@ -104,11 +103,11 @@ const Services: React.FC = () => {
             </p>
           </div>
           <Image
-            src="/images/alp-icon.png"
-            width={500}
-            height={500}
+            src="/images/alp-icon.webp"
+            width={45}
+            height={45}
             alt="ALP-Icon"
-            className="w-[40px] h-[40px]"
+            className="w-[45px] h-[45px]"
           />
         </div>
         <Slider
@@ -146,11 +145,11 @@ const Services: React.FC = () => {
             </p>
           </div>
           <Image
-            src="/images/alp-icon.png"
-            width={40}
-            height={40}
+            src="/images/alp-icon.webp"
+            width={45}
+            height={45}
             alt="ALP-Icon"
-            className="w-[40px] h-[40px]"
+            className="w-[45px] h-[45px]"
           />
         </div>
         <Slider
@@ -190,11 +189,11 @@ const Services: React.FC = () => {
             </p>
           </div>
           <Image
-            src="/images/alp-icon.png"
-            width={500}
-            height={500}
+            src="/images/alp-icon.webp"
+            width={45}
+            height={45}
             alt="ALP-Icon"
-            className="w-[40px] h-[40px]"
+            className="w-[45px] h-[45px]"
           />
         </div>
         <Slider
@@ -232,11 +231,11 @@ const Services: React.FC = () => {
             </p>
           </div>
           <Image
-            src="/images/alp-icon.png"
-            width={40}
-            height={40}
+            src="/images/alp-icon.webp"
+            width={45}
+            height={45}
             alt="ALP-Icon"
-            className="w-[40px] h-[40px]"
+            className="w-[45px] h-[45px]"
           />
         </div>
         <Slider

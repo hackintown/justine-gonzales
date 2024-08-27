@@ -1,13 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import iconInsta from "../../../../public/images/icon-insta.webp";
+import iconEmail from "../../../../public/images/icon-email.webp";
+import iconWhatsaap from "../../../../public/images/icon-whatsapp.webp";
+import iconCall from "../../../../public/images/icon-call.webp";
 
 const SocialIcons: React.FC = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center space-y-3 py-2 px-2 rounded-md">
       <Link href="https://www.facebook.com/alpjustine" passHref>
         <Image
-          src="/images/icon-fb.png"
+          src="/images/icon-fb.webp"
           width={28}
           height={28}
           alt="Facebook"
@@ -16,7 +20,7 @@ const SocialIcons: React.FC = () => {
       </Link>
       <Link href="https://www.instagram.com" passHref>
         <Image
-          src="/images/icon-insta.png"
+          src={iconInsta}
           width={28}
           height={28}
           alt="Instagram"
@@ -25,7 +29,7 @@ const SocialIcons: React.FC = () => {
       </Link>
       <Link href="mailto:gonzales.justine@ayalalandpremier.com" passHref>
         <Image
-          src="/images/icon-email.png"
+          src={iconEmail}
           width={28}
           height={28}
           alt="Email"
@@ -34,7 +38,7 @@ const SocialIcons: React.FC = () => {
       </Link>
       <Link href="https://wa.me/639171775588" passHref>
         <Image
-          src="/images/icon-whatsapp.png"
+          src={iconWhatsaap}
           width={28}
           height={28}
           alt="WhatsApp"
@@ -43,7 +47,7 @@ const SocialIcons: React.FC = () => {
       </Link>
       <Link href="tel:+639171775588" passHref>
         <Image
-          src="/images/icon-call.png"
+          src={iconCall}
           width={28}
           height={28}
           alt="Call"

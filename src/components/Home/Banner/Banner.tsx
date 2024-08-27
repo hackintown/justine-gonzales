@@ -17,16 +17,25 @@ const Banner: React.FC = () => {
         // Ensures the image covers the full width of the viewport
       />
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50 z-10" />
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent
+       to-black/50 lg:bg-gradient-to-l lg:from-transparent lg:via-transparent
+        lg:to-black/50 z-10
+        before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t lg:before:from-black/30
+        "
+      />
       {/* Adjust opacity if needed */}
       {/* Navbar */}
       <div className="absolute top-0 left-0 w-full z-20">
         <div className="container mt-10 sm:mt-12 md:mt-16">
           <Navbar />
           <div className="mt-36">
-            <h1 className="font-light text-5xl text-white font-serif">
-              For Keeps
-            </h1>
+            <Image
+              src="/images/for-keeps.webp"
+              width={500}
+              height={500}
+              alt="for-keeps"
+            />
           </div>
         </div>
       </div>
@@ -54,7 +63,7 @@ const Banner: React.FC = () => {
         </div>
       </div>
       {/* Social Icons */}
-      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-gradient-to-b from-[rgba(42,43,14,0.5)] via-[rgba(59,60,20,0.5)] to-[rgba(42,43,14,0.5)] rounded-lg z-20">
+      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-[#008000] bg-opacity-45 rounded-lg z-20">
         <SocialIcons />
       </div>
     </section>
