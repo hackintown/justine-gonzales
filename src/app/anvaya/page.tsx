@@ -5,8 +5,9 @@ import Navbar from "@/components/ui/Navbar/Navbar";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import Head from "next/head";
 
-const ayalaland = () => {
+const Ayalaland = () => {
   const [location, setLocation] = useState<string>("Fetching location...");
   const router = useRouter();
   useEffect(() => {
@@ -40,6 +41,9 @@ const ayalaland = () => {
   };
   return (
     <main className="relative min-h-screen">
+      <Head>
+        <link rel="preload" href="/images/homepage-banner-bg.webp" as="image" />
+      </Head>
       {/* Background Image */}
       <div
         style={{
@@ -75,4 +79,4 @@ const ayalaland = () => {
   );
 };
 
-export default ayalaland;
+export default Ayalaland;

@@ -1,21 +1,48 @@
+"use client"
 import SocialIcons from "@/components/ui/Icons/SocialIcons";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import Image from "next/image";
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+const images = [
+  "/images/main-hero-bg.webp",
+  "/images/hp-slide2.webp",
+  "/images/hp-slide3.webp",
+];
 const Banner: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="relative h-[600px] lg:h-[650] xl:h-[700px] w-full">
-      {/* Background Image */}
-      <Image
-        src="/images/main-hero-bg.webp" // Verify this path
-        alt="Real Estate"
-        fill
-        quality={100} // Lower quality setting to reduce file size
-        className="z-0 object-cover"
-        priority
-        // Ensures the image covers the full width of the viewport
-      />
+      {/* Background Image Slider */}
+      <AnimatePresence>
+        <motion.div
+          key={currentImageIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={images[currentImageIndex]}
+            alt="Real Estate"
+            fill
+            quality={100}
+            className="z-0 object-cover"
+            priority
+          />
+        </motion.div>
+      </AnimatePresence>
       {/* Overlay */}
       <div
         className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent
@@ -43,7 +70,7 @@ const Banner: React.FC = () => {
         <div className="flex items-center gap-x-8  container">
           <div className="hidden md:block relative w-full max-w-[250px]">
             <Image
-              src="/images/ayalaland-logo.png" // Ensure this path is correct
+              src="/images/ayalaland-logo.webp" // Ensure this path is correct
               alt="Ayala Land Premier"
               width={500}
               height={500}

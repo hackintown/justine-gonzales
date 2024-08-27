@@ -1,14 +1,19 @@
 "use client";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleSubmenu = (menu) => {
+    setExpandedMenu(expandedMenu === menu ? null : menu);
   };
 
   return (
@@ -35,28 +40,77 @@ const Navbar = () => {
           </Link>
           <Link
             href="/anvaya"
-            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200 relative group"
           >
             RESIDENTIAL LOTS
           </Link>
-          <Link
-            href="/anvaya"
-            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
-          >
-            CONDOMINIUMS
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
-          >
-            OFFICE
-          </Link>
-          <Link
-            href="/"
-            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
-          >
-            LEISURE
-          </Link>
+          <div className="relative group">
+            <Link
+              href="/anvaya"
+              className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+            >
+              CONDOMINIUMS
+            </Link>
+            <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <Link
+                href="/condominiums/type1"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
+              >
+                Arbor Lanes
+              </Link>
+              <Link
+                href="/condominiums/type2"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                Gardencourt Residences
+              </Link>
+              <Link
+                href="/condominiums/type2"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                Parklinks North Tower
+              </Link>
+              <Link
+                href="/condominiums/type2"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                The Residences at Azuela Cove
+              </Link>
+            </div>
+          </div>
+          <div className="relative group">
+            <Link
+              href="/"
+              className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+            >
+              OFFICE
+            </Link>
+            <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <Link
+                href="/office/type1"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
+              >
+                One Vertis Plaza
+              </Link>
+            </div>
+          </div>
+          <div className="relative group">
+            <Link
+              href="/"
+              className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+            >
+              LEISURE
+            </Link>
+            <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <Link
+                href="/office/type1"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
+              >
+                Anvaya Cove
+              </Link>
+            </div>
+          </div>
+
           <Link
             href="/"
             className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
@@ -67,7 +121,7 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <Link
             href="/"
-            className="text-sm font-medium mx-2  hover:text-gray-300 transition-colors duration-200"
+            className="text-sm font-medium mx-2 hover:text-gray-300 transition-colors duration-200"
           >
             CONTACT
           </Link>
@@ -83,12 +137,12 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-500 ease-in-out z-50`}
       >
-        <div className="flex justify-end p-4">
+        <div className="flex justify-end px-4 py-2">
           <button onClick={toggleMenu}>
             <FaTimes className="h-6 w-6 text-white" />
           </button>
         </div>
-        <div className="flex flex-col items-center mt-10 space-y-6">
+        <div className="flex flex-col px-8 mt-10 space-y-5">
           <Link
             href="/"
             className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
@@ -103,27 +157,101 @@ const Navbar = () => {
           >
             RESIDENTIAL LOTS
           </Link>
-          <Link
-            href="/"
-            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
-            onClick={toggleMenu}
-          >
-            CONDOMINIUMS
-          </Link>
-          <Link
-            href="/"
-            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
-            onClick={toggleMenu}
-          >
-            OFFICE
-          </Link>
-          <Link
-            href="/"
-            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
-            onClick={toggleMenu}
-          >
-            LEISURE
-          </Link>
+          <div className="w-full">
+            <button
+              onClick={() => toggleSubmenu("condominium")}
+              className="w-full flex items-center gap-x-2 text-lg font-medium hover:text-gray-300 transition-colors duration-200 py-2"
+            >
+              CONDOMINIUMS
+              <FaChevronDown
+                className={`transition-transform duration-300 ${
+                  expandedMenu === "condominium" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {expandedMenu === "condominium" && (
+              <div className="flex flex-col space-y-2 pl-4 mt-2">
+                <Link
+                  href="/condominiums/type1"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Arbor Lanes
+                </Link>
+                <Link
+                  href="/condominiums/type2"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Gardencourt Residences
+                </Link>
+                <Link
+                  href="/condominiums/type2"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Parklinks North Tower
+                </Link>
+                <Link
+                  href="/condominiums/type2"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  The Residences at Azuela Cove
+                </Link>
+              </div>
+            )}
+          </div>
+          <div className="w-full">
+            <button
+              onClick={() => toggleSubmenu("office")}
+              className="w-full flex items-center gap-x-2 text-lg font-medium hover:text-gray-300 transition-colors duration-200  py-2"
+            >
+              OFFICE
+              <FaChevronDown
+                className={`transition-transform duration-300 ${
+                  expandedMenu === "office" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {expandedMenu === "office" && (
+              <div className="flex flex-col space-y-2 pl-4 mt-2">
+                <Link
+                  href="/office/type1"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  One Vertis Plaza
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <div className="w-full">
+            <button
+              onClick={() => toggleSubmenu("leisure")}
+              className="w-full flex items-center gap-x-2 text-lg font-medium hover:text-gray-300 transition-colors duration-200  py-2"
+            >
+              LEISURE
+              <FaChevronDown
+                className={`transition-transform duration-300 ${
+                  expandedMenu === "leisure" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {expandedMenu === "leisure" && (
+              <div className="flex flex-col space-y-2 pl-4 mt-2">
+                <Link
+                  href="/leisure/type1"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Anvaya Cove
+                </Link>
+              </div>
+            )}
+          </div>
+
           <Link
             href="/"
             className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
