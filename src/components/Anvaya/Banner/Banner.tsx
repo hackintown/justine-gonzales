@@ -70,7 +70,7 @@ const Banner = () => {
                 src="/images/anvaya-bg.jpg"
                 height={500}
                 width={500}
-                layout="responsive"
+                
                 quality={75} // Adjust image quality for optimization
                 priority={true} // Load the first image eagerly
                 alt="Anvaya Cove Background 1"
@@ -82,7 +82,7 @@ const Banner = () => {
                 src="/images/ANV-Golf-Pavilion-2.jpg"
                 height={500}
                 width={500}
-                layout="responsive"
+                
                 quality={75} // Adjust image quality for optimization
                 priority={true} // Load the first image eagerly
                 alt="Anvaya Cove Background 2"
@@ -94,7 +94,7 @@ const Banner = () => {
                 src="/images/ANV-Golf-Pavilion-3.jpg"
                 height={500}
                 width={500}
-                layout="responsive"
+                
                 quality={75} // Adjust image quality for optimization
                 priority={true} // Load the first image eagerly
                 alt="Anvaya Cove Background 3"
@@ -106,7 +106,7 @@ const Banner = () => {
                 src="/images/ANV-Golf-Pavilion-4.jpg"
                 height={500}
                 width={500}
-                layout="responsive"
+                
                 quality={75} // Adjust image quality for optimization
                 priority={true} // Load the first image eagerly
                 alt="Anvaya Cove Background 3"

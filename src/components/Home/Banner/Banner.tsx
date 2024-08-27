@@ -5,15 +5,14 @@ import React from "react";
 
 const Banner: React.FC = () => {
   return (
-    <section className="relative h-[600px] w-full">
+    <section className="relative h-[600px] lg:h-[650] xl:h-[700px] w-full">
       {/* Background Image */}
       <Image
         src="/images/main-hero-bg.webp" // Verify this path
         alt="Real Estate"
         fill
-        
         quality={100} // Lower quality setting to reduce file size
-        className="z-0"
+        className="z-0 object-cover"
         priority
         // Ensures the image covers the full width of the viewport
       />
