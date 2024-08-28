@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import SocialIcons from "@/components/ui/Icons/SocialIcons";
 import Navbar from "@/components/ui/Navbar/Navbar";
 import Image from "next/image";
@@ -22,51 +22,57 @@ const Banner: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative h-[600px] lg:h-[650] xl:h-[700px] w-full">
+    <section className="relative h-[600px] lg:h-[650] xl:h-[700px] w-full bg-black">
       {/* Background Image Slider */}
-      <AnimatePresence>
-        <motion.div
-          key={currentImageIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={images[currentImageIndex]}
-            alt="Real Estate"
-            fill
-            quality={100}
-            className="z-0 object-cover"
-            priority
-          />
-        </motion.div>
-      </AnimatePresence>
+      {/* Background Image Slider */}
+      <div className="absolute inset-0">
+        {images.map((image, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: currentImageIndex === index ? 1 : 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className={`absolute inset-0 ${
+              currentImageIndex === index ? "z-10" : "z-0"
+            }`}
+          >
+            <Image
+              src={image}
+              alt="Real Estate"
+              fill
+              quality={100}
+              className="object-cover"
+              priority={index === 0} // Ensure the first image is loaded with priority
+            />
+          </motion.div>
+        ))}
+      </div>
       {/* Overlay */}
       <div
         className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent
        to-black/50 lg:bg-gradient-to-l lg:from-transparent lg:via-transparent
-        lg:to-black/50 z-10
-        before:absolute before:inset-x-0 before:bottom-0 before:h-1/3 before:bg-gradient-to-t lg:before:from-black/30
+        lg:to-black/50 z-20
+        lg:before:absolute lg:before:inset-x-0 lg:before:bottom-0 lg:before:h-1/3 lg:before:bg-gradient-to-t lg:before:from-black/30
         "
       />
       {/* Adjust opacity if needed */}
       {/* Navbar */}
-      <div className="absolute top-0 left-0 w-full z-20">
+      <div className="absolute top-0 left-0 w-full z-40">
         <div className="container mt-10 sm:mt-12 md:mt-16">
           <Navbar />
-          <div className="mt-36">
+          <div className="mt-36 md:mt-20 lg:mt-28">
             <Image
               src="/images/for-keeps.webp"
               width={500}
               height={500}
               alt="for-keeps"
+              className="w-44 sm:w-52 md:w-80 lg:w-96 xl:w-2/6"
             />
           </div>
         </div>
       </div>
-      <div className="absolute w-full bottom-0 py-6 sm:py-8 backdrop-blur-sm z-10">
+      <div className="absolute w-full bottom-0 py-6 sm:py-8 backdrop-blur-sm z-20">
         <div className="flex items-center gap-x-8  container">
           <div className="hidden md:block relative w-full max-w-[250px]">
             <Image

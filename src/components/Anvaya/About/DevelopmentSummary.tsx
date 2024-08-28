@@ -4,7 +4,7 @@ import SocialIcons from "../../ui/Icons/SocialIcons";
 const DevelopmentSummary: React.FC = () => {
   return (
     <div className="pt-5">
-      <h2 className="text-2xl font-bold mb-4 md:mb-2 text-white">
+      <h2 className="text-2xl lg:text-3xl font-bold mb-4 md:mb-2 text-white">
         Development Summary
       </h2>
       <div className="flex justify-between lg:justify-start lg:gap-x-8 ">

@@ -21,8 +21,11 @@ const About: React.FC<AboutProps> = ({
     <section className="md:grid md:grid-cols-[45%_1fr] md:items-center md:gap-3">
       <div className="hidden w-full md:block">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold text-white">Anvaya Cove</h1>
-          <button className="max-w-[110px]" onClick={handleInquiryClick}>
+          <h1 className="text-2xl lg:text-3xl font-bold text-white">Anvaya Cove</h1>
+          <button
+            className="max-w-[110px] lg:max-w-[130px]"
+            onClick={handleInquiryClick}
+          >
             <Image
               src={inquireBtn}
               width={500}
@@ -43,8 +46,8 @@ const About: React.FC<AboutProps> = ({
           />
         </p>
         <div className="flex justify-between items-center mb-3 md:mb-2">
-          <h2 className="text-2xl font-bold text-white">About</h2>
-          <button className="max-w-[110px]">
+          <h2 className="text-2xl lg:text-3xl font-bold text-white">About</h2>
+          <button className="max-w-[110px] lg:max-w-[140px]">
             <Image
               src={viewMapBtn}
               width={500}
@@ -54,7 +57,7 @@ const About: React.FC<AboutProps> = ({
             />
           </button>
         </div>
-        <p className="text-white text-sm md:text-xs lg:text-sm font-light leading-normal">
+        <p className="text-white text-sm md:text-xs lg:text-[0.8rem] xl:text-[0.9rem] font-light leading-normal lg:leading-[1.3]">
           Extending growth and dynamism in the South, a thriving estate spurs
           active and living wellness with distinct recreation and lifestyle
           destinations, interconnected verdant parks, and outdoor retail spaces.

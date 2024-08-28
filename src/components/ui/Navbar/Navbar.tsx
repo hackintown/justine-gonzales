@@ -6,13 +6,13 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedMenu, setExpandedMenu] = useState(null);
+  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleSubmenu = (menu) => {
+  const toggleSubmenu = (menu:string) => {
     setExpandedMenu(expandedMenu === menu ? null : menu);
   };
 
@@ -34,22 +34,23 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6">
           <Link
             href="/"
-            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+            className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200"
           >
             HOME
           </Link>
           <Link
             href="/anvaya"
-            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200 relative group"
+            className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 relative group"
           >
             RESIDENTIAL LOTS
           </Link>
           <div className="relative group">
             <Link
               href="/anvaya"
-              className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-1"
             >
               CONDOMINIUMS
+              <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
@@ -81,9 +82,10 @@ const Navbar = () => {
           <div className="relative group">
             <Link
               href="/"
-              className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-2"
             >
               OFFICE
+              <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
@@ -97,9 +99,10 @@ const Navbar = () => {
           <div className="relative group">
             <Link
               href="/"
-              className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-2"
             >
               LEISURE
+              <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
@@ -113,7 +116,7 @@ const Navbar = () => {
 
           <Link
             href="/"
-            className="text-sm font-medium hover:text-gray-300 transition-colors duration-200"
+            className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200"
           >
             CONTACT
           </Link>
@@ -133,7 +136,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black transform ${
+        className={`md:hidden fixed top-0 left-0 w-full h-screen z-50 bg-black transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-500 ease-in-out z-50`}
       >
