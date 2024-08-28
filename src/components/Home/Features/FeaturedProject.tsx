@@ -15,15 +15,15 @@ const FeaturedProject = () => {
       <div className="absolute top-0 left-0 inset-0 bg-black bg-opacity-20 z-10"></div>
       <div className="relative container mx-auto px-6 pt-8 pb-8">
         <div className="py-5 absolute left-5 lg:left-8 xl:left-10 top-2 sm:top-0 md:left-8 md:top-2">
-          <h1 className="text-white font-bold text-xl mb-1 leading-[1.0] sm:text-[2rem] lg:text-5xl">
+          <h1 className="text-white font-bold text-xl mb-1 leading-[1.0] sm:text-[2rem] lg:text-5xl xl:text-6xl">
             Featured
             <br /> <span className="ml-5 sm:ml-8">Projects</span>
           </h1>
-          <p className="text-white text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem]">
+          <p className="text-white text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem] xl:text-[0.8rem]">
             Discover what&apos;s in store for you
           </p>
         </div>
-        <div className="relative w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[350px] rounded-3xl overflow-hidden">
+        <div className="relative w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[400px] xl:h-[450px] rounded-3xl overflow-hidden">
           {/* Gradient Corner Overlay */}
           <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
           <div className="absolute w-full h-full clip-path-custom z-0">
@@ -69,7 +69,7 @@ const FeaturedProject = () => {
             </button>
           </div>
         </div>
-        <div className="relative my-5 w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[350px] rounded-3xl overflow-hidden">
+        <div className="relative my-5 w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[400px] xl:h-[450px] rounded-3xl overflow-hidden">
           {/* Gradient Corner Overlay */}
           <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
           <div className="absolute w-full h-full z-0">
@@ -116,7 +116,7 @@ const FeaturedProject = () => {
             </button>
           </div>
         </div>
-        <div className="relative w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[350px] rounded-3xl overflow-hidden">
+        <div className="relative w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[400px] xl:h-[450px] rounded-3xl overflow-hidden">
           {/* Gradient Corner Overlay */}
           <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
           <div className="absolute w-full h-full z-0">

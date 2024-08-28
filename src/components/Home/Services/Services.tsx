@@ -7,34 +7,38 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Services: React.FC = () => {
   const residentialLots = [
-    { image: "/images/rl-1.webp" },
-    { image: "/images/rl-2.webp" },
-    { image: "/images/rl-3.webp" },
-    { image: "/images/rl-4.webp" },
-    { image: "/images/rl-5.webp" },
+    { image: "/images/rl1.webp" },
+    { image: "/images/rl2.webp" },
+    { image: "/images/rl3.webp" },
+    { image: "/images/rl4.webp" },
+    { image: "/images/rl5.webp" },
+    { image: "/images/rl6.webp" },
   ];
 
   const residentialCondominiums = [
-    { image: "/images/rc-1.webp" },
-    { image: "/images/rc-2.webp" },
-    { image: "/images/rc-3.webp" },
-    { image: "/images/rc-4.webp" },
-    { image: "/images/rc-5.webp" },
+    { image: "/images/rc1.webp" },
+    { image: "/images/rc2.webp" },
+    { image: "/images/rc3.webp" },
+    { image: "/images/rc4.webp" },
+    { image: "/images/rc5.webp" },
+    { image: "/images/rc6.webp" },
   ];
   const officeSpaces = [
-    { image: "/images/rl-1.webp" },
-    { image: "/images/rl-2.webp" },
-    { image: "/images/rl-3.webp" },
-    { image: "/images/rl-4.webp" },
-    { image: "/images/rl-5.webp" },
+    { image: "/images/ofc.webp" },
+    { image: "/images/ofc.webp" },
+    { image: "/images/ofc.webp" },
+    { image: "/images/ofc.webp" },
+    { image: "/images/ofc.webp" },
+    { image: "/images/ofc.webp" },
   ];
 
   const leisureRecreation = [
-    { image: "/images/rc-1.webp" },
-    { image: "/images/rc-2.webp" },
-    { image: "/images/rc-3.webp" },
-    { image: "/images/rc-4.webp" },
-    { image: "/images/rc-5.webp" },
+    { image: "/images/lr-1.webp" },
+    { image: "/images/lr-1.webp" },
+    { image: "/images/lr-1.webp" },
+    { image: "/images/lr-1.webp" },
+    { image: "/images/lr-1.webp" },
+    { image: "/images/lr-1.webp" },
   ];
 
   // Separate state variables for each slider

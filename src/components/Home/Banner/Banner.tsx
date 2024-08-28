@@ -22,7 +22,7 @@ const Banner: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative h-[600px] lg:h-[650] xl:h-[700px] w-full bg-black">
+    <section className="relative h-[600px] lg:h-[680] xl:h-[750px] w-full bg-black">
       {/* Background Image Slider */}
       {/* Background Image Slider */}
       <div className="absolute inset-0">
