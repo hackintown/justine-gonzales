@@ -96,7 +96,7 @@ const Banner: React.FC = () => {
         </div>
       </div>
       {/* Social Icons */}
-      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-[#008000] bg-opacity-45 rounded-lg z-20">
+      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-[#008000] bg-opacity-45 rounded-lg z-40">
         <SocialIcons />
       </div>
     </section>

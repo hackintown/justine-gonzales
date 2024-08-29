@@ -12,7 +12,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleSubmenu = (menu:string) => {
+  const toggleSubmenu = (menu: string) => {
     setExpandedMenu(expandedMenu === menu ? null : menu);
   };
 
@@ -38,12 +38,54 @@ const Navbar = () => {
           >
             HOME
           </Link>
-          <Link
-            href="/anvaya"
-            className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 relative group"
-          >
-            RESIDENTIAL LOTS
-          </Link>
+          <div className="relative group">
+            <Link
+              href="/anvaya"
+              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-1"
+            >
+              RESIDENTIAL LOTS
+              <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
+            </Link>
+            <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
+              <Link
+                href="/#residential-lot-1"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
+              >
+                Ayala Greenfield Estates
+              </Link>
+              <Link
+                href="/#residential-lot-2"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
+              >
+                Arcilo
+              </Link>
+              <Link
+                href="/#residential-lot-3"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                Ciela Aera Heights
+              </Link>
+              <Link
+                href="/#residential-lot-4"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                Lanewood Hills
+              </Link>
+              <Link
+                href="/#residential-lot-5"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                Miravera Altaraza
+              </Link>
+              <Link
+                href="/#residential-lot-6"
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                The Courtyards, Vermosa
+              </Link>
+            </div>
+          </div>
+
           <div className="relative group">
             <Link
               href="/anvaya"
@@ -54,25 +96,25 @@ const Navbar = () => {
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
-                href="/condominiums/type1"
+                href="/#residential-condo-1"
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 Arbor Lanes
               </Link>
               <Link
-                href="/condominiums/type2"
+                href="/#residential-condo-2"
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 Gardencourt Residences
               </Link>
               <Link
-                href="/condominiums/type2"
+                href="/#residential-condo-4"
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 Parklinks North Tower
               </Link>
               <Link
-                href="/condominiums/type2"
+                href="/#residential-condo-6"
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 The Residences at Azuela Cove
@@ -89,7 +131,7 @@ const Navbar = () => {
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
-                href="/office/type1"
+                href="/#office-space-1"
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 One Vertis Plaza
@@ -106,7 +148,7 @@ const Navbar = () => {
             </Link>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
-                href="/office/type1"
+                href="/#leisure-rec-1"
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 Anvaya Cove
@@ -115,7 +157,7 @@ const Navbar = () => {
           </div>
 
           <Link
-            href="/"
+            href="/#inquiry-form"
             className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200"
           >
             CONTACT
@@ -123,7 +165,7 @@ const Navbar = () => {
         </div>
         <div className="md:hidden flex items-center">
           <Link
-            href="/"
+            href="/#inquiry-form"
             className="text-sm font-medium mx-2 hover:text-gray-300 transition-colors duration-200"
           >
             CONTACT
@@ -153,13 +195,66 @@ const Navbar = () => {
           >
             HOME
           </Link>
-          <Link
-            href="/anvaya"
-            className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
-            onClick={toggleMenu}
-          >
-            RESIDENTIAL LOTS
-          </Link>
+          <div className="w-full">
+            <button
+              onClick={() => toggleSubmenu("residentialLots")}
+              className="w-full flex items-center gap-x-2 text-lg font-medium hover:text-gray-300 transition-colors duration-200 py-2"
+            >
+              RESIDENTIAL LOTS
+              <FaChevronDown
+                className={`transition-transform duration-300 ${
+                  expandedMenu === "residentialLots" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {expandedMenu === "residentialLots" && (
+              <div className="flex flex-col space-y-2 pl-4 mt-2">
+                <Link
+                  href="/#residential-lot-1"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Ayala Greenfield Estate
+                </Link>
+                <Link
+                  href="/#residential-lot-2"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Arcilo
+                </Link>
+                <Link
+                  href="/#residential-lot-3"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Ciela Aera Heights
+                </Link>
+                <Link
+                  href="/#residential-lot-4"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Lanewood Hills
+                </Link>
+                <Link
+                  href="/#residential-lot-5"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  Miravera Altaraza
+                </Link>
+                <Link
+                  href="/#residential-condo-6"
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                >
+                  The Courtyards, Vermosa
+                </Link>
+              </div>
+            )}
+          </div>
+
           <div className="w-full">
             <button
               onClick={() => toggleSubmenu("condominium")}
@@ -175,28 +270,28 @@ const Navbar = () => {
             {expandedMenu === "condominium" && (
               <div className="flex flex-col space-y-2 pl-4 mt-2">
                 <Link
-                  href="/condominiums/type1"
+                  href="/#residential-condo-1"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Arbor Lanes
                 </Link>
                 <Link
-                  href="/condominiums/type2"
+                  href="/#residential-condo-2"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Gardencourt Residences
                 </Link>
                 <Link
-                  href="/condominiums/type2"
+                  href="/#residential-condo-4"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Parklinks North Tower
                 </Link>
                 <Link
-                  href="/condominiums/type2"
+                  href="/#residential-condo-6"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
@@ -220,7 +315,7 @@ const Navbar = () => {
             {expandedMenu === "office" && (
               <div className="flex flex-col space-y-2 pl-4 mt-2">
                 <Link
-                  href="/office/type1"
+                  href="/#office-space-1"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
@@ -245,7 +340,7 @@ const Navbar = () => {
             {expandedMenu === "leisure" && (
               <div className="flex flex-col space-y-2 pl-4 mt-2">
                 <Link
-                  href="/leisure/type1"
+                  href="/#leisure-rec-1"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
@@ -256,7 +351,7 @@ const Navbar = () => {
           </div>
 
           <Link
-            href="/"
+            href="/#inquiry-form"
             className="text-lg font-medium hover:text-gray-300 transition-colors duration-200"
             onClick={toggleMenu}
           >

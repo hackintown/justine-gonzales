@@ -7,38 +7,39 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Services: React.FC = () => {
   const residentialLots = [
-    { image: "/images/rl1.webp" },
-    { image: "/images/rl2.webp" },
-    { image: "/images/rl3.webp" },
-    { image: "/images/rl4.webp" },
-    { image: "/images/rl5.webp" },
-    { image: "/images/rl6.webp" },
+    { image: "/images/rl1.webp", id: "residential-lot-1" },
+    { image: "/images/rl2.webp", id: "residential-lot-2" },
+    { image: "/images/rl3.webp", id: "residential-lot-3" },
+    { image: "/images/rl4.webp", id: "residential-lot-4" },
+    { image: "/images/rl5.webp", id: "residential-lot-5" },
+    { image: "/images/rl6.webp", id: "residential-lot-6" },
   ];
 
   const residentialCondominiums = [
-    { image: "/images/rc1.webp" },
-    { image: "/images/rc2.webp" },
-    { image: "/images/rc3.webp" },
-    { image: "/images/rc4.webp" },
-    { image: "/images/rc5.webp" },
-    { image: "/images/rc6.webp" },
+    { image: "/images/rc1.webp", id: "residential-condo-1" },
+    { image: "/images/rc2.webp", id: "residential-condo-2" },
+    { image: "/images/rc3.webp", id: "residential-condo-3" },
+    { image: "/images/rc4.webp", id: "residential-condo-4" },
+    { image: "/images/rc5.webp", id: "residential-condo-5" },
+    { image: "/images/rc6.webp", id: "residential-condo-6" },
   ];
+
   const officeSpaces = [
-    { image: "/images/ofc.webp" },
-    { image: "/images/ofc.webp" },
-    { image: "/images/ofc.webp" },
-    { image: "/images/ofc.webp" },
-    { image: "/images/ofc.webp" },
-    { image: "/images/ofc.webp" },
+    { image: "/images/ofc.webp", id: "office-space-1" },
+    { image: "/images/ofc.webp", id: "office-space-2" },
+    { image: "/images/ofc.webp", id: "office-space-3" },
+    { image: "/images/ofc.webp", id: "office-space-4" },
+    { image: "/images/ofc.webp", id: "office-space-5" },
+    { image: "/images/ofc.webp", id: "office-space-6" },
   ];
 
   const leisureRecreation = [
-    { image: "/images/lr-1.webp" },
-    { image: "/images/lr-1.webp" },
-    { image: "/images/lr-1.webp" },
-    { image: "/images/lr-1.webp" },
-    { image: "/images/lr-1.webp" },
-    { image: "/images/lr-1.webp" },
+    { image: "/images/lr-1.webp", id: "leisure-rec-1" },
+    { image: "/images/lr-1.webp", id: "leisure-rec-2" },
+    { image: "/images/lr-1.webp", id: "leisure-rec-3" },
+    { image: "/images/lr-1.webp", id: "leisure-rec-4" },
+    { image: "/images/lr-1.webp", id: "leisure-rec-5" },
+    { image: "/images/lr-1.webp", id: "leisure-rec-6" },
   ];
 
   // Separate state variables for each slider
@@ -126,7 +127,7 @@ const Services: React.FC = () => {
           className="relative w-full"
         >
           {residentialLots.map((item, index) => (
-            <div key={index} className="px-2 outline-none">
+            <div key={index} id={item.id} className="px-2 outline-none">
               <Image
                 src={item.image}
                 alt="resident-lots-image"
@@ -168,7 +169,7 @@ const Services: React.FC = () => {
           className="relative w-full"
         >
           {residentialCondominiums.map((item, index) => (
-            <div key={index} className="px-2 outline-none">
+            <div key={index} id={item.id} className="px-2 outline-none">
               <Image
                 src={item.image}
                 alt="resident-lots-image"
@@ -212,7 +213,7 @@ const Services: React.FC = () => {
           className="relative w-full"
         >
           {officeSpaces.map((item, index) => (
-            <div key={index} className="px-2 outline-none">
+            <div key={index} id={item.id} className="px-2 outline-none">
               <Image
                 src={item.image}
                 alt="resident-lots-image"
@@ -254,7 +255,7 @@ const Services: React.FC = () => {
           className="relative w-full"
         >
           {leisureRecreation.map((item, index) => (
-            <div key={index} className="px-2 outline-none">
+            <div key={index} id={item.id} className="px-2 outline-none">
               <Image
                 src={item.image}
                 alt="resident-lots-image"
