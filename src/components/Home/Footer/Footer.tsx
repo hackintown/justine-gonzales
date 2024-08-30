@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Footer: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -31,34 +32,36 @@ const Footer: React.FC = () => {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const serviceId = "YOUR_SERVICE_ID";
+      const templateId = "YOUR_TEMPLATE_ID";
+      const userId = "YOUR_USER_ID";
 
-      const result = await response.json();
-      if (result.success) {
-        setSuccessMessage("Your inquiry has been sent successfully!");
-        setFormData({
-          project: "",
-          firstName: "",
-          lastName: "",
-          phone: "",
-          cityCountry: "",
-          email: "",
-          message: "",
-        });
-      } else {
-        setErrorMessage("Failed to send your inquiry. Please try again later.");
-      }
+      const templateParams = {
+        project: formData.project,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        phone: formData.phone,
+        cityCountry: formData.cityCountry,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+
+      setSuccessMessage("Your inquiry has been sent successfully!");
+      setFormData({
+        project: "",
+        firstName: "",
+        lastName: "",
+        phone: "",
+        cityCountry: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
-      setErrorMessage("An error occurred. Please try again later.");
+      setErrorMessage("Failed to send your inquiry. Please try again later.");
     }
   };
-
   return (
     <footer>
       <div className="bg-[#0d1210] text-white py-8 px-4">

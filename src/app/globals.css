@@ -43,14 +43,6 @@
   background-image: url("/images/gray-next-arrow.webp"); /* Custom next arrow image */
 }
 
-/* .clip-path-custom {
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 34%, 30% 34% );
-} */
-/* .clip-path-custom {
-  clip-path: inset(10% 20% 30% 40% round 0 0 0 50%);
-} */
-
-
 .masking_class::before {
   content: "";
   position: absolute;
@@ -62,7 +54,6 @@
   border-top-left-radius: 24px;
   /* background-color: blue; */
   box-shadow: -10px -20px 0 9px black;
-
 }
 .masking_class_2::after {
   content: "";
@@ -74,5 +65,4 @@
   border-top-left-radius: 24px;
   /* background-color: blue; */
   box-shadow: -10px -15px 0 9px black;
-
 }

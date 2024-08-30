@@ -11,7 +11,8 @@ const FeaturedProject = () => {
         priority
       />
       {/* Overlay Layer */}
-      <div className="absolute top-0 left-0 inset-0 bg-black bg-opacity-20 z-10"></div>
+      <div className="absolute top-0 w-[40%] left-0 inset-0 bg-gradient-to-br from-black via-black/60 to-black/60 z-0"></div>
+
       <div className="relative container mx-auto px-6 pt-8 pb-8">
         <div className="py-5 masking_class  masking_class_2   absolute z-10 bg-black rounded-br-3xl">
           <h1 className="text-white z-20 mr-1 font-bold text-xl mb-1 leading-[1.0] sm:text-[2rem] lg:text-5xl xl:text-6xl">
@@ -25,7 +26,7 @@ const FeaturedProject = () => {
         <div className="relative w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[400px] xl:h-[450px] rounded-3xl overflow-hidden">
           {/* Gradient Corner Overlay */}
           <div className="absolute bottom-0 right-0 w-full h-full z-10 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
-          <div className="absolute w-full h-full clip-path-custom z-0">
+          <div className="absolute w-full h-full  z-0">
             <Image
               src="/images/anvaya-cove-bg.webp"
               alt="Anvaya Cove"

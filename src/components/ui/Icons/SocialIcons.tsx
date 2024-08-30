@@ -15,7 +15,7 @@ const SocialIcons: React.FC = () => {
           width={28}
           height={28}
           alt="Facebook"
-          className="text-white"
+          className="text-white transform transition duration-300 ease-in-out hover:scale-110 hover:opacity-80"
         />
       </Link>
       <Link href=" https://www.instagram.com/ayalalandluxuryhomes" passHref>
@@ -24,7 +24,7 @@ const SocialIcons: React.FC = () => {
           width={28}
           height={28}
           alt="Instagram"
-          className="text-white"
+          className="text-white transform transition duration-300 ease-in-out hover:scale-110 hover:opacity-80"
         />
       </Link>
       <Link href="mailto:gonzales.justine@ayalalandpremier.com" passHref>
@@ -33,7 +33,7 @@ const SocialIcons: React.FC = () => {
           width={28}
           height={28}
           alt="Email"
-          className="text-white"
+          className="text-white transform transition duration-300 ease-in-out hover:scale-110 hover:opacity-80"
         />
       </Link>
       <Link href="https://wa.me/639171775588" passHref>
@@ -42,7 +42,7 @@ const SocialIcons: React.FC = () => {
           width={28}
           height={28}
           alt="WhatsApp"
-          className="text-white"
+          className="text-white transform transition duration-300 ease-in-out hover:scale-110 hover:opacity-80"
         />
       </Link>
       <Link href="tel:+639171775588" passHref>
@@ -51,7 +51,7 @@ const SocialIcons: React.FC = () => {
           width={28}
           height={28}
           alt="Call"
-          className="text-white"
+          className="text-white transform transition duration-300 ease-in-out hover:scale-110 hover:opacity-80"
         />
       </Link>
     </div>
