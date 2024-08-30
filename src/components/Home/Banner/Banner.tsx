@@ -17,7 +17,7 @@ const Banner: React.FC = () => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change image every 5 seconds
+    }, 3000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -32,7 +32,7 @@ const Banner: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: currentImageIndex === index ? 1 : 0 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
             className={`absolute inset-0 ${
               currentImageIndex === index ? "z-10" : "z-0"
             }`}

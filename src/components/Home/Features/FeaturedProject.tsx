@@ -11,7 +11,7 @@ const FeaturedProject = () => {
         priority
       />
       {/* Overlay Layer */}
-      <div className="absolute top-0 w-[40%] left-0 inset-0 bg-gradient-to-br from-black via-black/60 to-black/60 z-0"></div>
+      <div className="absolute top-0 w-[50%] left-0 inset-0 bg-gradient-to-br from-black via-black/20 to-black/0 z-0"></div>
 
       <div className="relative container mx-auto px-6 pt-8 pb-8">
         <div className="py-5 masking_class  masking_class_2   absolute z-10 bg-black rounded-br-3xl">
