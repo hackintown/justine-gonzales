@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Footer: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     project: "",
     firstName: "",
@@ -16,6 +17,7 @@ const Footer: React.FC = () => {
   });
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -26,40 +28,49 @@ const Footer: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setTermsAccepted(e.target.checked);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSuccessMessage("");
-    setErrorMessage("");
 
-    try {
-      const serviceId = "YOUR_SERVICE_ID";
-      const templateId = "YOUR_TEMPLATE_ID";
-      const userId = "YOUR_USER_ID";
+    if (!formData.firstName || !formData.phone || !formData.email) {
+      setErrorMessage("Please fill in all required fields.");
+      return;
+    }
 
-      const templateParams = {
-        project: formData.project,
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        phone: formData.phone,
-        cityCountry: formData.cityCountry,
-        email: formData.email,
-        message: formData.message,
-      };
+    if (!termsAccepted) {
+      setErrorMessage("You must agree to the terms and conditions.");
+      return;
+    }
 
-      await emailjs.send(serviceId, templateId, templateParams, userId);
-
-      setSuccessMessage("Your inquiry has been sent successfully!");
-      setFormData({
-        project: "",
-        firstName: "",
-        lastName: "",
-        phone: "",
-        cityCountry: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      setErrorMessage("Failed to send your inquiry. Please try again later.");
+    if (form.current) {
+      emailjs
+        .sendForm("service_s5580dy", "template_y6aoavu", form.current, {
+          publicKey: "LErNgH3JyfVeNPXvH",
+        })
+        .then(
+          () => {
+            setSuccessMessage("Your inquiry has been sent successfully!");
+            setFormData({
+              project: "",
+              firstName: "",
+              lastName: "",
+              phone: "",
+              cityCountry: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            setErrorMessage(
+              "Failed to send your inquiry. Please try again later."
+            );
+          }
+        );
+    } else {
+      console.error("Form element is null");
     }
   };
   return (
@@ -139,6 +150,7 @@ const Footer: React.FC = () => {
             <form
               id="inquiry-form"
               className="flex flex-col"
+              ref={form}
               onSubmit={handleSubmit}
             >
               <label className="sr-only" htmlFor="project">
@@ -201,12 +213,19 @@ const Footer: React.FC = () => {
               />
               <textarea
                 placeholder="Type your message here..."
+                name="message"
                 value={formData.message}
                 onChange={handleChange}
                 className="bg-[#848685] text-white p-2 mt-4 rounded placeholder-white font-light"
               />
               <div className="mt-4 flex items-center">
-                <input type="checkbox" id="terms" className="mr-2" />
+                <input
+                  type="checkbox"
+                  id="terms"
+                  checked={termsAccepted}
+                  onChange={handleCheckboxChange}
+                  className="mr-2"
+                />
                 <label htmlFor="terms" className="text-sm">
                   I agree to the terms and conditions
                 </label>
