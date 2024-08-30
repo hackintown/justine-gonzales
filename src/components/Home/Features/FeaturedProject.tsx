@@ -7,15 +7,14 @@ const FeaturedProject = () => {
         src="/images/featured-sec-bg.webp"
         alt="Anvaya Cove"
         fill
-        
         className=""
         priority
       />
       {/* Overlay Layer */}
       <div className="absolute top-0 left-0 inset-0 bg-black bg-opacity-20 z-10"></div>
       <div className="relative container mx-auto px-6 pt-8 pb-8">
-        <div className="py-5 absolute left-5 lg:left-8 xl:left-10 top-2 sm:top-0 md:left-8 md:top-2">
-          <h1 className="text-white font-bold text-xl mb-1 leading-[1.0] sm:text-[2rem] lg:text-5xl xl:text-6xl">
+        <div className="py-5 masking_class  masking_class_2   absolute z-10 bg-black rounded-br-3xl">
+          <h1 className="text-white z-20 mr-1 font-bold text-xl mb-1 leading-[1.0] sm:text-[2rem] lg:text-5xl xl:text-6xl">
             Featured
             <br /> <span className="ml-5 sm:ml-8">Projects</span>
           </h1>
@@ -31,7 +30,6 @@ const FeaturedProject = () => {
               src="/images/anvaya-cove-bg.webp"
               alt="Anvaya Cove"
               fill
-              
               className=""
               priority
             />
@@ -77,7 +75,6 @@ const FeaturedProject = () => {
               src="/images/miravera-hillestate.webp"
               alt="Anvaya Cove"
               fill
-              
               className=""
               priority
             />
@@ -124,7 +121,6 @@ const FeaturedProject = () => {
               src="/images/azuela-cove.webp"
               alt="Anvaya Cove"
               fill
-              
               quality={75}
               className=""
               priority
