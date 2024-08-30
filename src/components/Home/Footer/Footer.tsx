@@ -164,10 +164,10 @@ const Footer: React.FC = () => {
                 className="bg-[#344630] text-white p-2 rounded placeholder-white font-light"
               >
                 <option>Select Project</option>
-                <option value="Project 1">Project 1</option>
-                <option value="Project 2">Project 2</option>
-                <option value="Project 3">Project 3</option>
-                <option value="Project 4">Project 4</option>
+                <option value="Residential Lots">Residential Lots</option>
+                <option value="Condominiums">Condominiums</option>
+                <option value="Office">Office</option>
+                <option value="Leisure">Leisure</option>
               </select>
               <div className="mt-4 grid grid-cols-2 gap-4">
                 <input
