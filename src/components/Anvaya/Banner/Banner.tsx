@@ -20,7 +20,7 @@ const Banner: React.FC<BannerProps> = ({ param }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000, // Adjust autoplay speed (in milliseconds)
   };
 
