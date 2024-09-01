@@ -62,9 +62,9 @@ const Services: React.FC = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 4 } },
-      { breakpoint: 768, settings: { slidesToShow: 3 } },
-      { breakpoint: 480, settings: { slidesToShow: 2 } },
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
     beforeChange: (current: number, next: number) => setCurrentSlideLots(next),
   });
@@ -144,11 +144,11 @@ const Services: React.FC = () => {
                   height={320}
                   className="w-full h-full rounded-lg shadow-md object-cover"
                 />
-                <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
                   <h2 className="text-white text-base  font-bold mb-1">
                     {data[index]?.name || "Loading Name..."}
                   </h2>
-                  <div className="flex items-center">
+                  <div className="flex items-center justify-between gap-x-2 mb-1">
                     <p className="text-sm text-white">
                       {data[index]?.location || "Location Loading..."}
                     </p>
@@ -211,11 +211,11 @@ const Services: React.FC = () => {
                     loading="lazy" // Lazy load images
                     className="w-full h-full rounded-lg shadow-md object-cover"
                   />
-                  <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                  <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
                     <h2 className="text-white text-base  font-bold mb-1">
                       {data[dataIndex]?.name || "Loading Name..."}
                     </h2>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-between gap-x-2 mb-1">
                       <p className="text-sm text-white">
                         {data[dataIndex]?.location || "Location Loading..."}
                       </p>
@@ -275,11 +275,11 @@ const Services: React.FC = () => {
                     height={240}
                     className="w-full h-full rounded-lg shadow-md object-cover"
                   />
-                  <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                  <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
                     <h2 className="text-white text-base  font-bold mb-1">
                       {data[dataIndex]?.name || "Loading Name..."}
                     </h2>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-between gap-x-2 mb-1">
                       <p className="text-sm text-white">
                         {data[dataIndex]?.location || "Location Loading..."}
                       </p>
@@ -341,11 +341,11 @@ const Services: React.FC = () => {
                     loading="lazy" // Lazy load images
                     className="w-full h-full rounded-lg shadow-md object-cover"
                   />
-                  <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                  <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
                     <h2 className="text-white text-base  font-bold mb-1">
                       {data[dataIndex]?.name || "Loading Name..."}
                     </h2>
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-between gap-x-2 mb-1">
                       <p className="text-sm text-white">
                         {data[dataIndex]?.location || "Location Loading..."}
                       </p>
