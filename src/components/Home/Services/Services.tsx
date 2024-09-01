@@ -14,11 +14,12 @@ const Services: React.FC = () => {
   }));
 
   const residentialLots = [
-    { image: "/images/AGE1.webp", id: "residential-lot-1" },
-    { image: "/images/arcilo1.webp", id: "residential-lot-2" },
-    { image: "/images/cah1.webp", id: "residential-lot-3" },
-    { image: "/images/ma4.webp", id: "residential-lot-4" },
-    { image: "/images/tcv2.webp", id: "residential-lot-5" },
+    { image: "/images/rl1.webp", id: "residential-lot-1" },
+    { image: "/images/rl2.webp", id: "residential-lot-2" },
+    { image: "/images/rl3.webp", id: "residential-lot-3" },
+    { image: "/images/rl4.webp", id: "residential-lot-4" },
+    { image: "/images/rl5.webp", id: "residential-lot-5" },
+    { image: "/images/rl6.webp", id: "residential-lot-5" },
   ];
 
   const residentialCondominiums = [
@@ -61,7 +62,7 @@ const Services: React.FC = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },

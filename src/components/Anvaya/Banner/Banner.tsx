@@ -82,7 +82,7 @@ const Banner: React.FC<BannerProps> = ({ param }) => {
         <div className="md:hidden">
           <p className="flex items-center space-x-2 border-2 mt-6 mb-2 border-white px-2 py-2 rounded-xl">
             <IoLocationOutline className="text-white size-5" />
-            <span>{data[0].location}</span>
+            <span className="text-white">{data[0].location}</span>
           </p>
           <h1 className="text-4xl font-bold text-white">{data[0].name}</h1>
           <Link href="/#inquiry-form">

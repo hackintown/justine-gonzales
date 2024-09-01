@@ -14,7 +14,7 @@ const FeaturedProject = () => {
       <div className="absolute top-0 w-[50%] left-0 inset-0 bg-gradient-to-br from-black via-black/20 to-black/0 z-0"></div>
 
       <div className="relative container mx-auto px-6 pt-8 pb-8">
-        <div className="py-5 masking_class  masking_class_2   absolute z-10 bg-black rounded-br-3xl">
+        <div className="py-5 masking_class  masking_class_2 absolute z-10 bg-black rounded-br-3xl">
           <h1 className="text-white z-20 mr-1 font-bold text-xl mb-1 leading-[1.0] sm:text-[2rem] lg:text-5xl xl:text-6xl">
             Featured
             <br /> <span className="ml-5 sm:ml-8">Projects</span>

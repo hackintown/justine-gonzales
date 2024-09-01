@@ -94,16 +94,32 @@ export const NAVBARCONSTANT = [
       "Enveloped in greenery, heightened elevations, and luminous, wide-open views of city and sky, with flowing waterways throughout the undulating terrain. In Carmona, Cavite, Ayala Land reveals AÉRA, a destination communing nature, people, and spaces in one dynamic, strategically connected, and accessible estate. A landscape primed to nurture overall growth and well-being. AÉRA is a contemporary estate spanning close to a thousand hectares, converging a commercial district, expansive residential environments, and recreational destinations into a natural, elevated landscape.",
     map: "cah-map.webp",
     landArea: "67 hectares",
-    numberOfPhases: "1 phase",
+    totalLandArea:
+      "241 hectares (Phase 1: 67 hectares, Phase 2 Tranche One: 74 hectares, remaining phases: 100 hectares)",
     peakElevation: "172 - 217 meters above mean sea level",
     location: "Carmona, Cavite, Philippines",
-    developmentSummary: {
-      openSpaces: "70%",
-      numberOfLots: "300 lots",
-      density: "4 lots per hectare",
-      lotSizeRange: "446 - 1,446 square meters",
-      terrain: "Rolling",
-    },
+    developmentSummary: [
+      {
+        phase: "Phase 1",
+        landArea: "67 hectares",
+        openSpaces: "70%",
+        numberOfLots: "300",
+        density: "4 lots per hectare",
+        lotSizeRange: "446-1,446 square meters",
+        elevation: "172-217 meters above mean sea level",
+        terrain: "Rolling",
+      },
+      {
+        phase: "Phase 2 Tranche One",
+        landArea: "74 hectares",
+        openSpaces: "70%",
+        numberOfLots: "144",
+        density: "4 lots per hectare",
+        lotSizeRange: "500-1,987 square meters",
+        elevation: "130-185 meters above mean sea level",
+        terrain: "Rolling",
+      },
+    ],
   },
   {
     id: "lanewood-hills",
@@ -122,7 +138,6 @@ export const NAVBARCONSTANT = [
       "Located in Silang, Cavite, Lanewood Hills is nestled within a community jointly developed by Ayala Land and Cathay Land. Its unique location puts it in proximity to the vibrant NUVALI estate and the leisure destinations of Tagaytay.",
     map: "lh-map.webp",
     landArea: "57 hectares",
-    numberOfPhases: "1 phase",
     peakElevation: "193 – 265 meters above mean sea level",
     location: "Silang, Cavite, Philippines",
     developmentSummary: {
@@ -186,7 +201,6 @@ export const NAVBARCONSTANT = [
       numberOfLots: "904 lots",
       density: "7 lots per hectare",
       lotSizeRange: "470 – 1,947 square meters",
-      terrain: "Rolling",
     },
   },
   {
@@ -252,9 +266,6 @@ export const NAVBARCONSTANT = [
     description:
       "Arbor Lanes is located at ARCA South, a 74-hectare, large-scale, master-planned, mixed-use, sustainable estate by Ayala Land in Taguig. Opening the gateway to the South, this emerging central business district offers prime accessibility through South Luzon Expressway (SLEX), C-5, and future connections to the Skyway. Workspaces, residences, parks, retail, and entertainment destinations harmonize, creating a contemporary community for business and lifestyles.",
     map: "al-map.webp",
-    landArea: "3.48 hectares",
-    numberOfPhases: "2 phases",
-    peakElevation: "Varies",
     location: "Arca South, Taguig City, Philippines",
     developmentSummary: {
       olive: {
@@ -296,9 +307,6 @@ export const NAVBARCONSTANT = [
     description:
       "The development is located at ARCA South, a 74-hectare, large-scale, master-planned, mixed-use, sustainable estate by Ayala Land in Taguig. An emerging central business district with prime accessibility through South Luzon Expressway (SLEX), C-5, and future connections to the Skyway. A dynamic community for contemporary business and lifestyles.",
     map: "gr-map.webp",
-    landArea: "2 hectares",
-    numberOfPhases: "2 phases",
-    peakElevation: "Varies",
     location: "Arca South, Taguig City, Philippines",
     developmentSummary: {
       molave: {
@@ -365,8 +373,6 @@ export const NAVBARCONSTANT = [
       "Located at the intersection of Quezon City and Pasig, Parklinks is easily accessible via C-5, Ortigas Avenue, and Amang Rodriguez Avenue, connecting the estate to surrounding key commercial, retail, and institutional developments, including the country&apos;s esteemed schools along Katipunan. The 35-hectare sustainable masterplan dedicates 50% to a network of dynamic parks and refreshing green spaces, woven into an array of retail and leisure spots, offices, and living spaces. Designed for high pedestrian mobility, parks are within a five-minute walk from any point in the estate.",
     map: "pkl-map.webp",
     landArea: "4,145 sqm (North Tower), 4,002 sqm (South Tower)",
-    numberOfPhases: "2 phases",
-    peakElevation: "Varies",
     location: "Quezon City and Pasig City, Philippines",
     developmentSummary: {
       northTower: {
@@ -411,25 +417,14 @@ export const NAVBARCONSTANT = [
     map: "trac-map.webp",
     landArea: "10,019 sqm",
     numberOfPhases: "2 phases",
-    peakElevation: "Varies",
     location: "Davao City, Philippines",
     developmentSummary: {
-      northTower: {
-        landArea: "10,019 sqm",
-        numberOfFloors: "21",
-        numberOfUnits: "70",
-        unitSizeRange: "500—597 sqm",
-        density: "2—4 units per floor",
-        views: "Davao Gulf, Samal Island, Azuela Cove, Davao City",
-      },
-      southTower: {
-        landArea: "10,019 sqm",
-        numberOfFloors: "22",
-        numberOfUnits: "77",
-        unitSizeRange: "500—597 sqm",
-        density: "2—4 units per floor",
-        views: "Davao Gulf, Samal Island, Azuela Cove, Davao City",
-      },
+      landArea: "10,019 sqm",
+      numberOfFloors: "NORTH TOWER 21, SOUTH TOWER 22",
+      numberOfUnits: "NORTH TOWER 70, SOUTH TOWER 77",
+      unitSizeRange: "500—597 sqm",
+      density: "2—4 units per floor",
+      views: "Davao Gulf, Samal Island, Azuela Cove, Davao City",
     },
   },
   {
@@ -460,8 +455,6 @@ export const NAVBARCONSTANT = [
       "Located at the regional gateway to the North, serving as the main transportation hub between Metro Manila and Northern Luzon, One Vertis Plaza is accessible via major road networks including EDSA, Mindanao Avenue, and Quezon Avenue. This prime location opens up a dynamic range of opportunities for business, leisure, and living, accelerating growth for both emerging and established enterprises. Vertis North is a 45-hectare, mixed-use estate developed by Ayala Land in partnership with the National Housing Authority (NHA). The estate is a dynamic community seamlessly fusing natural details with elements of contemporary living in one destination.",
     map: "ovp-map.webp",
     landArea: "6,060 sqm",
-    numberOfPhases: "1 phase",
-    peakElevation: "174.7 meters",
     location: "Quezon City, Philippines",
     developmentSummary: {
       developmentType: "Premium LEED Registered Building",
