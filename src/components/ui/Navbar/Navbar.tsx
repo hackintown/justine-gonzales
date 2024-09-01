@@ -3,17 +3,26 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { NAVBARCONSTANT } from "./constants";
 
-const Navbar = () => {
+interface NavbarProps {}
+
+const Navbar: React.FC<NavbarProps> = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
-
+  const router = useRouter();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const toggleSubmenu = (menu: string) => {
     setExpandedMenu(expandedMenu === menu ? null : menu);
+  };
+
+  const handleMenuItemClick = (menuItem: string) => {
+    router.push(`/${menuItem.toLowerCase().replace(/\s+/g, "-")}`);
+    toggleMenu();
   };
 
   return (
@@ -39,46 +48,43 @@ const Navbar = () => {
             HOME
           </Link>
           <div className="relative group">
-            <Link
-              href="/anvaya"
-              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-1"
-            >
+            <button className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-1">
               RESIDENTIAL LOTS
               <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
-            </Link>
+            </button>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
-                href="/#residential-lot-1"
+                href={`/properties/${NAVBARCONSTANT[0].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 Ayala Greenfield Estates
               </Link>
               <Link
-                href="/#residential-lot-2"
+                href={`/properties/${NAVBARCONSTANT[1].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 Arcilo
               </Link>
               <Link
-                href="/#residential-lot-3"
+                href={`/properties/${NAVBARCONSTANT[2].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 Ciela Aera Heights
               </Link>
               <Link
-                href="/#residential-lot-4"
+                href={`/properties/${NAVBARCONSTANT[3].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 Lanewood Hills
               </Link>
               <Link
-                href="/#residential-lot-5"
+                href={`/properties/${NAVBARCONSTANT[4].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 Miravera Altaraza
               </Link>
               <Link
-                href="/#residential-lot-6"
+                href={`/properties/${NAVBARCONSTANT[5].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 The Courtyards, Vermosa
@@ -87,34 +93,31 @@ const Navbar = () => {
           </div>
 
           <div className="relative group">
-            <Link
-              href="/anvaya"
-              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-1"
-            >
+            <button className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-1">
               CONDOMINIUMS
               <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
-            </Link>
+            </button>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
-                href="/#residential-condo-1"
+                href={`/properties/${NAVBARCONSTANT[6].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 Arbor Lanes
               </Link>
               <Link
-                href="/#residential-condo-2"
+                href={`/properties/${NAVBARCONSTANT[7].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 Gardencourt Residences
               </Link>
               <Link
-                href="/#residential-condo-4"
+                href={`/properties/${NAVBARCONSTANT[8].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
-                Parklinks North Tower
+                ParkLinks North Tower
               </Link>
               <Link
-                href="/#residential-condo-6"
+                href={`/properties/${NAVBARCONSTANT[9].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 The Residences at Azuela Cove
@@ -122,16 +125,13 @@ const Navbar = () => {
             </div>
           </div>
           <div className="relative group">
-            <Link
-              href="/"
-              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-2"
-            >
+            <button className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-2">
               OFFICE
               <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
-            </Link>
+            </button>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
-                href="/#office-space-1"
+                href={`/properties/${NAVBARCONSTANT[10].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 One Vertis Plaza
@@ -139,16 +139,13 @@ const Navbar = () => {
             </div>
           </div>
           <div className="relative group">
-            <Link
-              href="/"
-              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-2"
-            >
+            <button className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors duration-200 flex items-center gap-x-2">
               LEISURE
               <FaChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
-            </Link>
+            </button>
             <div className="absolute left-0 mt-2 w-48 bg-black bg-opacity-80 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100 origin-top">
               <Link
-                href="/#leisure-rec-1"
+                href={`/properties/${NAVBARCONSTANT[11].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
                 Anvaya Cove
@@ -210,42 +207,42 @@ const Navbar = () => {
             {expandedMenu === "residentialLots" && (
               <div className="flex flex-col space-y-2 pl-4 mt-2">
                 <Link
-                  href="/#residential-lot-1"
+                  href={`/properties/${NAVBARCONSTANT[0].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Ayala Greenfield Estate
                 </Link>
                 <Link
-                  href="/#residential-lot-2"
+                  href={`/properties/${NAVBARCONSTANT[1].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Arcilo
                 </Link>
                 <Link
-                  href="/#residential-lot-3"
+                  href={`/properties/${NAVBARCONSTANT[2].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Ciela Aera Heights
                 </Link>
                 <Link
-                  href="/#residential-lot-4"
+                  href={`/properties/${NAVBARCONSTANT[3].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Lanewood Hills
                 </Link>
                 <Link
-                  href="/#residential-lot-5"
+                  href={`/properties/${NAVBARCONSTANT[4].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
                   Miravera Altaraza
                 </Link>
                 <Link
-                  href="/#residential-condo-6"
+                  href={`/properties/${NAVBARCONSTANT[5].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
@@ -270,30 +267,30 @@ const Navbar = () => {
             {expandedMenu === "condominium" && (
               <div className="flex flex-col space-y-2 pl-4 mt-2">
                 <Link
-                  href="/#residential-condo-1"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[6].id}`}
                 >
                   Arbor Lanes
                 </Link>
                 <Link
-                  href="/#residential-condo-2"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[7].id}`}
                 >
                   Gardencourt Residences
                 </Link>
                 <Link
-                  href="/#residential-condo-4"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[8].id}`}
                 >
-                  Parklinks North Tower
+                  ParkLinks North Tower
                 </Link>
                 <Link
-                  href="/#residential-condo-6"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[9].id}`}
                 >
                   The Residences at Azuela Cove
                 </Link>
@@ -315,9 +312,9 @@ const Navbar = () => {
             {expandedMenu === "office" && (
               <div className="flex flex-col space-y-2 pl-4 mt-2">
                 <Link
-                  href="/#office-space-1"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[10].id}`}
                 >
                   One Vertis Plaza
                 </Link>
@@ -340,9 +337,9 @@ const Navbar = () => {
             {expandedMenu === "leisure" && (
               <div className="flex flex-col space-y-2 pl-4 mt-2">
                 <Link
-                  href="/#leisure-rec-1"
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[11].id}`}
                 >
                   Anvaya Cove
                 </Link>

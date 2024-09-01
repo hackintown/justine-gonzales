@@ -5,29 +5,28 @@ import { IoLocationOutline } from "react-icons/io5";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
+import { NAVBARCONSTANT } from "@/components/ui/Navbar/constants";
 
 interface BannerProps {
-  location: string;
-  setLocation: (location: string) => void;
-  handleInquiryClick: () => void;
+  param: string;
 }
 
-const Banner: React.FC<BannerProps> = ({
-  location,
-  setLocation,
-  handleInquiryClick,
-}) => {
-
+const Banner: React.FC<BannerProps> = ({ param }) => {
   // Slick slider settings
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000, // Adjust autoplay speed (in milliseconds)
   };
+
+  const data = NAVBARCONSTANT.filter((data) => {
+    return data.id === param;
+  }) as any;
 
   return (
     <section className="relative">
@@ -40,21 +39,26 @@ const Banner: React.FC<BannerProps> = ({
           border: "1px solid rgba(255, 255, 255, 0.18)",
         }}
       >
-        <div className="relative max-h-[500px] h-full">
+        <div className="relative  h-full">
           <Slider {...sliderSettings} className="rounded-lg overflow-hidden">
-            {["/images/anvaya-bg.webp", "/images/ANV-Golf-Pavilion-2.webp", "/images/ANV-Golf-Pavilion-3.webp", "/images/ANV-Golf-Pavilion-4.webp"].map((src, index) => (
-              <div key={index} className="rounded-xl max-h-[500px] h-full w-full overflow-hidden">
-                <Image
-                  src={src}
-                  height={500}
-                  width={1200}
-                  quality={75} // Adjust image quality for optimization
-                  priority={index === 0} // Load the first image eagerly
-                  alt={`Anvaya Cove Background ${index + 1}`}
-                  className="w-full h-full object-cover" // Ensure full coverage
-                />
-              </div>
-            ))}
+            {data[0].images.map(
+              (image: { src: string; alt: string }, index: number) => (
+                <div
+                  key={index}
+                  className="rounded-xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[550px] w-full overflow-hidden"
+                >
+                  <Image
+                    src={image.src}
+                    height={500}
+                    width={1200}
+                    quality={75} // Adjust image quality for optimization
+                    priority={index === 0} // Load the first image eagerly
+                    alt={image.alt}
+                    className="w-full h-full object-cover" // Ensure full coverage
+                  />
+                </div>
+              )
+            )}
           </Slider>
           <div className="absolute top-1/2 right-2 transform -translate-y-1/2 max-w-[50px] w-full">
             <Image
@@ -65,36 +69,33 @@ const Banner: React.FC<BannerProps> = ({
               className="w-full h-auto"
             />
           </div>
-          <div className="absolute top-7 right-3 transform -translate-y-1/2 max-w-[85px] w-full">
+          <div className="absolute top-10 right-3 transform -translate-y-1/2 max-w-[120px] w-full">
             <Image
-              src="/images/anvaya-logo.webp"
+              src={`/images/${data[0].logo}`}
               height={500}
               width={500}
               alt="Anvaya Logo"
-              className="w-full h-auto"
+              className="w-full h-auto filter drop-shadow"
             />
           </div>
         </div>
         <div className="md:hidden">
           <p className="flex items-center space-x-2 border-2 mt-6 mb-2 border-white px-2 py-2 rounded-xl">
             <IoLocationOutline className="text-white size-5" />
-            <input
-              type="text"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              className="bg-transparent text-white font-light outline-none w-full"
-            />
+            <span>{data[0].location}</span>
           </p>
-          <h1 className="text-4xl font-bold text-white">Anvaya Cove</h1>
-          <button className="max-w-[165px] mt-3" onClick={handleInquiryClick}>
-            <Image
-              src="/images/inquire-btn.webp"
-              width={500}
-              height={500}
-              alt="Inquire Button"
-              className="w-full"
-            />
-          </button>
+          <h1 className="text-4xl font-bold text-white">{data[0].name}</h1>
+          <Link href="/#inquiry-form">
+            <button className="max-w-[165px] mt-3">
+              <Image
+                src="/images/inquire-btn.webp"
+                width={500}
+                height={500}
+                alt="Inquire Button"
+                className="w-full"
+              />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

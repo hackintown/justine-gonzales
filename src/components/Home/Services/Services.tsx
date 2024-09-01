@@ -25,21 +25,21 @@ const Services: React.FC = () => {
   ];
 
   const officeSpaces = [
-    { image: "/images/ofc.webp", id: "office-space-1" },
-    { image: "/images/ofc.webp", id: "office-space-2" },
-    { image: "/images/ofc.webp", id: "office-space-3" },
-    { image: "/images/ofc.webp", id: "office-space-4" },
-    { image: "/images/ofc.webp", id: "office-space-5" },
-    { image: "/images/ofc.webp", id: "office-space-6" },
+    { image: "/images/ovp1.webp", id: "office-space-1" },
+    { image: "/images/ovp2.webp", id: "office-space-2" },
+    { image: "/images/ovp3.webp", id: "office-space-3" },
+    { image: "/images/ovp4.webp", id: "office-space-4" },
+    { image: "/images/ovp5.webp", id: "office-space-5" },
+    { image: "/images/ovp6.webp", id: "office-space-6" },
   ];
 
   const leisureRecreation = [
-    { image: "/images/lr-1.webp", id: "leisure-rec-1" },
-    { image: "/images/lr-1.webp", id: "leisure-rec-2" },
-    { image: "/images/lr-1.webp", id: "leisure-rec-3" },
-    { image: "/images/lr-1.webp", id: "leisure-rec-4" },
-    { image: "/images/lr-1.webp", id: "leisure-rec-5" },
-    { image: "/images/lr-1.webp", id: "leisure-rec-6" },
+    { image: "/images/ac1.webp", id: "leisure-rec-1" },
+    { image: "/images/ac2.webp", id: "leisure-rec-2" },
+    { image: "/images/ac3.webp", id: "leisure-rec-3" },
+    { image: "/images/ac4.webp", id: "leisure-rec-4" },
+    { image: "/images/ac5.webp", id: "leisure-rec-5" },
+    { image: "/images/ac6.webp", id: "leisure-rec-6" },
   ];
 
   // Separate state variables for each slider
@@ -177,7 +177,7 @@ const Services: React.FC = () => {
                 height={240}
                 quality={75} // Reduced quality for optimization
                 loading="lazy" // Lazy load images
-                className="rounded-lg shadow-md"
+                className="rounded-lg shadow-md object-cover"
               />
             </div>
           ))}
@@ -219,7 +219,11 @@ const Services: React.FC = () => {
                 alt="resident-lots-image"
                 width={320}
                 height={240}
-                className="rounded-lg shadow-md"
+                className="rounded-lg shadow-md object-cover h-full w-full"
+                style={{
+                  objectFit: "cover",
+                  aspectRatio: "320/240",
+                }}
               />
             </div>
           ))}
@@ -263,7 +267,11 @@ const Services: React.FC = () => {
                 height={240}
                 quality={75} // Reduced quality for optimization
                 loading="lazy" // Lazy load images
-                className="rounded-lg shadow-md"
+                className="rounded-lg shadow-md object-cover h-full w-full"
+                style={{
+                  objectFit: "cover",
+                  aspectRatio: "320/240",
+                }}
               />
             </div>
           ))}

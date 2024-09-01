@@ -1,7 +1,14 @@
 import React from "react";
 import SocialIcons from "../../ui/Icons/SocialIcons";
+import { NAVBARCONSTANT } from "@/components/ui/Navbar/constants";
+interface DevelopmentSummaryProps {
+  param: string;
+}
+const DevelopmentSummary: React.FC<DevelopmentSummaryProps> = ({ param }) => {
+  const data = NAVBARCONSTANT.filter((data) => {
+    return data.id === param;
+  }) as any;
 
-const DevelopmentSummary: React.FC = () => {
   return (
     <div className="pt-5">
       <h2 className="text-2xl lg:text-3xl font-bold mb-4 md:mb-2 text-white">
@@ -18,7 +25,7 @@ const DevelopmentSummary: React.FC = () => {
 
             <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
               <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">
-                Morong, Bataan
+                {data[0].location}
               </p>
             </div>
           </div>
@@ -32,7 +39,7 @@ const DevelopmentSummary: React.FC = () => {
 
             <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
               <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">
-                620 hectares
+                {data[0].landArea}
               </p>
             </div>
           </div>
@@ -46,7 +53,7 @@ const DevelopmentSummary: React.FC = () => {
 
             <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
               <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">
-                3.5 kilometers
+                {data[0].developmentSummary?.coastline}
               </p>
             </div>
           </div>
@@ -60,7 +67,7 @@ const DevelopmentSummary: React.FC = () => {
 
             <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
               <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">
-                130 meters above mean sea level
+                {data[0].peakElevation}
               </p>
             </div>
           </div>
@@ -74,7 +81,7 @@ const DevelopmentSummary: React.FC = () => {
 
             <div className="w-full rounded-lg bg-[#635e41] px-2 py-2 mx-1 my-1">
               <p className="text-white text-xs font-light sm:text-sm md:text-xs lg:text-sm">
-                6 to 13 lots per hectare
+                {data[0].developmentSummary?.density}
               </p>
             </div>
           </div>

@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               height={280} // Adjusted to the max required height
               alt="footer-logo"
               priority
-              className="max-w-[250px] lg:max-w-[280px] w-full mb-4"
+              className="max-w-[250px] lg:max-w-[280px] w-full h-auto mb-4"
               sizes="(max-width: 1024px) 250px, 280px" // Serve smaller size for smaller screens
             />
             <p className="mt-2 text-center font-light text-sm">

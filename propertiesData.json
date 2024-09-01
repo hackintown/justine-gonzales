@@ -1,0 +1,61 @@
+{
+  "properties": [
+    {
+      "id": "anvaya-cove",
+      "name": "Anvaya Cove",
+      "images": [
+        { "src": "anvaya-image1.jpg", "alt": "Anvaya Cove Image 1" },
+        { "src": "anvaya-image2.jpg", "alt": "Anvaya Cove Image 2" }
+      ],
+      "logo": "anvaya-logo.png",
+      "title": "Anvaya Cove",
+      "about": "A luxury seaside residential community by Ayala Land.",
+      "description": "Presenting the excitement of a seaside resort and the tranquility of a mountain retreat...",
+      "map": "anvaya-map.png",
+      "landArea": "470 hectares",
+      "numberOfPhases": "5 phases",
+      "peakElevation": "130 meters above sea level",
+      "location": "Bataan, Philippines"
+    },
+    {
+      "id": "ayala-greenfield-estate",
+      "name": "Ayala Greenfield Estate",
+      "images": [
+        {
+          "src": "ayala-greenfield-image1.jpg",
+          "alt": "Ayala Greenfield Image 1"
+        },
+        {
+          "src": "ayala-greenfield-image2.jpg",
+          "alt": "Ayala Greenfield Image 2"
+        }
+      ],
+      "logo": "ayala-greenfield-logo.png",
+      "title": "Ayala Greenfield Estates",
+      "about": "Ayala Greenfield Estates is accessible via South Luzon Expressway (SLEX)...",
+      "description": "Lush landscapes and rolling terrain—in Ayala Greenfield Estates, the calm and constancy of nature...",
+      "map": "ayala-greenfield-map.png",
+      "landArea": "350 hectares",
+      "numberOfPhases": "9 phases",
+      "peakElevation": "315 meters above sea level",
+      "location": "Calamba, Laguna, Philippines"
+    },
+    {
+      "id": "arcilo",
+      "name": "Arcilo",
+      "images": [
+        { "src": "arcilo-image1.jpg", "alt": "Arcilo Image 1" },
+        { "src": "arcilo-image2.jpg", "alt": "Arcilo Image 2" }
+      ],
+      "logo": "arcilo-logo.png",
+      "title": "Arcilo",
+      "about": "A picturesque residential community...",
+      "description": "Arcilo offers a serene environment with modern amenities...",
+      "map": "arcilo-map.png",
+      "landArea": "300 hectares",
+      "numberOfPhases": "4 phases",
+      "peakElevation": "250 meters above sea level",
+      "location": "Tagaytay, Philippines"
+    }
+  ]
+}

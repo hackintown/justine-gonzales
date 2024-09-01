@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import DevelopmentSummary from "./DevelopmentSummary";
 import SocialIcons from "../../ui/Icons/SocialIcons";
@@ -6,19 +7,13 @@ import { motion } from "framer-motion";
 import { IoLocationOutline } from "react-icons/io5";
 import inquireBtn from "../../../../public/images/inquire-btn.webp";
 import viewMapBtn from "../../../../public/images/view-map.webp";
-import mapImage from "../../../../public/images/anvaya-vicinity-map.webp";
+import { NAVBARCONSTANT } from "@/components/ui/Navbar/constants";
 
 interface AboutProps {
-  location: string;
-  setLocation: (location: string) => void;
-  handleInquiryClick: () => void;
+  param: string;
 }
 
-const About: React.FC<AboutProps> = ({
-  location,
-  setLocation,
-  handleInquiryClick,
-}) => {
+const About: React.FC<AboutProps> = ({ param }) => {
   const [isMapOpen, setIsMapOpen] = useState(false);
 
   const handleMapClick = () => {
@@ -29,42 +24,38 @@ const About: React.FC<AboutProps> = ({
     setIsMapOpen(false);
   };
 
-  const handleBackdropClick = (e: { target: any; currentTarget: any; }) => {
+  const handleBackdropClick = (e: { target: any; currentTarget: any }) => {
     // Close the popup if the user clicks on the backdrop (not the popup itself)
     if (e.target === e.currentTarget) {
       closeMapPopup();
     }
   };
+
+  const data = NAVBARCONSTANT.filter((data) => {
+    return data.id === param;
+  }) as any;
+
   return (
     <section className="md:grid md:grid-cols-[45%_1fr] md:items-center md:gap-3">
       <div className="hidden w-full md:block">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mt-5">
           <h1 className="text-2xl lg:text-3xl font-bold text-white">
-            Anvaya Cove
+            {data[0].name}
           </h1>
-          <button
-            className="max-w-[110px] lg:max-w-[130px]"
-            onClick={(e) => handleInquiryClick}
-          >
+          <button className="max-w-[110px] lg:max-w-[130px]">
             <Image
               src={inquireBtn}
               width={500}
               height={500}
               alt="inquire-button"
               className="w-full"
-              onClick={handleInquiryClick}
             />
           </button>
         </div>
 
         <p className="flex items-center space-x-2 border-2 mt-2 mb-2 md:mb-4 border-white px-2 py-2 rounded-xl">
           <IoLocationOutline className="text-white size-5" />
-          <input
-            type="text"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            className="bg-transparent text-white font-light outline-none w-full h-3"
-          />
+          <span className="text-white">{data[0].location}</span>
         </p>
         <div className="flex justify-between items-center mb-3 md:mb-2">
           <h2 className="text-2xl lg:text-3xl font-bold text-white">About</h2>
@@ -82,13 +73,7 @@ const About: React.FC<AboutProps> = ({
           </button>
         </div>
         <p className="text-white text-sm md:text-xs lg:text-[0.8rem] xl:text-[0.9rem] font-light leading-normal lg:leading-[1.3]">
-          Presenting the excitement of a seaside resort and the tranquility of a
-          mountain retreat, unique tropical features provide residents with the
-          best that nature has to offer. A 620-hectare development designed for
-          shared moments among family, Anvaya Cove offers endless opportunities
-          to forge lifelong memories. A dynamic community nurturing family above
-          everything else. With an array of amenities, services, events and
-          activities, family ties flourish at Anvaya Cove.
+          {data[0].about}
         </p>
       </div>
       <div className="md:bg-none md:bg-transparent bg-about-sec-gradient rounded-lg p-4">
@@ -109,17 +94,10 @@ const About: React.FC<AboutProps> = ({
             </button>
           </div>
           <p className="text-white text-sm md:text-xs lg:text-[0.8rem] xl:text-[0.9rem] font-light leading-normal lg:leading-[1.3]">
-            Presenting the excitement of a seaside resort and the tranquility of
-            a mountain retreat, unique tropical features provide residents with
-            the best that nature has to offer. A 620-hectare development
-            designed for shared moments among family, Anvaya Cove offers endless
-            opportunities to forge lifelong memories. A dynamic community
-            nurturing family above everything else. With an array of amenities,
-            services, events and activities, family ties flourish at Anvaya
-            Cove.
+            {data[0].about}
           </p>
         </div>
-        <DevelopmentSummary />
+        <DevelopmentSummary param={param} />
       </div>
       {/* Map Popup */}
       {isMapOpen && (
@@ -141,11 +119,11 @@ const About: React.FC<AboutProps> = ({
               &#10005;
             </button>
             <Image
-              src={mapImage}
+              src={`/images/${data[0].map}`}
               width={800}
               height={600}
               alt="map-image"
-              className="rounded-lg"
+              className="rounded-lg max-h-[600px]"
             />
           </motion.div>
         </div>
