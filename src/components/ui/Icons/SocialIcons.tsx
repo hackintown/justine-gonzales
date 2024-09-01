@@ -9,7 +9,10 @@ import iconCall from "../../../../public/images/icon-call.webp";
 const SocialIcons: React.FC = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center space-y-3 py-2 px-2 rounded-md">
-      <Link href="https://web.facebook.com/profile.php?id=61563007072598" passHref>
+      <Link
+        href="https://web.facebook.com/profile.php?id=61563007072598"
+        passHref
+      >
         <Image
           src="/images/icon-fb.webp"
           width={28}

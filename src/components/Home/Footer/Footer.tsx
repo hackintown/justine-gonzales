@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex justify-center mt-4 space-x-4">
               {/* Replace with actual icons */}
-              <Link href="#" aria-label="Phone">
+              <Link href="tel:+639171775588" passHref>
                 <Image
                   src="/images/icon-call.webp"
                   width={500}
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
                   className="w-6 h-6"
                 />
               </Link>
-              <Link href="#" aria-label="WhatsApp">
+              <Link href="https://wa.me/639171775588" passHref>
                 <Image
                   src="/images/icon-whatsapp.webp"
                   alt="WhatsApp"
@@ -114,7 +114,10 @@ const Footer: React.FC = () => {
                   className="w-6 h-6"
                 />
               </Link>
-              <Link href="#" aria-label="Email">
+              <Link
+                href="mailto:gonzales.justine@ayalalandpremier.com"
+                passHref
+              >
                 <Image
                   src="/images/icon-email.webp"
                   alt="Email"
@@ -123,7 +126,10 @@ const Footer: React.FC = () => {
                   className="w-6 h-6"
                 />
               </Link>
-              <Link href="#" aria-label="Facebook">
+              <Link
+                href="https://web.facebook.com/profile.php?id=61563007072598"
+                passHref
+              >
                 <Image
                   src="/images/icon-fb.webp"
                   alt="Facebook"
@@ -132,7 +138,10 @@ const Footer: React.FC = () => {
                   className="w-6 h-6"
                 />
               </Link>
-              <Link href="#" aria-label="Instagram">
+              <Link
+                href=" https://www.instagram.com/ayalalandluxuryhomes"
+                passHref
+              >
                 <Image
                   src="/images/icon-insta.webp"
                   alt="Instagram"

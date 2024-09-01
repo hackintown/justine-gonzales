@@ -4,15 +4,21 @@ import Slider from "react-slick";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { NAVBARCONSTANT } from "@/components/ui/Navbar/constants";
+import Link from "next/link";
 
 const Services: React.FC = () => {
+  const data = NAVBARCONSTANT.map((item) => ({
+    location: item.location,
+    name: item.name,
+  }));
+
   const residentialLots = [
-    { image: "/images/rl1.webp", id: "residential-lot-1" },
-    { image: "/images/rl2.webp", id: "residential-lot-2" },
-    { image: "/images/rl3.webp", id: "residential-lot-3" },
-    { image: "/images/rl4.webp", id: "residential-lot-4" },
-    { image: "/images/rl5.webp", id: "residential-lot-5" },
-    { image: "/images/rl6.webp", id: "residential-lot-6" },
+    { image: "/images/AGE1.webp", id: "residential-lot-1" },
+    { image: "/images/arcilo1.webp", id: "residential-lot-2" },
+    { image: "/images/cah1.webp", id: "residential-lot-3" },
+    { image: "/images/ma4.webp", id: "residential-lot-4" },
+    { image: "/images/tcv2.webp", id: "residential-lot-5" },
   ];
 
   const residentialCondominiums = [
@@ -20,8 +26,6 @@ const Services: React.FC = () => {
     { image: "/images/rc2.webp", id: "residential-condo-2" },
     { image: "/images/rc3.webp", id: "residential-condo-3" },
     { image: "/images/rc4.webp", id: "residential-condo-4" },
-    { image: "/images/rc5.webp", id: "residential-condo-5" },
-    { image: "/images/rc6.webp", id: "residential-condo-6" },
   ];
 
   const officeSpaces = [
@@ -127,14 +131,35 @@ const Services: React.FC = () => {
           className="relative w-full"
         >
           {residentialLots.map((item, index) => (
-            <div key={index} id={item.id} className="px-2 outline-none">
-              <Image
-                src={item.image}
-                alt="resident-lots-image"
-                width={320}
-                height={240}
-                className="rounded-lg shadow-md"
-              />
+            <div
+              key={index}
+              id={item.id}
+              className="outline-none overflow-hidden px-2"
+            >
+              <div className="relative h-[320px] overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt="resident-lots-image"
+                  width={320}
+                  height={320}
+                  className="w-full h-full rounded-lg shadow-md object-cover"
+                />
+                <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                  <h2 className="text-white text-base  font-bold mb-1">
+                    {data[index]?.name || "Loading Name..."}
+                  </h2>
+                  <div className="flex items-center">
+                    <p className="text-sm text-white">
+                      {data[index]?.location || "Location Loading..."}
+                    </p>
+                    <Link href={`/properties/${NAVBARCONSTANT[index].id}`}>
+                      <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
+                        View Property
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </Slider>
@@ -168,19 +193,45 @@ const Services: React.FC = () => {
           }
           className="relative w-full"
         >
-          {residentialCondominiums.map((item, index) => (
-            <div key={index} id={item.id} className="px-2 outline-none">
-              <Image
-                src={item.image}
-                alt="resident-lots-image"
-                width={320}
-                height={240}
-                quality={75} // Reduced quality for optimization
-                loading="lazy" // Lazy load images
-                className="rounded-lg shadow-md object-cover"
-              />
-            </div>
-          ))}
+          {residentialCondominiums.map((item, index) => {
+            const dataIndex = index + 6;
+            return (
+              <div
+                key={index}
+                id={item.id}
+                className="px-2 outline-none overflow-hidden"
+              >
+                <div className="relative h-[320px] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt="resident-lots-image"
+                    width={320}
+                    height={240}
+                    quality={75} // Reduced quality for optimization
+                    loading="lazy" // Lazy load images
+                    className="w-full h-full rounded-lg shadow-md object-cover"
+                  />
+                  <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                    <h2 className="text-white text-base  font-bold mb-1">
+                      {data[dataIndex]?.name || "Loading Name..."}
+                    </h2>
+                    <div className="flex items-center">
+                      <p className="text-sm text-white">
+                        {data[dataIndex]?.location || "Location Loading..."}
+                      </p>
+                      <Link
+                        href={`/properties/${NAVBARCONSTANT[dataIndex].id}`}
+                      >
+                        <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
+                          View Property
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </Slider>
       </div>
       <div className="relative container mx-auto px-4 my-8">
@@ -212,21 +263,39 @@ const Services: React.FC = () => {
           }
           className="relative w-full"
         >
-          {officeSpaces.map((item, index) => (
-            <div key={index} id={item.id} className="px-2 outline-none">
-              <Image
-                src={item.image}
-                alt="resident-lots-image"
-                width={320}
-                height={240}
-                className="rounded-lg shadow-md object-cover h-full w-full"
-                style={{
-                  objectFit: "cover",
-                  aspectRatio: "320/240",
-                }}
-              />
-            </div>
-          ))}
+          {officeSpaces.map((item, index) => {
+            const dataIndex = (index = 10);
+            return (
+              <div key={index} id={item.id} className="px-2  outline-none">
+                <div className="relative h-[320px] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt="resident-lots-image"
+                    width={320}
+                    height={240}
+                    className="w-full h-full rounded-lg shadow-md object-cover"
+                  />
+                  <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                    <h2 className="text-white text-base  font-bold mb-1">
+                      {data[dataIndex]?.name || "Loading Name..."}
+                    </h2>
+                    <div className="flex items-center">
+                      <p className="text-sm text-white">
+                        {data[dataIndex]?.location || "Location Loading..."}
+                      </p>
+                      <Link
+                        href={`/properties/${NAVBARCONSTANT[dataIndex].id}`}
+                      >
+                        <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
+                          View Property
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </Slider>
       </div>
       <div className="relative container mx-auto px-4 my-8">
@@ -258,23 +327,41 @@ const Services: React.FC = () => {
           }
           className="relative w-full"
         >
-          {leisureRecreation.map((item, index) => (
-            <div key={index} id={item.id} className="px-2 outline-none">
-              <Image
-                src={item.image}
-                alt="resident-lots-image"
-                width={320}
-                height={240}
-                quality={75} // Reduced quality for optimization
-                loading="lazy" // Lazy load images
-                className="rounded-lg shadow-md object-cover h-full w-full"
-                style={{
-                  objectFit: "cover",
-                  aspectRatio: "320/240",
-                }}
-              />
-            </div>
-          ))}
+          {leisureRecreation.map((item, index) => {
+            const dataIndex = (index = 11);
+            return (
+              <div key={index} id={item.id} className="px-2 outline-none ">
+                <div className="relative h-[320px] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt="resident-lots-image"
+                    width={320}
+                    height={240}
+                    quality={75} // Reduced quality for optimization
+                    loading="lazy" // Lazy load images
+                    className="w-full h-full rounded-lg shadow-md object-cover"
+                  />
+                  <div className="absolute bottom-0 px-2 py-1 w-full flex flex-col  bg-[#344530] rounded-lg">
+                    <h2 className="text-white text-base  font-bold mb-1">
+                      {data[dataIndex]?.name || "Loading Name..."}
+                    </h2>
+                    <div className="flex items-center">
+                      <p className="text-sm text-white">
+                        {data[dataIndex]?.location || "Location Loading..."}
+                      </p>
+                      <Link
+                        href={`/properties/${NAVBARCONSTANT[dataIndex].id}`}
+                      >
+                        <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
+                          View Property
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </section>
