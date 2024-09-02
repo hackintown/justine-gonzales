@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,6 +13,9 @@ interface BannerProps {
 }
 
 const Banner: React.FC<BannerProps> = ({ param }) => {
+  // Reference for the Slick Slider instance
+  const sliderRef = useRef<Slider | null>(null);
+
   // Slick slider settings
   const sliderSettings = {
     dots: false,
@@ -36,11 +39,14 @@ const Banner: React.FC<BannerProps> = ({ param }) => {
           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
           WebkitBackdropFilter: "blur(1.5px)",
           borderRadius: "10px",
-          border: "1px solid rgba(255, 255, 255, 0.18)",
         }}
       >
         <div className="relative  h-full">
-          <Slider {...sliderSettings} className="rounded-lg overflow-hidden">
+          <Slider
+            {...sliderSettings}
+            className="rounded-lg overflow-hidden"
+            ref={sliderRef}
+          >
             {data[0].images.map(
               (image: { src: string; alt: string }, index: number) => (
                 <div
@@ -54,13 +60,16 @@ const Banner: React.FC<BannerProps> = ({ param }) => {
                     quality={75} // Adjust image quality for optimization
                     priority={index === 0} // Load the first image eagerly
                     alt={image.alt}
-                    className="w-full h-full object-cover" // Ensure full coverage
+                    className="w-full h-full object-cover outline-none" // Ensure full coverage
                   />
                 </div>
               )
             )}
           </Slider>
-          <div className="absolute top-1/2 right-2 transform -translate-y-1/2 max-w-[50px] w-full">
+          <div
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 max-w-[50px] w-full cursor-pointer"
+            onClick={() => sliderRef.current?.slickNext()}
+          >
             <Image
               src="/images/mbl-next-icon.webp"
               height={500}
@@ -85,8 +94,8 @@ const Banner: React.FC<BannerProps> = ({ param }) => {
             <span className="text-white">{data[0].location}</span>
           </p>
           <h1 className="text-4xl font-bold text-white">{data[0].name}</h1>
-          <Link href="/#inquiry-form">
-            <button className="max-w-[165px] mt-3">
+          <Link href="/#inquiry-form mt-3">
+            <button className="max-w-[165px]">
               <Image
                 src="/images/inquire-btn.webp"
                 width={500}

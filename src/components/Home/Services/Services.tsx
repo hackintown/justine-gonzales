@@ -137,7 +137,7 @@ const Services: React.FC = () => {
             <div
               key={index}
               id={item.id}
-              className="outline-none overflow-hidden px-2"
+              className="outline-none overflow-hidden px-2 rounded-xl"
             >
               <div className="relative h-[320px] overflow-hidden">
                 <Image

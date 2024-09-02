@@ -8,6 +8,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import inquireBtn from "../../../../public/images/inquire-btn.webp";
 import viewMapBtn from "../../../../public/images/view-map.webp";
 import { NAVBARCONSTANT } from "@/components/ui/Navbar/constants";
+import Link from "next/link";
 
 interface AboutProps {
   param: string;
@@ -42,15 +43,17 @@ const About: React.FC<AboutProps> = ({ param }) => {
           <h1 className="text-2xl lg:text-3xl font-bold text-white">
             {data[0].name}
           </h1>
-          <button className="max-w-[110px] lg:max-w-[130px]">
-            <Image
-              src={inquireBtn}
-              width={500}
-              height={500}
-              alt="inquire-button"
-              className="w-full"
-            />
-          </button>
+          <Link href="/#inquiry-form">
+            <button className="max-w-[110px] lg:max-w-[130px]">
+              <Image
+                src={inquireBtn}
+                width={500}
+                height={500}
+                alt="inquire-button"
+                className="w-full"
+              />
+            </button>
+          </Link>
         </div>
 
         <p className="flex items-center space-x-2 border-2 mt-2 mb-2 md:mb-4 border-white px-2 py-2 rounded-xl">
@@ -67,7 +70,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
               src={viewMapBtn}
               width={500}
               height={500}
-              alt="inquire-button"
+              alt="map"
               className="w-full h-full"
             />
           </button>
@@ -88,7 +91,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
                 src={viewMapBtn}
                 width={500}
                 height={500}
-                alt="inquire-button"
+                alt="map"
                 className="w-full h-full"
               />
             </button>
