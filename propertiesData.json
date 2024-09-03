@@ -42,15 +42,15 @@
     },
     {
       "id": "arcilo",
-      "name": "Arcilo",
+      "name": "Arcilo Nuvali",
       "images": [
         { "src": "arcilo-image1.jpg", "alt": "Arcilo Image 1" },
         { "src": "arcilo-image2.jpg", "alt": "Arcilo Image 2" }
       ],
       "logo": "arcilo-logo.png",
-      "title": "Arcilo",
+      "title": "Arcilo Nuvali",
       "about": "A picturesque residential community...",
-      "description": "Arcilo offers a serene environment with modern amenities...",
+      "description": "Arcilo Nuvali offers a serene environment with modern amenities...",
       "map": "arcilo-map.png",
       "landArea": "300 hectares",
       "numberOfPhases": "4 phases",

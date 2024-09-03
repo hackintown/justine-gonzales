@@ -37,22 +37,20 @@ const About: React.FC<AboutProps> = ({ param }) => {
   }) as any;
 
   return (
-    <section className="md:grid md:grid-cols-[45%_1fr] md:items-center md:gap-3">
-      <div className="hidden w-full md:block">
-        <div className="flex items-center justify-between mt-5">
+    <section className="md:grid md:grid-cols-[45%_1fr] md:items-center xl:items-start md:gap-3">
+      <div className="hidden w-full md:block lg:pt-5">
+        <div className="flex items-center lg:items-start justify-between mt-5">
           <h1 className="text-2xl lg:text-3xl font-bold text-white">
             {data[0].name}
           </h1>
-          <Link href="/#inquiry-form">
-            <button className="max-w-[110px] lg:max-w-[130px]">
-              <Image
-                src={inquireBtn}
-                width={500}
-                height={500}
-                alt="inquire-button"
-                className="w-full"
-              />
-            </button>
+          <Link href="/#inquiry-form" className="mt-2 block max-w-[120px] lg:max-w-[140px]">
+            <Image
+              src="/images/inquire-btn.webp"
+              width={500}
+              height={500}
+              alt="Inquire Button"
+              className="w-full"
+            />
           </Link>
         </div>
 
@@ -71,7 +69,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
               width={500}
               height={500}
               alt="map"
-              className="w-full h-full"
+              className="w-full h-full object-cover"
             />
           </button>
         </div>
@@ -126,7 +124,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
               width={800}
               height={600}
               alt="map-image"
-              className="rounded-lg max-h-[600px]"
+              className="rounded-lg max-h-[600px] object-contain"
             />
           </motion.div>
         </div>

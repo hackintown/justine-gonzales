@@ -5,9 +5,22 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 const images = [
-  "/images/main-hero-bg.webp",
-  "/images/hp-slide2.webp",
-  "/images/hp-slide3.webp",
+  "/images/banner-slide1.webp",
+  "/images/banner-slide2.webp",
+  "/images/banner-slide3.webp",
+  "/images/banner-slide4.webp",
+  "/images/banner-slide5.webp",
+  "/images/banner-slide6.webp",
+  "/images/banner-slide7.webp",
+  "/images/banner-slide8.webp",
+  "/images/banner-slide9.webp",
+  "/images/banner-slide10.webp",
+  "/images/banner-slide11.webp",
+  "/images/banner-slide12.webp",
+  "/images/banner-slide13.webp",
+  "/images/banner-slide14.webp",
+  "/images/banner-slide15.webp",
+  "/images/banner-slide16.webp",
 ];
 const Banner: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -96,7 +109,7 @@ const Banner: React.FC = () => {
         </div>
       </div>
       {/* Social Icons */}
-      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-[#008000] bg-opacity-45 rounded-lg z-40">
+      <div className="absolute right-8 top-1/4 sm:top-[200px] bg-black bg-opacity-80 rounded-lg z-40">
         <SocialIcons />
       </div>
     </section>

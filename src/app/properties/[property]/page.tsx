@@ -14,9 +14,6 @@ const Test = (props: Props) => {
   const param = props.params.property;
   return (
     <main className="relative min-h-screen">
-      <Head>
-        <link rel="preload" href="/images/homepage-banner-bg.webp" as="image" />
-      </Head>
       {/* Background Image */}
       <div
         style={{

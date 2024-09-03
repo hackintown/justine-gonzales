@@ -27,24 +27,14 @@ const Services: React.FC = () => {
     { image: "/images/rc2.webp", id: "residential-condo-2" },
     { image: "/images/rc3.webp", id: "residential-condo-3" },
     { image: "/images/rc4.webp", id: "residential-condo-4" },
+    { image: "/images/rc5.webp", id: "residential-condo-4" },
+    { image: "/images/rc6.webp", id: "residential-condo-4" },
   ];
 
-  const officeSpaces = [
-    { image: "/images/ovp1.webp", id: "office-space-1" },
-    { image: "/images/ovp2.webp", id: "office-space-2" },
-    { image: "/images/ovp3.webp", id: "office-space-3" },
-    { image: "/images/ovp4.webp", id: "office-space-4" },
-    { image: "/images/ovp5.webp", id: "office-space-5" },
-    { image: "/images/ovp6.webp", id: "office-space-6" },
-  ];
+  const officeSpaces = [{ image: "/images/ovp1.webp", id: "office-space-1" }];
 
   const leisureRecreation = [
     { image: "/images/ac1.webp", id: "leisure-rec-1" },
-    { image: "/images/ac2.webp", id: "leisure-rec-2" },
-    { image: "/images/ac3.webp", id: "leisure-rec-3" },
-    { image: "/images/ac4.webp", id: "leisure-rec-4" },
-    { image: "/images/ac5.webp", id: "leisure-rec-5" },
-    { image: "/images/ac6.webp", id: "leisure-rec-6" },
   ];
 
   // Separate state variables for each slider
@@ -72,14 +62,14 @@ const Services: React.FC = () => {
     beforeChange: (current: number, next: number) => setCurrentSlideLots(next),
   });
 
-  const CustomPrevArrow = ({
-    onClick,
-    currentSlide,
-  }: {
-    onClick?: () => void;
-    currentSlide: number;
-  }) =>
-    currentSlide > 0 && <div className="custom-slick-prev" onClick={onClick} />;
+  // const CustomPrevArrow = ({
+  //   onClick,
+  //   currentSlide,
+  // }: {
+  //   onClick?: () => void;
+  //   currentSlide: number;
+  // }) =>
+  //   currentSlide > 0 && <div className="custom-slick-prev" onClick={onClick} />;
 
   const CustomNextArrow = ({
     onClick,
@@ -119,12 +109,12 @@ const Services: React.FC = () => {
             width={45}
             height={45}
             alt="ALP-Icon"
-            className="w-[45px] h-[45px]"
+            className="w-[45px] h-auto"
           />
         </div>
         <Slider
           {...settings(currentSlideLots, setCurrentSlideLots)}
-          prevArrow={<CustomPrevArrow currentSlide={currentSlideLots} />}
+       
           nextArrow={
             <CustomNextArrow
               currentSlide={currentSlideLots}
@@ -133,38 +123,36 @@ const Services: React.FC = () => {
           }
           className="relative w-full"
         >
-          {residentialLots.map((item, index) => (
-            <div
-              key={index}
-              id={item.id}
-              className="outline-none overflow-hidden px-2 rounded-xl"
-            >
-              <div className="relative h-[320px] overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt="resident-lots-image"
-                  width={320}
-                  height={320}
-                  className="w-full h-full rounded-lg shadow-md object-cover"
-                />
-                <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
-                  <h2 className="text-white text-base  font-bold mb-1">
-                    {data[index]?.name || "Loading Name..."}
-                  </h2>
-                  <div className="flex items-center justify-between gap-x-2 mb-1">
-                    <p className="text-sm text-white">
-                      {data[index]?.location || "Location Loading..."}
-                    </p>
-                    <Link href={`/properties/${NAVBARCONSTANT[index].id}`}>
-                      <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
-                        View Property
-                      </button>
-                    </Link>
+          {residentialLots.map((item, index) => {
+            const navbarIndexMap: Partial<Record<number, number>> = {
+              0: 0,
+              1: 4,
+              2: 5,
+              3: 2,
+              4: 1,
+              5: 3,
+            };
+
+            const navbarIndex = navbarIndexMap[index] ?? index;
+            return (
+              <div
+                key={index}
+                id={item.id}
+                className="outline-none px-2 rounded-xl"
+              >
+                <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
+                  <div className="relative h-[350px] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt="resident-lots-image"
+                      fill={true}
+                      className="w-full h-full rounded-lg shadow-md object-contain"
+                    />
                   </div>
-                </div>
+                </Link>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </Slider>
       </div>
       <div className="relative container mx-auto px-4 my-8">
@@ -182,12 +170,12 @@ const Services: React.FC = () => {
             width={45}
             height={45}
             alt="ALP-Icon"
-            className="w-[45px] h-[45px]"
+            className="w-[45px] h-auto"
           />
         </div>
         <Slider
           {...settings(currentSlideCondos, setCurrentSlideCondos)}
-          prevArrow={<CustomPrevArrow currentSlide={currentSlideCondos} />}
+      
           nextArrow={
             <CustomNextArrow
               currentSlide={currentSlideCondos}
@@ -197,175 +185,129 @@ const Services: React.FC = () => {
           className="relative w-full"
         >
           {residentialCondominiums.map((item, index) => {
-            const dataIndex = index + 6;
+            const navbarIndexMap: Partial<Record<number, number>> = {
+              0: 6,
+              1: 7,
+              2: 5,
+              3: 8,
+              4: 9,
+              5: 8,
+            };
+
+            const navbarIndex = navbarIndexMap[index] ?? index;
             return (
               <div
                 key={index}
                 id={item.id}
                 className="px-2 outline-none overflow-hidden"
               >
-                <div className="relative h-[320px] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt="resident-lots-image"
-                    width={320}
-                    height={240}
-                    quality={75} // Reduced quality for optimization
-                    loading="lazy" // Lazy load images
-                    className="w-full h-full rounded-lg shadow-md object-cover"
-                  />
-                  <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
-                    <h2 className="text-white text-base  font-bold mb-1">
-                      {data[dataIndex]?.name || "Loading Name..."}
-                    </h2>
-                    <div className="flex items-center justify-between gap-x-2 mb-1">
-                      <p className="text-sm text-white">
-                        {data[dataIndex]?.location || "Location Loading..."}
-                      </p>
-                      <Link
-                        href={`/properties/${NAVBARCONSTANT[dataIndex].id}`}
-                      >
-                        <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
-                          View Property
-                        </button>
-                      </Link>
-                    </div>
+                <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
+                  <div className="relative h-[350px] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt="resident-lots-image"
+                      fill={true}
+                      className="w-full h-full rounded-lg shadow-md object-contain"
+                    />
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
         </Slider>
       </div>
-      <div className="relative container mx-auto px-4 my-8">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-gray-800 text-3xl md:text-4xl font-bold">
-              Office
-            </h1>
-            <p className="text-sm md:text-base font-light text-gray-600">
-              Discover which property suits you best
-            </p>
-          </div>
-          <Image
-            src="/images/alp-icon.webp"
-            width={45}
-            height={45}
-            alt="ALP-Icon"
-            className="w-[45px] h-[45px]"
-          />
-        </div>
-        <Slider
-          {...settings(currentSlideOffice, setCurrentSlideOffice)}
-          prevArrow={<CustomPrevArrow currentSlide={currentSlideOffice} />}
-          nextArrow={
-            <CustomNextArrow
-              currentSlide={currentSlideOffice}
-              slideCount={officeSpaces.length}
+      <div className="flex container flex-col md:flex-row gap-x-2 lg:gap-x-10 xl:gap-x-12">
+        <div className="relative container mx-auto px-4 my-8">
+          <div className="flex justify-between items-center mb-8">
+            <div>
+              <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
+                Office
+              </h1>
+              <p className="text-sm md:text-base font-light text-gray-600">
+                Discover which property suits you best
+              </p>
+            </div>
+            <Image
+              src="/images/alp-icon.webp"
+              width={45}
+              height={45}
+              alt="ALP-Icon"
+              className="w-[45px] h-auto"
             />
-          }
-          className="relative w-full"
-        >
+          </div>
+
           {officeSpaces.map((item, index) => {
-            const dataIndex = (index = 10);
+            const navbarIndexMap: Partial<Record<number, number>> = {
+              0: 10,
+            };
+
+            const navbarIndex = navbarIndexMap[index] ?? index;
             return (
-              <div key={index} id={item.id} className="px-2  outline-none">
-                <div className="relative h-[320px] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt="resident-lots-image"
-                    width={320}
-                    height={240}
-                    className="w-full h-full rounded-lg shadow-md object-cover"
-                  />
-                  <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
-                    <h2 className="text-white text-base  font-bold mb-1">
-                      {data[dataIndex]?.name || "Loading Name..."}
-                    </h2>
-                    <div className="flex items-center justify-between gap-x-2 mb-1">
-                      <p className="text-sm text-white">
-                        {data[dataIndex]?.location || "Location Loading..."}
-                      </p>
-                      <Link
-                        href={`/properties/${NAVBARCONSTANT[dataIndex].id}`}
-                      >
-                        <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
-                          View Property
-                        </button>
-                      </Link>
-                    </div>
+              <div
+                key={index}
+                id={item.id}
+                className="px-2 outline-none w-full max-w-[400px]"
+              >
+                <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
+                  <div className="relative h-[350px] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt="resident-lots-image"
+                      fill={true}
+                      className="w-full h-full rounded-lg shadow-md object-contain"
+                    />
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
-        </Slider>
-      </div>
-      <div className="relative container mx-auto px-4 my-8">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-gray-800 text-3xl md:text-4xl font-bold">
-              Leisure & Recreation
-            </h1>
-            <p className="text-sm md:text-base font-light text-gray-600">
-              Discover which property suits you best
-            </p>
-          </div>
-          <Image
-            src="/images/alp-icon.webp"
-            width={45}
-            height={45}
-            alt="ALP-Icon"
-            className="w-[45px] h-[45px]"
-          />
         </div>
-        <Slider
-          {...settings(currentSlideLeisure, setCurrentSlideLeisure)}
-          prevArrow={<CustomPrevArrow currentSlide={currentSlideLeisure} />}
-          nextArrow={
-            <CustomNextArrow
-              currentSlide={currentSlideLeisure}
-              slideCount={leisureRecreation.length}
+
+        <div className="relative container mx-auto px-4 my-8">
+          <div className="flex justify-between items-center mb-8">
+            <div>
+              <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
+                Leisure & Recreation
+              </h1>
+              <p className="text-sm md:text-base font-light text-gray-600">
+                Discover which property suits you best
+              </p>
+            </div>
+            <Image
+              src="/images/alp-icon.webp"
+              width={45}
+              height={45}
+              alt="ALP-Icon"
+              className="w-[45px] h-auto"
             />
-          }
-          className="relative w-full"
-        >
+          </div>
+
           {leisureRecreation.map((item, index) => {
-            const dataIndex = (index = 11);
+            const navbarIndexMap: Partial<Record<number, number>> = {
+              0: 11,
+            };
+
+            const navbarIndex = navbarIndexMap[index] ?? index;
             return (
-              <div key={index} id={item.id} className="px-2 outline-none ">
-                <div className="relative h-[320px] overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt="resident-lots-image"
-                    width={320}
-                    height={240}
-                    quality={75} // Reduced quality for optimization
-                    loading="lazy" // Lazy load images
-                    className="w-full h-full rounded-lg shadow-md object-cover"
-                  />
-                  <div className="absolute bottom-0 px-2 py-2 w-full flex flex-col  bg-[#344530] rounded-lg">
-                    <h2 className="text-white text-base  font-bold mb-1">
-                      {data[dataIndex]?.name || "Loading Name..."}
-                    </h2>
-                    <div className="flex items-center justify-between gap-x-2 mb-1">
-                      <p className="text-sm text-white">
-                        {data[dataIndex]?.location || "Location Loading..."}
-                      </p>
-                      <Link
-                        href={`/properties/${NAVBARCONSTANT[dataIndex].id}`}
-                      >
-                        <button className="text-[#283425] text-sm font-semibold bg-white rounded-lg px-2 py-1 text-nowrap">
-                          View Property
-                        </button>
-                      </Link>
-                    </div>
+              <div
+                key={index}
+                id={item.id}
+                className="px-2 outline-none max-w-[400px]"
+              >
+                <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
+                  <div className="relative h-[350px] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt="resident-lots-image"
+                      fill={true}
+                      className="w-full h-full rounded-lg shadow-md object-contain"
+                    />
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
-        </Slider>
+        </div>
       </div>
     </section>
   );

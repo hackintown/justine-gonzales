@@ -1,4 +1,6 @@
+import { NAVBARCONSTANT } from "@/components/ui/Navbar/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 const FeaturedProject = () => {
   return (
@@ -30,8 +32,8 @@ const FeaturedProject = () => {
             <Image
               src="/images/anvaya-cove-bg.webp"
               alt="Anvaya Cove"
-              fill
-              className=""
+              fill={true}
+              className="object-cover"
               priority
             />
           </div>
@@ -58,14 +60,17 @@ const FeaturedProject = () => {
               <br /> unique tropical features provide residents with the best
               that nature has to offer.
             </p>
-            <button className="max-w-[100px]">
+            <Link
+              href={`/properties/${NAVBARCONSTANT[11].id}`}
+              className="max-w-[100px] lg:max-w-[120px]"
+            >
               <Image
                 src="/images/learn-more-btn.webp"
                 width={500}
                 height={500}
                 alt="learn-more-btn"
               />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="relative my-5 w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[400px] xl:h-[450px] rounded-3xl overflow-hidden">
@@ -74,9 +79,9 @@ const FeaturedProject = () => {
           <div className="absolute w-full h-full z-0">
             <Image
               src="/images/miravera-hillestate.webp"
-              alt="Anvaya Cove"
-              fill
-              className=""
+              alt="miravera-hillestate"
+              fill={true}
+              className="object-cover"
               priority
             />
           </div>
@@ -95,14 +100,17 @@ const FeaturedProject = () => {
           </div>
           <div className="absolute bottom-4 lg:bottom-11 z-10 right-6 flex flex-col items-end text-white">
             <h2 className="text-3xl font-bold mb-1 lg:text-5xl">
-              Miravera Altaraza
+              Miravera at Altaraza
             </h2>
             <p className="text-[0.5rem] sm:text-xs  sm:max-w-lg max-w-md w-full text-right mb-2">
               Built around the natural environment instead of altering it, the
               village takes advantage of the undulating terrain by maintaining
               the site&apos;s ridges and waterways.
             </p>
-            <button className="max-w-[100px]">
+            <Link
+              href={`/properties/${NAVBARCONSTANT[4].id}`}
+              className="max-w-[100px] lg:max-w-[120px]"
+            >
               <Image
                 src="/images/learn-more-btn.webp"
                 width={500}
@@ -111,7 +119,7 @@ const FeaturedProject = () => {
                 loading="lazy" // Lazy load images
                 alt="learn-more-btn"
               />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="relative w-full h-[200px] sm:h-[230px] md:h-[300px] lg:h-[400px] xl:h-[450px] rounded-3xl overflow-hidden">
@@ -120,11 +128,9 @@ const FeaturedProject = () => {
           <div className="absolute w-full h-full z-0">
             <Image
               src="/images/azuela-cove.webp"
-              alt="Anvaya Cove"
-              fill
-              quality={75}
-              className=""
-              priority
+              alt="azuela-cove"
+              fill={true}
+              className="object-cover"
             />
           </div>
           <div className="absolute top-8 right-8 z-10 max-w-[130px] w-full">
@@ -151,7 +157,10 @@ const FeaturedProject = () => {
               hub undulating spaces for leisure and activity, recreation and
               entertainment, business and home.
             </p>
-            <button className="max-w-[100px]">
+            <Link
+              href={`/properties/${NAVBARCONSTANT[9].id}`}
+              className="max-w-[100px] lg:max-w-[120px]"
+            >
               <Image
                 src="/images/learn-more-btn.webp"
                 width={500}
@@ -160,7 +169,7 @@ const FeaturedProject = () => {
                 loading="lazy"
                 alt="learn-more-btn"
               />
-            </button>
+            </Link>
           </div>
         </div>
         <p className="mt-5 text-white text-[0.6rem] sm:text-xs  text-center px-4 max-w-2xl xl:max-w-3xl mx-auto">

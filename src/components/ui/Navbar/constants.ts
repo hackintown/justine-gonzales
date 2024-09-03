@@ -66,25 +66,25 @@ export const NAVBARCONSTANT = [
     id: "ciela-aera-heights",
     name: "Ciela at Aéra Heights",
     images: [
-      { src: "/images/age1.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age2.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age3.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age4.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age5.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age6.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age7.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age8.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age9.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age10.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age11.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age12.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age13.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age14.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age15.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age16.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age17.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age18.webp", alt: "Ciela-at-Aéra-Heights" },
-      { src: "/images/age19.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah1.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah2.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah3.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah4.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah5.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah6.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah7.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah8.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah9.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah10.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah11.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah12.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah13.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah14.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah15.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah16.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah17.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah18.webp", alt: "Ciela-at-Aéra-Heights" },
+      { src: "/images/cah19.webp", alt: "Ciela-at-Aéra-Heights" },
     ],
     logo: "cah-logo.webp",
     title: "Ciela at Aéra Heights",
@@ -123,7 +123,7 @@ export const NAVBARCONSTANT = [
   },
   {
     id: "lanewood-hills",
-    name: "Lanewood Hills",
+    name: "Lanewood Hills at Southmont",
     images: [
       { src: "/images/lh1.webp", alt: "lanewood-hills" },
       { src: "/images/lh2.webp", alt: "lanewood-hills" },
@@ -131,11 +131,11 @@ export const NAVBARCONSTANT = [
       { src: "/images/lh4.webp", alt: "lanewood-hills" },
     ],
     logo: "lh-logo.webp",
-    title: "Lanewood Hills",
+    title: "Lanewood Hills at Southmont",
     about:
       "Undulating landscapes and greenery intertwine with residential enclaves in Ayala Land Premier&apos;s newest neighborhood in the south. By preserving the natural features of the land, sprawling greenways will remain untouched, stretching throughout the development. Configured along ridges, homes overlook views of lush treetops, with everyday life imbued with the sights and sounds of nature.",
     description:
-      "Located in Silang, Cavite, Lanewood Hills is nestled within a community jointly developed by Ayala Land and Cathay Land. Its unique location puts it in proximity to the vibrant NUVALI estate and the leisure destinations of Tagaytay.",
+      "Located in Silang, Cavite, Lanewood Hills at Southmont is nestled within a community jointly developed by Ayala Land and Cathay Land. Its unique location puts it in proximity to the vibrant NUVALI estate and the leisure destinations of Tagaytay.",
     map: "lh-map.webp",
     landArea: "57 hectares",
     peakElevation: "193 – 265 meters above mean sea level",
@@ -205,7 +205,7 @@ export const NAVBARCONSTANT = [
   },
   {
     id: "arbor-lanes",
-    name: "Arbor Lanes",
+    name: "Arbor Lanes, Arca South",
     images: [
       { src: "/images/al1.webp", alt: "Arbor-Lanes" },
       { src: "/images/al2.webp", alt: "Arbor-Lanes" },
@@ -260,11 +260,11 @@ export const NAVBARCONSTANT = [
     ],
 
     logo: "al-logo.webp",
-    title: "Arbor Lanes",
+    title: "Arbor Lanes, Arca South",
     about:
-      "Arbor Lanes intertwines greenery and architecture in a vast 3.48-hectare development, complemented by commercial buildings to its north. Various configurations reveal landscapes and garden views, where a natural breeze and minimized sun exposure create a pleasant microclimate through a distinctive building orientation. Verdant spaces refresh urban lifestyles throughout the development. Four amenity spines create a communal atmosphere enlivened by vibrant foliage—expansive lawns, tree wells, outdoor lounges, pools, garden terraces, and halls—environments weaving together home and nature.",
+      "Arbor Lanes, Arca South intertwines greenery and architecture in a vast 3.48-hectare development, complemented by commercial buildings to its north. Various configurations reveal landscapes and garden views, where a natural breeze and minimized sun exposure create a pleasant microclimate through a distinctive building orientation. Verdant spaces refresh urban lifestyles throughout the development. Four amenity spines create a communal atmosphere enlivened by vibrant foliage—expansive lawns, tree wells, outdoor lounges, pools, garden terraces, and halls—environments weaving together home and nature.",
     description:
-      "Arbor Lanes is located at ARCA South, a 74-hectare, large-scale, master-planned, mixed-use, sustainable estate by Ayala Land in Taguig. Opening the gateway to the South, this emerging central business district offers prime accessibility through South Luzon Expressway (SLEX), C-5, and future connections to the Skyway. Workspaces, residences, parks, retail, and entertainment destinations harmonize, creating a contemporary community for business and lifestyles.",
+      "Arbor Lanes, Arca South is located at ARCA South, a 74-hectare, large-scale, master-planned, mixed-use, sustainable estate by Ayala Land in Taguig. Opening the gateway to the South, this emerging central business district offers prime accessibility through South Luzon Expressway (SLEX), C-5, and future connections to the Skyway. Workspaces, residences, parks, retail, and entertainment destinations harmonize, creating a contemporary community for business and lifestyles.",
     map: "al-map.webp",
     location: "Arca South, Taguig City, Philippines",
     developmentSummary: {
@@ -282,7 +282,7 @@ export const NAVBARCONSTANT = [
   },
   {
     id: "gardencourt-residences",
-    name: "Gardencourt Residences",
+    name: "Gardencourt Residences, Arca South",
     images: [
       { src: "/images/gr1.webp", alt: "gardencourt-residences" },
       { src: "/images/gr2.webp", alt: "gardencourt-residences" },
@@ -301,9 +301,9 @@ export const NAVBARCONSTANT = [
       { src: "/images/gr15.webp", alt: "gardencourt-residences" },
     ],
     logo: "gr-logo.webp",
-    title: "Gardencourt Residences",
+    title: "Gardencourt Residences, Arca South",
     about:
-      "Gardencourt Residences is a two-hectare parkside community of five cascading residential towers enveloping the expansive Gardencourt—a 6,000-square meter courtyard featuring open spaces, pockets of green, shared amenities, and settings for relaxation and play, connection and quiet. Maximized ceiling heights, expansive windows, and balconies open homes to abundant natural light, illuminating lifestyles of distinction.",
+      "Gardencourt Residences, Arca South is a two-hectare parkside community of five cascading residential towers enveloping the expansive Gardencourt—a 6,000-square meter courtyard featuring open spaces, pockets of green, shared amenities, and settings for relaxation and play, connection and quiet. Maximized ceiling heights, expansive windows, and balconies open homes to abundant natural light, illuminating lifestyles of distinction.",
     description:
       "The development is located at ARCA South, a 74-hectare, large-scale, master-planned, mixed-use, sustainable estate by Ayala Land in Taguig. An emerging central business district with prime accessibility through South Luzon Expressway (SLEX), C-5, and future connections to the Skyway. A dynamic community for contemporary business and lifestyles.",
     map: "gr-map.webp",

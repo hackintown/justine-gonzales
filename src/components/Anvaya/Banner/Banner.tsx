@@ -94,16 +94,14 @@ const Banner: React.FC<BannerProps> = ({ param }) => {
             <span className="text-white">{data[0].location}</span>
           </p>
           <h1 className="text-4xl font-bold text-white">{data[0].name}</h1>
-          <Link href="/#inquiry-form mt-3">
-            <button className="max-w-[165px]">
-              <Image
-                src="/images/inquire-btn.webp"
-                width={500}
-                height={500}
-                alt="Inquire Button"
-                className="w-full"
-              />
-            </button>
+          <Link href="/#inquiry-form" className="mt-2 block max-w-[140px]">
+            <Image
+              src="/images/inquire-btn.webp"
+              width={500}
+              height={500}
+              alt="Inquire Button"
+              className="w-full"
+            />
           </Link>
         </div>
       </div>

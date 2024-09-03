@@ -63,31 +63,31 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 href={`/properties/${NAVBARCONSTANT[1].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
-                Arcilo
+                Arcilo Nuvali
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[2].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
-                Ciela Aera Heights
+                Ciela at Aera Heights
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[3].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
-                Lanewood Hills
+                Lanewood Hills at Southmont
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[4].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
-                Miravera Altaraza
+                Miravera at Altaraza
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[5].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
-                The Courtyards, Vermosa
+                The Courtyards at Vermosa
               </Link>
             </div>
           </div>
@@ -102,19 +102,19 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 href={`/properties/${NAVBARCONSTANT[6].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-t-lg"
               >
-                Arbor Lanes
+                Arbor Lanes, Arca South
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[7].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
-                Gardencourt Residences
+                Gardencourt Residences, Arca South
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[8].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
-                ParkLinks North Tower
+                Parklinks North and South Towers
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[9].id}`}
@@ -218,35 +218,35 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
-                  Arcilo
+                  Arcilo Nuvali
                 </Link>
                 <Link
                   href={`/properties/${NAVBARCONSTANT[2].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
-                  Ciela Aera Heights
+                  Ciela at Aera Heights
                 </Link>
                 <Link
                   href={`/properties/${NAVBARCONSTANT[3].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
-                  Lanewood Hills
+                  Lanewood Hills at Southmont
                 </Link>
                 <Link
                   href={`/properties/${NAVBARCONSTANT[4].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
-                  Miravera Altaraza
+                  Miravera at Altaraza
                 </Link>
                 <Link
                   href={`/properties/${NAVBARCONSTANT[5].id}`}
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
-                  The Courtyards, Vermosa
+                  The Courtyards at Vermosa
                 </Link>
               </div>
             )}
@@ -271,21 +271,21 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                   onClick={toggleMenu}
                   href={`/properties/${NAVBARCONSTANT[6].id}`}
                 >
-                  Arbor Lanes
+                  Arbor Lanes, Arca South
                 </Link>
                 <Link
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                   href={`/properties/${NAVBARCONSTANT[7].id}`}
                 >
-                  Gardencourt Residences
+                  Gardencourt Residences, Arca South
                 </Link>
                 <Link
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                   href={`/properties/${NAVBARCONSTANT[8].id}`}
                 >
-                  ParkLinks North Tower
+                  Parklinks North and South Towers
                 </Link>
                 <Link
                   className="text-sm hover:text-gray-300"
