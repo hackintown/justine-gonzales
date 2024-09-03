@@ -173,10 +173,37 @@ const Footer: React.FC = () => {
                 className="bg-[#344630] text-white p-2 rounded placeholder-white font-light"
               >
                 <option>Select Project</option>
-                <option value="Residential Lots">Residential Lots</option>
-                <option value="Condominiums">Condominiums</option>
-                <option value="Office">Office</option>
-                <option value="Leisure">Leisure</option>
+                <option value="Ayala Greenfield Estates">
+                  Ayala Greenfield Estates
+                </option>
+                <option value="Arcilo, Nuvali">Arcilo, Nuvali</option>
+                <option value="Ciela at Aera Heights">
+                  Ciela at Aera Heights
+                </option>
+                <option value="Lanewood Hills at Southmont">
+                  Lanewood Hills at Southmont
+                </option>
+                <option value="Miravera at Altaraza">
+                  Miravera at Altaraza
+                </option>
+                <option value="The Courtyards at Vermosa">
+                  The Courtyards at Vermosa
+                </option>
+                <option value="Arbor Lanes, Arca South">
+                  Arbor Lanes, Arca South
+                </option>
+                <option value="Gardencourt Residences, Arca South">
+                  Gardencourt Residences, Arca South
+                </option>
+                <option value="Park Central Towers">Park Central Towers</option>
+                <option value="Parklinks North and South Towers">
+                  Parklinks North and South Towers
+                </option>
+                <option value="The Alcoves, Cebu">The Alcoves, Cebu</option>
+                <option value="The Residences at Azuela Cove">
+                  The Residences at Azuela Cove
+                </option>
+                <option value="One Vertis Plaza">One Vertis Plaza</option>
               </select>
               <div className="mt-4 grid grid-cols-2 gap-4">
                 <input

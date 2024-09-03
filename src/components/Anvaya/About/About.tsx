@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import DevelopmentSummary from "./DevelopmentSummary";
-import SocialIcons from "../../ui/Icons/SocialIcons";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { IoLocationOutline } from "react-icons/io5";
-import inquireBtn from "../../../../public/images/inquire-btn.webp";
 import viewMapBtn from "../../../../public/images/view-map.webp";
 import { NAVBARCONSTANT } from "@/components/ui/Navbar/constants";
 import Link from "next/link";
