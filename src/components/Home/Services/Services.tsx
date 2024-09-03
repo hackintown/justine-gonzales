@@ -114,7 +114,6 @@ const Services: React.FC = () => {
         </div>
         <Slider
           {...settings(currentSlideLots, setCurrentSlideLots)}
-       
           nextArrow={
             <CustomNextArrow
               currentSlide={currentSlideLots}
@@ -175,7 +174,6 @@ const Services: React.FC = () => {
         </div>
         <Slider
           {...settings(currentSlideCondos, setCurrentSlideCondos)}
-      
           nextArrow={
             <CustomNextArrow
               currentSlide={currentSlideCondos}
@@ -251,7 +249,7 @@ const Services: React.FC = () => {
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
                   <div className="relative h-[350px] overflow-hidden">
                     <Image
-                      src={item.image}
+                      src="/images/one-vertis-plaza-btn.webp"
                       alt="resident-lots-image"
                       fill={true}
                       className="w-full h-full rounded-lg shadow-md object-contain"
@@ -297,7 +295,7 @@ const Services: React.FC = () => {
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
                   <div className="relative h-[350px] overflow-hidden">
                     <Image
-                      src={item.image}
+                      src="/images/anvaya-cove-btn.webp"
                       alt="resident-lots-image"
                       fill={true}
                       className="w-full h-full rounded-lg shadow-md object-contain"

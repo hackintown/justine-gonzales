@@ -17,7 +17,7 @@ const Test = (props: Props) => {
       {/* Background Image */}
       <div
         style={{
-          backgroundImage: "url('/images/homepage-banner-bg.webp')",
+          backgroundImage: "url('/images/properties-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",

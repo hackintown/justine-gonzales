@@ -41,7 +41,10 @@ const About: React.FC<AboutProps> = ({ param }) => {
           <h1 className="text-2xl lg:text-3xl font-bold text-white">
             {data[0].name}
           </h1>
-          <Link href="/#inquiry-form" className="mt-2 block max-w-[120px] lg:max-w-[140px]">
+          <Link
+            href="/#inquiry-form"
+            className="mt-2 block max-w-[120px] lg:max-w-[140px]"
+          >
             <Image
               src="/images/inquire-btn.webp"
               width={500}
@@ -75,7 +78,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
           {data[0].about}
         </p>
       </div>
-      <div className="md:bg-none md:bg-transparent bg-about-sec-gradient rounded-lg p-4">
+      <div className="md:bg-none md:bg-transparent bg-black bg-opacity-30 rounded-lg p-4">
         <div className="md:hidden w-full">
           <div className="flex justify-between items-center mb-3 md:mb-2">
             <h2 className="text-2xl lg:text-3xl font-bold text-white">About</h2>
