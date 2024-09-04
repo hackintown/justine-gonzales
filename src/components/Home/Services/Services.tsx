@@ -40,8 +40,6 @@ const Services: React.FC = () => {
   // Separate state variables for each slider
   const [currentSlideLots, setCurrentSlideLots] = useState(0);
   const [currentSlideCondos, setCurrentSlideCondos] = useState(0);
-  const [currentSlideOffice, setCurrentSlideOffice] = useState(0);
-  const [currentSlideLeisure, setCurrentSlideLeisure] = useState(0);
 
   const settings = (
     currentSlide: number,
@@ -54,6 +52,13 @@ const Services: React.FC = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
+    prevArrow: null,
+    nextArrow: (
+      <CustomNextArrow
+        currentSlide={currentSlide}
+        slideCount={residentialLots.length}
+      />
+    ),
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
       { breakpoint: 768, settings: { slidesToShow: 2 } },
@@ -90,9 +95,9 @@ const Services: React.FC = () => {
         src="/images/residential-sec-bg.webp"
         alt="Real Estate"
         fill
-        quality={75}
+        quality={100}
         priority
-        className="z-0"
+        className="z-0 object-cover opacity-50"
       />
       <div className="relative container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
@@ -215,8 +220,8 @@ const Services: React.FC = () => {
         </Slider>
       </div>
       <div className="flex container flex-col md:flex-row gap-x-2 lg:gap-x-10 xl:gap-x-12">
-        <div className="relative container mx-auto px-4 my-8">
-          <div className="flex justify-between items-center mb-8">
+        <div className="relative container mx-auto px-4 my-4">
+          <div className="flex justify-between items-center mb-2">
             <div>
               <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
                 Office
@@ -247,7 +252,7 @@ const Services: React.FC = () => {
                 className="px-2 outline-none w-full max-w-[400px]"
               >
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
-                  <div className="relative h-[350px] overflow-hidden">
+                  <div className="relative h-[300px] lg:h-[350px] overflow-hidden">
                     <Image
                       src="/images/one-vertis-plaza-btn.webp"
                       alt="resident-lots-image"
@@ -261,8 +266,8 @@ const Services: React.FC = () => {
           })}
         </div>
 
-        <div className="relative container mx-auto px-4 my-8">
-          <div className="flex justify-between items-center mb-8">
+        <div className="relative container mx-auto px-4 mt-4">
+          <div className="flex justify-between items-center mb-2">
             <div>
               <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
                 Leisure & Recreation
@@ -293,7 +298,7 @@ const Services: React.FC = () => {
                 className="px-2 outline-none max-w-[400px]"
               >
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
-                  <div className="relative h-[350px] overflow-hidden">
+                  <div className="relative h-[300px] lg:h-[350px] overflow-hidden">
                     <Image
                       src="/images/anvaya-cove-btn.webp"
                       alt="resident-lots-image"

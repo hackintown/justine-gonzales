@@ -13,6 +13,9 @@
 .slick-next {
   display: none; /* Hide default arrows */
 }
+.slick-prev {
+  display: none !important;
+}
 
 /* Custom Slick Arrows */
 .custom-slick-prev {

@@ -111,10 +111,22 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 Gardencourt Residences, Arca South
               </Link>
               <Link
+                href={`/properties/${NAVBARCONSTANT[12].id}`}
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                Park Central Towers
+              </Link>
+              <Link
                 href={`/properties/${NAVBARCONSTANT[8].id}`}
                 className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
               >
                 Parklinks North and South Towers
+              </Link>
+              <Link
+                href={`/properties/${NAVBARCONSTANT[13].id}`}
+                className="block px-4 py-2 text-sm hover:bg-gray-700 rounded-b-lg"
+              >
+                The Alcoves, Cebu
               </Link>
               <Link
                 href={`/properties/${NAVBARCONSTANT[9].id}`}
@@ -283,9 +295,23 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                 <Link
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[12].id}`}
+                >
+                  Park Central Towers
+                </Link>
+                <Link
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
                   href={`/properties/${NAVBARCONSTANT[8].id}`}
                 >
                   Parklinks North and South Towers
+                </Link>
+                <Link
+                  className="text-sm hover:text-gray-300"
+                  onClick={toggleMenu}
+                  href={`/properties/${NAVBARCONSTANT[13].id}`}
+                >
+                  The Alcoves, Cebu
                 </Link>
                 <Link
                   className="text-sm hover:text-gray-300"
