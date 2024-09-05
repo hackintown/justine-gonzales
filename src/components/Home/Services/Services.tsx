@@ -43,7 +43,8 @@ const Services: React.FC = () => {
 
   const settings = (
     currentSlide: number,
-    setCurrentSlide: (slide: number) => void
+    setCurrentSlide: (slide: number) => void,
+    slideCount: number
   ) => ({
     dots: false,
     infinite: true,
@@ -52,12 +53,8 @@ const Services: React.FC = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
-    prevArrow: null,
     nextArrow: (
-      <CustomNextArrow
-        currentSlide={currentSlide}
-        slideCount={residentialLots.length}
-      />
+      <CustomNextArrow currentSlide={currentSlide} slideCount={slideCount} />
     ),
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
@@ -66,15 +63,6 @@ const Services: React.FC = () => {
     ],
     beforeChange: (current: number, next: number) => setCurrentSlideLots(next),
   });
-
-  // const CustomPrevArrow = ({
-  //   onClick,
-  //   currentSlide,
-  // }: {
-  //   onClick?: () => void;
-  //   currentSlide: number;
-  // }) =>
-  //   currentSlide > 0 && <div className="custom-slick-prev" onClick={onClick} />;
 
   const CustomNextArrow = ({
     onClick,
@@ -85,9 +73,9 @@ const Services: React.FC = () => {
     currentSlide: number;
     slideCount: number;
   }) =>
-    currentSlide < slideCount - 4 && (
+    currentSlide < slideCount - 4 ? (
       <div className="custom-slick-next" onClick={onClick} />
-    );
+    ) : null;
 
   return (
     <section className="relative bg-gray-50 py-12">
@@ -118,13 +106,7 @@ const Services: React.FC = () => {
           />
         </div>
         <Slider
-          {...settings(currentSlideLots, setCurrentSlideLots)}
-          nextArrow={
-            <CustomNextArrow
-              currentSlide={currentSlideLots}
-              slideCount={residentialLots.length}
-            />
-          }
+          {...settings(currentSlideLots, setCurrentSlideLots, residentialLots.length)}
           className="relative w-full"
         >
           {residentialLots.map((item, index) => {
@@ -178,13 +160,11 @@ const Services: React.FC = () => {
           />
         </div>
         <Slider
-          {...settings(currentSlideCondos, setCurrentSlideCondos)}
-          nextArrow={
-            <CustomNextArrow
-              currentSlide={currentSlideCondos}
-              slideCount={residentialCondominiums.length}
-            />
-          }
+          {...settings(
+            currentSlideCondos,
+            setCurrentSlideCondos,
+            residentialCondominiums.length
+          )}
           className="relative w-full"
         >
           {residentialCondominiums.map((item, index) => {
