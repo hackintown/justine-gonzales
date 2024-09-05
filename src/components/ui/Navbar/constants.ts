@@ -26,7 +26,7 @@ export const NAVBARCONSTANT = [
     logo: "age-logo.webp",
     title: "Ayala Greenfield Estates",
     about:
-      "Lush landscapes and rolling terrain—in Ayala Greenfield Estates, the calm and constancy of nature belies life&apos;s dynamism. Enveloped by vistas of Mt. Makiling and Laguna de Bay, an idyllic, mountainside living experience unfolds. Natural amenities and a dedicated country club capture a living portrait of sweeping views. Fairways, park, mountain, lake—your home pulls into focus nature at its most astonishing.",
+      "Lush landscapes and rolling terrain—in Ayala Greenfield Estates, the calm and constancy of nature belies life’s dynamism. Enveloped by vistas of Mt. Makiling and Laguna de Bay, an idyllic, mountainside living experience unfolds. Natural amenities and a dedicated country club capture a living portrait of sweeping views. Fairways, park, mountain, lake—your home pulls into focus nature at its most astonishing.",
     description:
       "Ayala Greenfield Estates is accessible via South Luzon Expressway (SLEX) through the Batangas Exit, a quick drive from NUVALI, and only 30 minutes by car from Alabang. The first Ayala Land Premier development in Calamba, Laguna, spanning 350 hectares, features distinct residential enclaves complemented by parks, open spaces, and unparalleled amenities, surrounding residents with a world of nature.",
     map: "age-map.webp",
@@ -48,7 +48,7 @@ export const NAVBARCONSTANT = [
     about:
       "Surrounded by a lush, natural landscape, this distinctive neighborhood is embraced by large acacia trees, creating a unique setting for families to take root and thrive. Discover a new enclave where dense foliage and overarching canopies provide natural shade and a distinct charm for residents. Ayala Land Premier welcomes you to its newest address in the growing NUVALI estate.",
     description:
-      "Ayala Land Premier&apos;s tenth neighborhood in NUVALI is located in the southern expanse of the estate along Evoliving Parkway. It is easily accessible to the main road of Nuvali Boulevard and close to all the conveniences and support establishments within the estate. Arcilo is surrounded by existing premier villages and bordered by the Cauang-Cauang River to the west, providing natural barriers and heightened exclusivity.",
+      "Ayala Land Premier’s tenth neighborhood in NUVALI is located in the southern expanse of the estate along Evoliving Parkway. It is easily accessible to the main road of Nuvali Boulevard and close to all the conveniences and support establishments within the estate. Arcilo is surrounded by existing premier villages and bordered by the Cauang-Cauang River to the west, providing natural barriers and heightened exclusivity.",
     map: "arcilo-map.webp",
     landArea: "30 hectares",
     numberOfPhases: "1 phase",
@@ -133,7 +133,7 @@ export const NAVBARCONSTANT = [
     logo: "lh-logo.webp",
     title: "Lanewood Hills at Southmont",
     about:
-      "Undulating landscapes and greenery intertwine with residential enclaves in Ayala Land Premier&apos;s newest neighborhood in the south. By preserving the natural features of the land, sprawling greenways will remain untouched, stretching throughout the development. Configured along ridges, homes overlook views of lush treetops, with everyday life imbued with the sights and sounds of nature.",
+      "Undulating landscapes and greenery intertwine with residential enclaves in Ayala Land Premier’s newest neighborhood in the south. By preserving the natural features of the land, sprawling greenways will remain untouched, stretching throughout the development. Configured along ridges, homes overlook views of lush treetops, with everyday life imbued with the sights and sounds of nature.",
     description:
       "Located in Silang, Cavite, Lanewood Hills at Southmont is nestled within a community jointly developed by Ayala Land and Cathay Land. Its unique location puts it in proximity to the vibrant NUVALI estate and the leisure destinations of Tagaytay.",
     map: "lh-map.webp",
@@ -315,7 +315,7 @@ export const NAVBARCONSTANT = [
     about:
       "Ayala Land, in partnership with Eton Properties, continues a pioneering heritage, setting the standard for master-planned, large-scale, mixed-use, and sustainable developments with the greenest urban estate in Quezon City and Pasig—Parklinks. Sprawling parks extend throughout the entire estate, creating a highly integrated community enhanced by green spaces. Ayala Land Premier reveals a panorama of living, esteemed addresses within a dynamic growth corridor with Parklinks North and South Towers.",
     description:
-      "Located at the intersection of Quezon City and Pasig, Parklinks is easily accessible via C-5, Ortigas Avenue, and Amang Rodriguez Avenue, connecting the estate to surrounding key commercial, retail, and institutional developments, including the country&apos;s esteemed schools along Katipunan. The 35-hectare sustainable masterplan dedicates 50% to a network of dynamic parks and refreshing green spaces, woven into an array of retail and leisure spots, offices, and living spaces. Designed for high pedestrian mobility, parks are within a five-minute walk from any point in the estate.",
+      "Located at the intersection of Quezon City and Pasig, Parklinks is easily accessible via C-5, Ortigas Avenue, and Amang Rodriguez Avenue, connecting the estate to surrounding key commercial, retail, and institutional developments, including the country’s esteemed schools along Katipunan. The 35-hectare sustainable masterplan dedicates 50% to a network of dynamic parks and refreshing green spaces, woven into an array of retail and leisure spots, offices, and living spaces. Designed for high pedestrian mobility, parks are within a five-minute walk from any point in the estate.",
     map: "pkl-map.webp",
     landArea: "4,145 sqm (North Tower), 4,002 sqm (South Tower)",
     location: "Quezon City and Pasig City, Philippines",
@@ -356,9 +356,9 @@ export const NAVBARCONSTANT = [
     logo: "trac-logo.webp",
     title: "The Residences at Azuela Cove",
     about:
-      "The Alcantara Group—a shared vision with Ayala Land—brings together Mindanao&apos;s pioneer in infrastructure, agri-business, and property development. Azuela Cove is a prime mixed-use, master-planned development in Davao. It is a vibrant destination where people and pursuits converge, offering a dynamic hub with undulating spaces for leisure, activity, recreation, entertainment, business, and home. Presenting a new wave of living in Davao&apos;s premier waterside community. The Residences at Azuela Cove is a two-tower, low-density, all-suite development where every residential space faces seaward. Spaces for activity and convergence channel radiance and effortlessness into everyday living. A spectrum of contemporary amenities and facilities complements the outstanding blue expanse, elevating lifestyles by the sea.",
+      "The Alcantara Group—a shared vision with Ayala Land—brings together Mindanao’s pioneer in infrastructure, agri-business, and property development. Azuela Cove is a prime mixed-use, master-planned development in Davao. It is a vibrant destination where people and pursuits converge, offering a dynamic hub with undulating spaces for leisure, activity, recreation, entertainment, business, and home. Presenting a new wave of living in Davao’s premier waterside community. The Residences at Azuela Cove is a two-tower, low-density, all-suite development where every residential space faces seaward. Spaces for activity and convergence channel radiance and effortlessness into everyday living. A spectrum of contemporary amenities and facilities complements the outstanding blue expanse, elevating lifestyles by the sea.",
     description:
-      "Located at the intersection of J.P. Laurel Avenue and R. Castillo Street, Azuela Cove is Ayala Land&apos;s first waterside, mixed-use estate in the region. This 25-hectare business and residential development at Kilometer Seven Lanang faces Samal Island and Davao Gulf. Forty percent of the estate will be dedicated to greens and open spaces, with a Central Park serving as a sprawling green spine that connects all parts of Azuela Cove to the seaside Esplanade, its dynamic centerpiece, which unfolds vistas of Davao Gulf and Samal Island.",
+      "Located at the intersection of J.P. Laurel Avenue and R. Castillo Street, Azuela Cove is Ayala Land’s first waterside, mixed-use estate in the region. This 25-hectare business and residential development at Kilometer Seven Lanang faces Samal Island and Davao Gulf. Forty percent of the estate will be dedicated to greens and open spaces, with a Central Park serving as a sprawling green spine that connects all parts of Azuela Cove to the seaside Esplanade, its dynamic centerpiece, which unfolds vistas of Davao Gulf and Samal Island.",
     map: "trac-map.webp",
     landArea: "10,019 sqm",
     numberOfPhases: "2 phases",
@@ -395,7 +395,7 @@ export const NAVBARCONSTANT = [
     logo: "ovp-logo.webp",
     title: "One Vertis Plaza",
     about:
-      "One Vertis Plaza signals a new branch in Ayala Land Premier&apos;s evolution, presenting distinctive professional environments in Quezon City. Prime workspaces, directly accessible to the two-hectare Vertis North Gardens, offer unobstructed views of opportunities ahead. This dynamic corporate address is designed for business and investment, helping define your measure of success.",
+      "One Vertis Plaza signals a new branch in Ayala Land Premier’s evolution, presenting distinctive professional environments in Quezon City. Prime workspaces, directly accessible to the two-hectare Vertis North Gardens, offer unobstructed views of opportunities ahead. This dynamic corporate address is designed for business and investment, helping define your measure of success.",
     description:
       "Located at the regional gateway to the North, serving as the main transportation hub between Metro Manila and Northern Luzon, One Vertis Plaza is accessible via major road networks including EDSA, Mindanao Avenue, and Quezon Avenue. This prime location opens up a dynamic range of opportunities for business, leisure, and living, accelerating growth for both emerging and established enterprises. Vertis North is a 45-hectare, mixed-use estate developed by Ayala Land in partnership with the National Housing Authority (NHA). The estate is a dynamic community seamlessly fusing natural details with elements of contemporary living in one destination.",
     map: "ovp-map.webp",
@@ -439,8 +439,13 @@ export const NAVBARCONSTANT = [
       "Golf & Sports Share",
       "Beach and Nature Club Shares",
     ],
-    description:
-      "Located in Morong, Bataan, Anvaya Cove is accessible via North Luzon Expressway (NLEX) through San Fernando Exit, Subic-Clark-Tarlac Expressway (SCTEX), and Angeles Exit. It is approximately 2.5 hours from Manila by car, only 20 minutes away from the Subic Bay Freeport Zone, offering an accessible escape from the city.",
+    description: `Located in Morong, Bataan, Anvaya Cove is accessible via North Luzon Expressway (NLEX) through San Fernando Exit, Subic-Clark-Tarlac Expressway (SCTEX), and Angeles Exit. 
+    It is approximately 2.5 hours from Manila by car, only 20 minutes away from the Subic Bay Freeport Zone, offering an accessible escape from the city. 
+    Anvaya Cove offers:
+    ● Residential Neighborhoods
+    ● Residential Condominium
+    ● Golf & Sports Share
+    ● Beach and Nature Club Shares.`,
     map: "ac-map.webp",
     landArea: "620 hectares",
     peakElevation: "130 meters above sea level",
@@ -465,7 +470,7 @@ export const NAVBARCONSTANT = [
       { src: "/images/pct9.webp", alt: "park-central-towers" },
       { src: "/images/pct10.webp", alt: "park-central-towers" },
     ],
-    logo: "park-central-logo.webp",
+    logo: "pct-logo.webp",
     title: "Park Central Towers",
     about:
       "At the core of a thriving city, Park Central Towers unfolds timeless residences in Makati’s urban oasis. An integrated locale places homes at the center of it all—paramount connectivity to the lush spaces of Ayala Triangle and proximity to premier lifestyle destinations in Ayala Center position everything within reach from all directions. Anchored by a curated spectrum of retail, dining, and service establishments, as well as dynamic workspaces at the podium level, Park Central Towers offers a unique living experience with a variety of delights and encounters. The 15,860-sqm development features shared amenities including a fully dedicated fitness center, multi-functional courts, a pool, indoor and outdoor lounges, and play areas, complementing distinctive residences with dynamic environments for unique everyday pursuits.",
@@ -500,14 +505,14 @@ export const NAVBARCONSTANT = [
       { src: "/images/alc9.webp", alt: "the-alcoves" },
       { src: "/images/alc10.webp", alt: "the-alcoves" },
     ],
-    logo: "the-alcoves-logo.webp",
+    logo: "alc-logo.webp",
     title: "The Alcoves",
     about:
       "Surrounding you with the finest elements for living, Ayala Land Premier’s newest vertical community, The Alcoves, places you at the heart of the city’s vibrant lifestyle district. With private access to Ayala Center Cebu’s array of retail, dining, and leisure destinations, your address provides the perfect backdrop for your chosen lifestyle. Every day is inspired by an abundance of opportunities that welcome you home.",
 
     description:
       "Cebu Park District is located at Luzon Avenue, Cebu Business Park, Brgy. Mabolo, Cebu City. Residents of The Alcoves will have direct access to Ayala Center Cebu and enjoy retail and dining establishments at the ground, 2nd, and 3rd levels. Life abounds amidst a variety of choices, with select opportunities for leisure, dining, and retail right at your doorstep.",
-    map: "alcoves-map.webp",
+    map: "alc-map.webp",
     landArea: "",
     peakElevation: "",
     location: "Cebu City",

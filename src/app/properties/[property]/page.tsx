@@ -22,7 +22,7 @@ const Test = (props: Props) => {
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
         }}
-        className="absolute inset-0 w-full h-full z-0 filter blur-sm"
+        className="absolute inset-0 w-full h-full z-0"
       ></div>
 
       <div className="relative container z-10 py-10">
