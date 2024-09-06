@@ -35,7 +35,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
   }) as any;
 
   return (
-    <section className="md:grid md:grid-cols-[45%_1fr] md:items-center xl:items-start md:gap-3">
+    <section className="md:grid md:grid-cols-[45%_1fr] md:items-start xl:items-start md:gap-3">
       <div className="hidden w-full md:block lg:pt-5">
         <div className="flex items-center lg:items-start justify-between mt-5">
           <h1 className="text-2xl lg:text-3xl font-bold text-white">
@@ -115,10 +115,10 @@ const About: React.FC<AboutProps> = ({ param }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
-            className="relative p-4 bg-white rounded-lg shadow-xl"
+            className="relative p-2 bg-black rounded-lg shadow-xl w-[96%] mx-auto md:w-full"
           >
             <button
-              className="absolute top-5 right-6 w-10 h-10 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-full shadow-md transition-all duration-300"
+              className="absolute top-5 right-6 w-7 h-7 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-full shadow-md transition-all duration-300"
               onClick={closeMapPopup}
             >
               &#10005;
@@ -128,7 +128,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
               width={800}
               height={600}
               alt="map-image"
-              className="rounded-lg max-h-[600px] object-contain"
+              className="rounded-lg w-full h-full max-h-[600px] object-contain"
             />
           </motion.div>
         </div>

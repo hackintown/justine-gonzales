@@ -164,7 +164,7 @@ export const NAVBARCONSTANT = [
       "Altaraza transforms potential into the next growth center in northeastern Manila. Converging urban energy with nature in Bulacan, a 40 hectare Master-planed Estate with a 600 hectare expansion area is nestled within a wide range of residential and commercial spaces set against a captivating backdrop of the Sierra Madre mountains.",
     description:
       "The estate is conveniently located just outside Metro Manila at the boundary of Caloocan and Bulacan. It is highly accessible through a direct connection to Quirino Highway along with planned government infrastructure projects such as MRT-7 and Bulacan International Airport.",
-    map: "ma-map-webp",
+    map: "ma-map.webp",
     landArea: "29 hectares",
     numberOfPhases: "1 phase",
     peakElevation: "70 - 130 meters above mean sea level",
