@@ -115,7 +115,7 @@ const About: React.FC<AboutProps> = ({ param }) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
-            className="relative p-2 bg-black rounded-lg shadow-xl w-[96%] mx-auto md:w-full"
+            className="relative p-2 bg-black rounded-lg shadow-xl w-auto"
           >
             <button
               className="absolute top-5 right-6 w-7 h-7 flex items-center justify-center bg-red-500 hover:bg-red-600 text-white rounded-full shadow-md transition-all duration-300"
