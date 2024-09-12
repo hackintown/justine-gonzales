@@ -74,10 +74,10 @@ const About: React.FC<AboutProps> = ({ param }) => {
             />
           </button>
         </div>
-        <p className="text-white text-justify hyphens-auto text-sm md:text-xs lg:text-[0.8rem] xl:text-[0.9rem] font-light leading-normal lg:leading-[1.3]">
+        <p className="text-white text-justify  hyphens-none text-sm md:text-xs lg:text-[0.8rem] xl:text-[0.9rem] font-light leading-normal lg:leading-[1.3]">
           {data[0].about}
         </p>
-        <p className="text-white text-justify hyphens-auto text-sm md:text-xs lg:text-[0.8rem] xl:text-[0.9rem] my-3 font-light leading-normal lg:leading-[1.3]">
+        <p className="text-white text-justify hyphens-none text-sm md:text-xs lg:text-[0.8rem] xl:text-[0.9rem] my-3 font-light leading-normal lg:leading-[1.3]">
           {data[0].description}
         </p>
       </div>

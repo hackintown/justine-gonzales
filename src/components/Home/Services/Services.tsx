@@ -41,11 +41,7 @@ const Services: React.FC = () => {
   const [currentSlideLots, setCurrentSlideLots] = useState(0);
   const [currentSlideCondos, setCurrentSlideCondos] = useState(0);
 
-  const settings = (
-    currentSlide: number,
-    setCurrentSlide: (slide: number) => void,
-    slideCount: number
-  ) => ({
+  const settings = (setCurrentSlide: (slide: number) => void) => ({
     dots: false,
     infinite: true,
     speed: 500,
@@ -53,29 +49,22 @@ const Services: React.FC = () => {
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
-    nextArrow: (
-      <CustomNextArrow currentSlide={currentSlide} slideCount={slideCount} />
-    ),
+    nextArrow: <CustomNextArrow />,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
       { breakpoint: 768, settings: { slidesToShow: 2 } },
       { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
-    beforeChange: (current: number, next: number) => setCurrentSlideLots(next),
+    beforeChange: (_: number, next: number) => setCurrentSlideLots(next),
   });
 
-  const CustomNextArrow = ({
-    onClick,
-    currentSlide,
-    slideCount,
-  }: {
-    onClick?: () => void;
-    currentSlide: number;
-    slideCount: number;
-  }) =>
-    currentSlide < slideCount - 4 ? (
-      <div className="custom-slick-next" onClick={onClick} />
-    ) : null;
+  // Custom Next Arrow component
+  const CustomNextArrow: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
+    <div
+      className="custom-slick-next absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer z-10"
+      onClick={onClick}
+    ></div>
+  );
 
   return (
     <section className="relative bg-gray-50 py-12">
@@ -105,10 +94,7 @@ const Services: React.FC = () => {
             className="w-[45px] h-auto"
           />
         </div>
-        <Slider
-          {...settings(currentSlideLots, setCurrentSlideLots, residentialLots.length)}
-          className="relative w-full"
-        >
+        <Slider {...settings(setCurrentSlideLots)} className="relative w-full">
           {residentialLots.map((item, index) => {
             const navbarIndexMap: Partial<Record<number, number>> = {
               0: 0,
@@ -159,14 +145,7 @@ const Services: React.FC = () => {
             className="w-[45px] h-auto"
           />
         </div>
-        <Slider
-          {...settings(
-            currentSlideCondos,
-            setCurrentSlideCondos,
-            residentialCondominiums.length
-          )}
-          className="relative w-full"
-        >
+        <Slider {...settings(setCurrentSlideLots)} className="relative w-full">
           {residentialCondominiums.map((item, index) => {
             const navbarIndexMap: Partial<Record<number, number>> = {
               0: 6,
