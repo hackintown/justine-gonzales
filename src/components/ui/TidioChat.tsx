@@ -4,8 +4,15 @@ import { useEffect } from "react";
 
 const TidioChat = () => {
   useEffect(() => {
+    const tidioUrl = process.env.NEXT_PUBLIC_TIDIO_URL;
+
+    if (!tidioUrl) {
+      console.error("Tidio URL is not set in environment variables.");
+      return; // Exit early if no Tidio URL is provided
+    }
+
     const script = document.createElement("script");
-    script.src = process.env.NEXT_PUBLIC_TIDIO_URL || ""; // Load the Tidio script from the environment variable
+    script.src = tidioUrl; // Load the Tidio script from the environment variable
     script.async = true;
     script.defer = true;
     document.body.appendChild(script); // Append the script to the body
