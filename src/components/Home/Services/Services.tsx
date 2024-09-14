@@ -50,10 +50,25 @@ const Services: React.FC = () => {
     autoplay: false,
     autoplaySpeed: 3000,
     nextArrow: <CustomNextArrow />,
+    className: "right-side-visible-slider",
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2.1,
+          centerMode: true, // Enable center mode
+          centerPadding: "20px",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.1,
+          centerMode: true, // Enable center mode
+          centerPadding: "20px",
+        },
+      },
     ],
     beforeChange: (_: number, next: number) => setCurrentSlideLots(next),
   });
@@ -179,7 +194,7 @@ const Services: React.FC = () => {
         </Slider>
       </div>
       <div className="flex container flex-col md:flex-row gap-x-2 lg:gap-x-10 xl:gap-x-12">
-        <div className="relative container mx-auto px-4 my-4">
+        <div className="relative my-4">
           <div className="flex justify-between items-center mb-2">
             <div>
               <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
@@ -215,8 +230,8 @@ const Services: React.FC = () => {
                     <Image
                       src="/images/one-vertis-plaza-btn.webp"
                       alt="resident-lots-image"
-                      fill={true}
-                      className="w-full h-full rounded-lg shadow-md object-contain"
+                      fill
+                      className="w-full h-auto rounded-lg shadow-md object-contain"
                     />
                   </div>
                 </Link>
@@ -225,7 +240,7 @@ const Services: React.FC = () => {
           })}
         </div>
 
-        <div className="relative container mx-auto px-4 mt-4">
+        <div className="relative mt-4">
           <div className="flex justify-between items-center mb-2">
             <div>
               <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
@@ -261,8 +276,8 @@ const Services: React.FC = () => {
                     <Image
                       src="/images/anvaya-cove-btn.webp"
                       alt="resident-lots-image"
-                      fill={true}
-                      className="w-full h-full rounded-lg shadow-md object-contain"
+                      fill
+                      className="w-full h-auto rounded-lg shadow-md object-contain"
                     />
                   </div>
                 </Link>
