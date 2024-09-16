@@ -72,3 +72,8 @@
   right: 20px; /* Adjust as needed */
   z-index: 9999; /* Ensure it's above other content */
 }
+
+.responsive-image {
+  width: 100%;
+  height: auto; /* Maintains the aspect ratio */
+}

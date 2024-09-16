@@ -54,6 +54,7 @@ const Banner: React.FC = () => {
               src={image}
               alt="Real Estate"
               fill
+              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
               quality={100}
               className="object-cover"
               priority={index === 0} // Ensure the first image is loaded with priority

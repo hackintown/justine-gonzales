@@ -32,6 +32,7 @@ export default function RootLayout({
           sizes="32x32"
           type="image/png"
         />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={inter.className}>
         {children}

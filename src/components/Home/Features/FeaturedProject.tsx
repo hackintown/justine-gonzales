@@ -9,6 +9,7 @@ const FeaturedProject = () => {
         src="/images/featured-sec-bg.webp"
         alt="Anvaya Cove"
         fill
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
         className=""
         priority
       />
@@ -32,9 +33,10 @@ const FeaturedProject = () => {
             <Image
               src="/images/anvaya-cove-bg.webp"
               alt="Anvaya Cove"
-              fill={true}
+              fill
               className="object-cover"
               priority
+              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="absolute top-8 right-8 z-10 max-w-[130px] w-full">
@@ -57,8 +59,8 @@ const FeaturedProject = () => {
             <p className="text-[0.5rem] sm:text-xs  sm:max-w-lg max-w-md w-full text-right mb-2">
               Presenting the excitement of a seaside resort and the tranquility
               of a mountain retreat,
-              <br /> unique tropical features provide residents with the best
-              that nature has to offer.
+              <br className="hidden md:block" /> unique tropical features
+              provide residents with the best that nature has to offer.
             </p>
             <Link
               href={`/properties/${NAVBARCONSTANT[11].id}`}
@@ -80,7 +82,8 @@ const FeaturedProject = () => {
             <Image
               src="/images/miravera-hillestate.webp"
               alt="miravera-hillestate"
-              fill={true}
+              fill
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
               className="object-cover"
               priority
             />
@@ -129,7 +132,8 @@ const FeaturedProject = () => {
             <Image
               src="/images/azuela-cove.webp"
               alt="azuela-cove"
-              fill={true}
+              fill
+              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
               className="object-cover"
             />
           </div>

@@ -87,6 +87,7 @@ const Services: React.FC = () => {
         src="/images/residential-sec-bg.webp"
         alt="Real Estate"
         fill
+        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
         quality={100}
         priority
         className="z-0 object-cover opacity-50"
@@ -132,7 +133,8 @@ const Services: React.FC = () => {
                     <Image
                       src={item.image}
                       alt="resident-lots-image"
-                      fill={true}
+                      fill
+                      sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                       className="w-full h-full rounded-lg shadow-md object-contain"
                     />
                   </div>
@@ -183,7 +185,8 @@ const Services: React.FC = () => {
                     <Image
                       src={item.image}
                       alt="resident-lots-image"
-                      fill={true}
+                      fill
+                      sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
                       className="w-full h-full rounded-lg shadow-md object-contain"
                     />
                   </div>
@@ -193,14 +196,14 @@ const Services: React.FC = () => {
           })}
         </Slider>
       </div>
-      <div className="flex container flex-col md:flex-row gap-x-2 lg:gap-x-10 xl:gap-x-12">
-        <div className="relative my-4">
-          <div className="flex justify-between items-center mb-2">
+      <div className="grid container grid-cols-1 sm:grid-col-[80%] md:grid-cols-2 gap-x-2 md:gap-x-10 lg:gap-x-20 xl:gap-x-12 justify-items-start lg:justify-between">
+        <div className="relative my-4 w-full">
+          <div className="flex justify-between items-center gap-x-6 lg:justify-between mb-2">
             <div>
               <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
                 Office
               </h1>
-              <p className="text-sm md:text-base font-light text-gray-600">
+              <p className="text-sm md:text-base font-light text-gray-600 mb-3">
                 Discover which property suits you best
               </p>
             </div>
@@ -223,15 +226,16 @@ const Services: React.FC = () => {
               <div
                 key={index}
                 id={item.id}
-                className="px-2 outline-none w-full max-w-[400px]"
+                className="px-2 outline-none w-full max-w-[440px]"
               >
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
-                  <div className="relative h-[300px] lg:h-[350px] overflow-hidden">
+                  <div className="relative h-[200px] xs:h-[250px] sm:h-[300px] lg:h-[343px] max-w-[447px] overflow-hidden">
                     <Image
                       src="/images/one-vertis-plaza-btn.webp"
                       alt="resident-lots-image"
                       fill
-                      className="w-full h-auto rounded-lg shadow-md object-contain"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 447px"
+                      className="w-full h-auto rounded-lg shadow-md object-contain object-left"
                     />
                   </div>
                 </Link>
@@ -240,13 +244,13 @@ const Services: React.FC = () => {
           })}
         </div>
 
-        <div className="relative mt-4">
-          <div className="flex justify-between items-center mb-2">
+        <div className="relative mt-4 w-full">
+          <div className="flex justify-between items-center gap-x-6 lg:justify-between mb-2">
             <div>
               <h1 className="text-gray-800 text-3xl md:text-2xl lg:text-4xl font-bold">
                 Leisure & Recreation
               </h1>
-              <p className="text-sm md:text-base font-light text-gray-600">
+              <p className="text-sm md:text-base font-light text-gray-600 mb-3">
                 Discover which property suits you best
               </p>
             </div>
@@ -269,15 +273,16 @@ const Services: React.FC = () => {
               <div
                 key={index}
                 id={item.id}
-                className="px-2 outline-none max-w-[400px]"
+                className="px-2 outline-none max-w-[447px]"
               >
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
-                  <div className="relative h-[300px] lg:h-[350px] overflow-hidden">
+                  <div className="relative h-[200px] xs:h-[250px] sm:h-[300px] lg:h-[343px] max-w-[447px] overflow-hidden">
                     <Image
                       src="/images/anvaya-cove-btn.webp"
                       alt="resident-lots-image"
                       fill
-                      className="w-full h-auto rounded-lg shadow-md object-contain"
+                      sizes="(max-width: 768px) 100vh, (max-width: 1024px) 50vw, 447px"
+                      className="w-full h-auto rounded-lg shadow-md object-contain object-left"
                     />
                   </div>
                 </Link>

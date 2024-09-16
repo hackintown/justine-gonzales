@@ -223,7 +223,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
                   className="text-sm hover:text-gray-300"
                   onClick={toggleMenu}
                 >
-                  Ayala Greenfield Estate
+                  Ayala Greenfield Estates
                 </Link>
                 <Link
                   href={`/properties/${NAVBARCONSTANT[1].id}`}

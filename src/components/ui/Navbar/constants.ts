@@ -1,7 +1,7 @@
 export const NAVBARCONSTANT = [
   {
     id: "ayala-greenfield-estate",
-    name: "Ayala Greenfield Estate",
+    name: "Ayala Greenfield Estates",
     images: [
       { src: "/images/AGE1.webp", alt: "Ayala-Greenfield" },
       { src: "/images/AGE2.webp", alt: "Ayala-Greenfield" },
