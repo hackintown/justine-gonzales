@@ -229,7 +229,7 @@ const Services: React.FC = () => {
                 className="px-2 outline-none w-full max-w-[440px]"
               >
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
-                  <div className="relative h-[200px] xs:h-[250px] sm:h-[300px] lg:h-[343px] max-w-[447px] overflow-hidden">
+                  <div className="relative h-[300px] xs:h-[350px] sm:h-[300px] lg:h-[343px] max-w-[447px] overflow-hidden">
                     <Image
                       src="/images/one-vertis-plaza-btn.webp"
                       alt="resident-lots-image"
@@ -276,7 +276,7 @@ const Services: React.FC = () => {
                 className="px-2 outline-none max-w-[447px]"
               >
                 <Link href={`/properties/${NAVBARCONSTANT[navbarIndex].id}`}>
-                  <div className="relative h-[200px] xs:h-[250px] sm:h-[300px] lg:h-[343px] max-w-[447px] overflow-hidden">
+                  <div className="relative h-[300px] xs:h-[350px] sm:h-[300px] lg:h-[343px] max-w-[447px] overflow-hidden">
                     <Image
                       src="/images/anvaya-cove-btn.webp"
                       alt="resident-lots-image"
