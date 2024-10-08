@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import TidioChat from "@/components/ui/TidioChat";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ayala Land Premier Luxury Homes PH",
+  title: "Luxury Homes for Sale Philippines | Ayala Land Premier",
   description:
-    "Explore the epitome of luxury living in the Philippines with Ayala Land Premier, featuring exclusive and high-end residential properties that redefine the standards of luxury homes.",
+    "Ayala Land Premier offers the most prestigious residential lots and luxury homes in prime locations across the Philippines.",
 };
 
 export default function RootLayout({
@@ -37,6 +38,18 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <TidioChat />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-KMMCBDB361"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KMMCBDB361');
+          `}
+        </Script>
       </body>
     </html>
   );

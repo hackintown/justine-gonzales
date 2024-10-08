@@ -38,6 +38,10 @@ export const NAVBARCONSTANT = [
   {
     id: "arcilo",
     name: "Arcilo Nuvali",
+    metaTitle: "Buy Modern House and Lot in Nuvali | Ayala Land Premier",
+    metaDescription:
+      "Explore modern homes and house and lot packages for sale in Nuvali and luxury homes in prime locations across the Philippines.",
+    keyword: ["Buy Modern Home", "House and Lot for Sale in Nuvali"],
     images: [
       { src: "/images/arcilo1.webp", alt: "Arcilo-Nuvali" },
       { src: "/images/arcilo2.webp", alt: "Arcilo-Nuvali" },
@@ -77,6 +81,10 @@ export const NAVBARCONSTANT = [
   {
     id: "ciela-aera-heights",
     name: "Ciela at Aéra Heights",
+    metaTitle: "Lot for Sale in Carmona | Land for sale | Ayala Land Premier",
+    metaDescription:
+      "Discover premium lots and land for sale in Carmona at Ciela Aera Heights. An exclusive residential community by Ayala Land Premier, offering spacious lots perfect for your dream home. Explore serene living in a lush, elevated environment.",
+    keyword: ["Lot for Sale in Carmona", "Lots and Land for Sale"],
     images: [
       { src: "/images/cah1.webp", alt: "Ciela-at-Aéra-Heights" },
       { src: "/images/cah2.webp", alt: "Ciela-at-Aéra-Heights" },
@@ -136,6 +144,11 @@ export const NAVBARCONSTANT = [
   {
     id: "lanewood-hills",
     name: "Lanewood Hills at Southmont",
+    metaTitle:
+      "Lanewood Hills | Residential Lots for Sale in Silang, Cavite | Ayala Land Premier",
+    metaDescription:
+      "Explore Lanewood Hills, a premier residential community in Silang, Cavite. Enjoy expansive residential lots with stunning views and access to modern amenities.",
+    keyword: ["Lots in Lanewood Hills", "Residential Plots for Sale in Silang"],
     images: [
       { src: "/images/lh1.webp", alt: "lanewood-hills" },
       { src: "/images/lh2.webp", alt: "lanewood-hills" },
@@ -175,6 +188,11 @@ export const NAVBARCONSTANT = [
   {
     id: "miravera-altaraza",
     name: "Miravera at Altaraza",
+    metaTitle:
+      "Buy Land in the Philippines | Residential Vacant Lot for Sale in Bulacan | Ayala Land Premier",
+    metaDescription:
+      "Discover prime residential vacant lots for sale in Bulacan at Miravera Altaraza. Invest in your future and build your dream home in a thriving community. Contact us today!",
+    keyword: ["Buy Land in the Philippines", "Residential Vacant Lot for Sale"],
     images: [
       { src: "/images/ma1.webp", alt: "Miravera-at-Altaraza" },
       { src: "/images/ma2.webp", alt: "Miravera-at-Altaraza" },
@@ -214,6 +232,11 @@ export const NAVBARCONSTANT = [
   {
     id: "the-courtyards-vermosa",
     name: "The Courtyards at Vermosa",
+    metaTitle:
+      "Buy Courtyards at Vermosa | Luxury Residential Lots for Sale |  Ayala Land Premier",
+    metaDescription:
+      "Discover luxurious residential lots for sale at The Courtyards at Vermosa. Experience a blend of suburban tranquility and urban convenience in Cavite, Philippines. Contact us to secure your dream lot today!",
+    keyword: ["Buy Courtyards at Vermosa", "Courtyards at Vermosa"],
     images: [
       { src: "/images/tcv1.webp", alt: "The-Courtyard-at-Vermosa" },
       { src: "/images/tcv2.webp", alt: "The-Courtyard-at-Vermosa" },
@@ -251,6 +274,14 @@ export const NAVBARCONSTANT = [
   {
     id: "arbor-lanes",
     name: "Arbor Lanes, Arca South",
+    metaTitle:
+      "Luxury Condominium for Sale in Arbor Lanes | Arca South | Ayala Land Premier",
+    metaDescription:
+      "Explore luxurious condominiums for sale at Arbor Lanes in Arca South. Enjoy a seamless blend of nature and city living, with lush gardens, premium amenities, and easy access to BGC and Makati. Find your dream home with Ayala Land Premier today.",
+    keyword: [
+      "Condominium for Sale in Arbor Lanes",
+      "Condominium for Sale in Arca South",
+    ],
     images: [
       { src: "/images/al1.webp", alt: "Arbor-Lanes" },
       { src: "/images/al2.webp", alt: "Arbor-Lanes" },
@@ -293,6 +324,11 @@ export const NAVBARCONSTANT = [
   {
     id: "gardencourt-residences",
     name: "Gardencourt Residences, Arca South",
+    metaTitle:
+      "Luxury Condominium for Sale in Gardencourt Residences, Arca South | Ayala Land Premier",
+    metaDescription:
+      "Luxury condos for sale at Gardencourt Residences, Arca South. Spacious units, lush parks, and premium amenities. Experience modern living by Ayala Land Premier.",
+    keyword: ["Condominium for Sale in GardenCourt Residences"],
     images: [
       { src: "/images/gr1.webp", alt: "gardencourt-residences" },
       { src: "/images/gr2.webp", alt: "gardencourt-residences" },
@@ -338,6 +374,10 @@ export const NAVBARCONSTANT = [
   {
     id: "parklinks-north-south-towers",
     name: "Parklinks North and South Towers",
+    metaTitle: "Luxury Condominium for Sale in Parklinks North, Quezon City",
+    metaDescription:
+      "Explore luxury condos in Parklinks North, Quezon City. Enjoy spacious living, stunning skyline views, and premium amenities in a vibrant urban community by Ayala Land.",
+    keyword: ["Condominium in Parklinks North"],
     images: [
       { src: "/images/pkl1.webp", alt: "parklinks-north-south-towers" },
       { src: "/images/pkl2.webp", alt: "parklinks-north-south-towers" },
@@ -384,6 +424,11 @@ export const NAVBARCONSTANT = [
   {
     id: "residences-azuela-cove",
     name: "The Residences at Azuela Cove",
+    metaTitle:
+      "Luxury Condominium for Sale in Azuela Cove | Ayala Land Premier",
+    metaDescription:
+      "Explore premium condominiums at Azuela Cove, Davao. Enjoy modern living with stunning views, top-tier amenities, and a vibrant community. Invest in your dream home today!",
+    keyword: ["Condominium in Azuela Cove"],
     images: [
       { src: "/images/trac1.webp", alt: "residences-azuela-cove" },
       { src: "/images/trac2.webp", alt: "residences-azuela-cove" },
@@ -420,6 +465,14 @@ export const NAVBARCONSTANT = [
   {
     id: "one-vertis-plaza",
     name: "One Vertis Plaza",
+    metaTitle:
+      "Buy Premium Office Space in One Vertis Plaza, Quezon City | Ayala Land Premier",
+    metaDescription:
+      "Discover the best offices for sale in One Vertis Plaza. Enjoy modern amenities, strategic location, and flexible spaces designed for your business needs.",
+    keyword: [
+      "Buy Office in One Vertis Plaza",
+      "Best Office for Sale in One Vertis Plaza",
+    ],
     images: [
       { src: "/images/ovp1.webp", alt: "one-vertis-plaza" },
       { src: "/images/ovp2.webp", alt: "one-vertis-plaza" },
@@ -462,6 +515,8 @@ export const NAVBARCONSTANT = [
   {
     id: "anvaya-cove",
     name: "Anvaya Cove",
+    metaTitle: "",
+    metaDescription: "",
     images: [
       { src: "/images/ac1.webp", alt: "anvaya-cove" },
       { src: "/images/ac2.webp", alt: "anvaya-cove" },
@@ -508,6 +563,10 @@ export const NAVBARCONSTANT = [
   {
     id: "park-central-towers",
     name: "Park Central Towers",
+    metaTitle: "Luxury Condominium for Sale in Parklinks North Tower ",
+    metaDescription:
+      "Luxury condos in Parklinks North Tower, Quezon City. Enjoy panoramic city views, spacious units, and world-class amenities. Experience urban living at its finest.",
+    keyword: ["ondominium for Sale in Park Central Towers"],
     images: [
       { src: "/images/pct1.webp", alt: "park-central-towers" },
       { src: "/images/pct2.webp", alt: "park-central-towers" },
@@ -548,6 +607,8 @@ export const NAVBARCONSTANT = [
   {
     id: "the-alcoves",
     name: " The Alcoves, Cebu",
+    metaTitle: "",
+    metaDescription: "",
     images: [
       { src: "/images/alc1.webp", alt: "the-alcoves" },
       { src: "/images/alc2.webp", alt: "the-alcoves" },
