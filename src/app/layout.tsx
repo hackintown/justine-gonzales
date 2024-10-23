@@ -34,6 +34,69 @@ export default function RootLayout({
           type="image/png"
         />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="google-site-verification" content="N7UFS0ZOBiVXK0Zv_DA5ccdhZpzyKvPzhEb8WIi9a-w" />
+        <Script id="structured-data" type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Ayala Land Premier Luxury Homes",
+            "url": "https://www.ayalalandpremierluxuryhomesph.com",
+            "logo": "https://www.ayalalandpremierluxuryhomesph.com/logo.png",
+            "image": "https://www.ayalalandpremierluxuryhomesph.com/main-image.jpg",
+            "description": "Ayala Land Premier offers luxury homes and exclusive properties in prime locations across the Philippines.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Ayala Land Offices, Makati City",
+              "addressLocality": "Makati",
+              "addressRegion": "Metro Manila",
+              "postalCode": "1200",
+              "addressCountry": "PH"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+63-123-456-7890",
+              "contactType": "Customer Service",
+              "areaServed": "PH",
+              "availableLanguage": "English"
+            },
+            "priceRange": "$$$$",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Available Properties",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "House",
+                    "name": "Luxury Home in Makati",
+                    "description": "A beautiful luxury home located in the heart of Makati.",
+                    "url": "https://www.ayalalandpremierluxuryhomesph.com/makati-luxury-home",
+                    "image": "https://www.ayalalandpremierluxuryhomesph.com/images/makati-luxury-home.jpg",
+                    "numberOfRooms": 5,
+                    "floorSize": "500 sqm",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "123 Makati Avenue",
+                      "addressLocality": "Makati",
+                      "addressRegion": "Metro Manila",
+                      "postalCode": "1200",
+                      "addressCountry": "PH"
+                    },
+                    "price": {
+                      "@type": "PriceSpecification",
+                      "priceCurrency": "PHP",
+                      "price": "100000000"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+          `}
+        </Script>
+
+        <link rel="canonical" href="https://www.ayalalandpremierluxuryhomesph.com/" />
       </head>
       <body className={inter.className}>
         {children}
